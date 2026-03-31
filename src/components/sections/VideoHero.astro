@@ -1,0 +1,74 @@
+---
+interface Props {
+  videoSrc: string;
+  posterSrc: string;
+  headline: string;
+  subheadline: string;
+  ctaPrimary?: { label: string; href: string };
+  ctaSecondary?: { label: string; href: string };
+  showEmergency?: boolean;
+}
+
+const {
+  videoSrc,
+  posterSrc,
+  headline,
+  subheadline,
+  ctaPrimary = { label: 'Get a Free Quote', href: '/booking' },
+  ctaSecondary = { label: 'Our Services', href: '/services' },
+  showEmergency = true,
+} = Astro.props;
+---
+
+<section class="video-hero relative min-h-[85vh] flex items-center overflow-hidden" aria-label="Hero">
+  <!-- Video Background -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+    muted
+    playsinline
+    preload="metadata"
+    poster={posterSrc}
+  >
+    <source src={videoSrc} type="video/mp4" />
+  </video>
+
+  <!-- Static Poster (shown after video ends) -->
+  <div
+    class="video-poster absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500"
+    style={`background-image: url('${posterSrc}'); background-size: cover; background-position: center;`}
+  ></div>
+
+  <!-- Content — centered liquid glass card over clear video -->
+  <div class="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6 py-32 flex items-center justify-center">
+    <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-16 rounded-2xl">
+      <h1 class="font-heading text-h1 md:text-hero text-primary leading-tight mb-4">
+        {headline}
+      </h1>
+      <p class="text-text text-lg mb-8 leading-relaxed max-w-lg mx-auto">
+        {subheadline}
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={ctaPrimary.href} class="btn-primary text-lg">
+          {ctaPrimary.label}
+        </a>
+        <a href={ctaSecondary.href} class="btn-outline text-lg">
+          {ctaSecondary.label}
+        </a>
+      </div>
+
+      {showEmergency && (
+        <div class="mt-6 flex justify-center">
+          <a href="tel:+64212779151" class="btn-emergency">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            24/7 Emergency — Call Now
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-60"><path d="m6 9 6 6 6-6"/></svg>
+  </div>
+</section>

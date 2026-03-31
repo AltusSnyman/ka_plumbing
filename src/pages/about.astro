@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import VideoHero from '../components/sections/VideoHero.astro';
+import TestimonialScroller from '../components/sections/TestimonialScroller.astro';
+import Gallery from '../components/sections/Gallery.astro';
+import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
+import CTABanner from '../components/sections/CTABanner.astro';
+
+const timeline = [
+  { year: 'Certified', title: 'Plumbing Certification', desc: 'Completed certification as a qualified plumber in New Zealand.' },
+  { year: 'Certified', title: 'Drain Layer Certification', desc: 'Earned additional certification as a licensed drain layer.' },
+  { year: 'Founded', title: 'KA Plumbing LTD', desc: 'Established KA Plumbing LTD to serve Auckland with quality, locally-owned plumbing services.' },
+  { year: 'Today', title: '24/7 Service Across Auckland', desc: 'Continuing to grow with hundreds of satisfied customers and 24/7 emergency coverage.' },
+];
+
+const values = [
+  { title: 'Quality Workmanship', desc: 'Every job is done to the highest standard. We fix it right the first time, every time.', icon: 'star' },
+  { title: 'Honest & Transparent', desc: 'Clear pricing with no hidden costs. We explain everything before we start work.', icon: 'shield' },
+  { title: 'Reliable & Punctual', desc: 'We show up when we say we will. Your time matters, and we respect it.', icon: 'clock' },
+  { title: 'Locally Owned', desc: 'Not a franchise. When you call KA Plumbing, you get Kurt — a local Aucklander who cares.', icon: 'map-pin' },
+];
+---
+
+<BaseLayout
+  title="About KA Plumbing LTD — Meet Kurt, Auckland's Trusted Plumber"
+  description="Meet Kurt, the certified plumber and drain layer behind KA Plumbing LTD. Locally owned and operated in Auckland. Learn about our values, certifications, and commitment to quality."
+>
+  <VideoHero
+    videoSrc="/videos/floorplan-transform.mp4"
+    posterSrc="/videos/floorplan-poster.jpg"
+    headline="Meet Kurt — The Face Behind KA Plumbing"
+    subheadline="When you call KA Plumbing, you're not getting a call centre. You're getting a certified plumber who takes personal pride in every job."
+    ctaPrimary={{ label: 'Contact Kurt', href: '/contact' }}
+    ctaSecondary={{ label: 'See Our Work', href: '/services' }}
+    showEmergency={false}
+  />
+
+  <!-- Kurt's Story -->
+  <section class="py-section bg-surface" aria-label="Kurt's story">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <img
+            src="/images/about/business-vehicle.jpg"
+            alt="KA Plumbing service vehicle"
+            width="600"
+            height="400"
+            loading="lazy"
+            class="rounded-xl shadow-card w-full object-cover"
+          />
+        </div>
+
+        <div class="reveal">
+          <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Story</span>
+          <h2 class="font-heading text-h2 text-primary mb-6">Built on Trust, Driven by Quality</h2>
+          <p class="text-text-muted leading-relaxed mb-4">
+            I'm Kurt, and I started KA Plumbing LTD because I believe Aucklanders deserve a plumber they can
+            trust — someone who shows up on time, does quality work, and charges fairly.
+          </p>
+          <p class="text-text-muted leading-relaxed mb-4">
+            As a certified plumber and certified drain layer, I bring the full range of plumbing expertise
+            to every job. From a leaking tap to a complete bathroom renovation, I treat every property
+            like it's my own.
+          </p>
+          <p class="text-text-muted leading-relaxed">
+            I'm proud to be locally owned and operated — not a franchise, not a call centre.
+            When you call KA Plumbing, you get me. And I'm committed to getting it right the first time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="py-section bg-background" aria-label="Our journey">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Journey</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Milestones</h2>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/10 hidden md:block"></div>
+
+        <div class="space-y-8 reveal-stagger">
+          {timeline.map((item) => (
+            <div class="flex gap-6 items-start">
+              <div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center flex-shrink-0 border-2 border-primary/10 relative z-10 bg-background">
+                <span class="text-accent font-bold text-xs text-center leading-tight">{item.year}</span>
+              </div>
+              <div class="glass-card-solid p-6 flex-1">
+                <h3 class="font-heading text-h4 text-primary mb-2">{item.title}</h3>
+                <p class="text-text-muted text-sm">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-section bg-surface" aria-label="Our values">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Stand For</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Our Values</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal-stagger">
+        {values.map((value) => (
+          <div class="glass-card-solid p-8 flex gap-5">
+            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+              {value.icon === 'star' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8A04C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              )}
+              {value.icon === 'shield' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8A04C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              )}
+              {value.icon === 'clock' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8A04C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              )}
+              {value.icon === 'map-pin' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8A04C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              )}
+            </div>
+            <div>
+              <h3 class="font-heading text-h4 text-primary mb-2">{value.title}</h3>
+              <p class="text-text-muted text-sm leading-relaxed">{value.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Gallery />
+
+  <!-- Certifications & Partners -->
+  <section class="py-section bg-primary" aria-label="Certifications and partners">
+    <div class="max-w-[1200px] mx-auto px-6 text-center reveal">
+      <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Credentials</span>
+      <h2 class="font-heading text-h2 text-white mb-10">Certified, Qualified & Trusted</h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 reveal-stagger">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/10 flex flex-col items-center gap-3">
+          <img src="/images/badges/certified-plumber.jpeg" alt="Certifying Plumber" width="80" height="80" loading="lazy" class="h-16 w-auto object-contain" />
+          <p class="text-white font-semibold text-sm">Certified Plumber</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/10 flex flex-col items-center gap-3">
+          <img src="/images/badges/certified-drainlayer.jpeg" alt="Certifying Drainlayer" width="80" height="80" loading="lazy" class="h-16 w-auto object-contain" />
+          <p class="text-white font-semibold text-sm">Certified Drainlayer</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/10 flex flex-col items-center gap-3">
+          <img src="/images/badges/master-plumbers.png" alt="Master Plumbers Guarantee" width="120" height="80" loading="lazy" class="h-16 w-auto object-contain" />
+          <p class="text-white font-semibold text-sm">Master Plumbers</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/10 flex flex-col items-center gap-3">
+          <img src="/images/badges/rheem.png" alt="Rheem Partner" width="120" height="80" loading="lazy" class="h-16 w-auto object-contain" />
+          <p class="text-white font-semibold text-sm">Rheem Partner</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/10 flex flex-col items-center gap-3">
+          <img src="/images/badges/rinnai.png" alt="Rinnai Partner" width="120" height="80" loading="lazy" class="h-16 w-auto object-contain" />
+          <p class="text-white font-semibold text-sm">Rinnai Partner</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/10 flex flex-col items-center gap-3">
+          <img src="/images/badges/auckland-council.jpg" alt="Auckland Council Approved" width="80" height="80" loading="lazy" class="h-16 w-auto object-contain" />
+          <p class="text-white font-semibold text-sm">Auckland Council</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TestimonialScroller />
+  <CTABanner
+    headline="Work with Kurt"
+    subheadline="Ready to experience honest, quality plumbing? Get in touch for a free quote — Kurt will personally handle your enquiry."
+  />
+</BaseLayout>

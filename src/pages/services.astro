@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import VideoHero from '../components/sections/VideoHero.astro';
+import BeforeAfterSlider from '../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../components/sections/TestimonialScroller.astro';
+import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
+import CTABanner from '../components/sections/CTABanner.astro';
+import services from '../data/services.json';
+
+const icons: Record<string, string> = {
+  wrench: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+  hammer: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></svg>',
+  'plus-circle': '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>',
+  flame: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+  layers: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>',
+  'message-circle': '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>',
+};
+
+const processSteps = [
+  { step: '01', title: 'Call or Book Online', desc: 'Reach out by phone or use our online booking form. We respond fast.' },
+  { step: '02', title: 'Free Quote', desc: 'Kurt assesses your needs and provides a clear, upfront quote — no hidden fees.' },
+  { step: '03', title: 'Schedule the Work', desc: 'We book a time that works for you. Flexible scheduling, including weekends.' },
+  { step: '04', title: 'Job Done Right', desc: 'Professional workmanship with a clean finish. We treat your home like our own.' },
+];
+
+const faqs = [
+  { q: 'Do you offer free quotes?', a: 'Yes! We provide free, no-obligation quotes for all plumbing and drain laying work. Call us or book online to get started.' },
+  { q: 'What areas do you serve?', a: 'We serve all of Auckland — from the CBD to the western suburbs and everywhere in between.' },
+  { q: 'Are you available for emergencies?', a: 'Absolutely. Kurt is available 24/7 for plumbing emergencies including burst pipes, flooding, and blocked drains. Call 021 277 9151 anytime.' },
+  { q: 'Are you a certified plumber?', a: 'Yes, Kurt is a fully certified plumber and certified drain layer, licensed to carry out all plumbing and drainage work in New Zealand.' },
+  { q: 'How quickly can you get to my property?', a: 'For emergencies, we aim to arrive within 30-60 minutes across Auckland. For scheduled work, we offer flexible booking including weekends.' },
+];
+---
+
+<BaseLayout
+  title="Plumbing Services Auckland — KA Plumbing LTD | Repairs, Renovations, Drain Laying"
+  description="Expert plumbing services in Auckland: repairs, renovations, new installations, hot water systems, drain laying, and consulting. Certified plumber available 24/7. Get a free quote."
+>
+  <VideoHero
+    videoSrc="/videos/bathroom-transform.mp4"
+    posterSrc="/videos/bathroom-poster.jpg"
+    headline="Expert Plumbing Services for Every Need"
+    subheadline="From quick repairs to complete renovations, KA Plumbing delivers certified, professional plumbing and drain laying services across Auckland."
+    ctaPrimary={{ label: 'Book a Service', href: '/booking' }}
+    ctaSecondary={{ label: 'Call for Advice', href: 'tel:+64212779151' }}
+  />
+
+  <!-- Detailed Services -->
+  <section class="py-section bg-background" aria-label="All services">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Comprehensive Plumbing Solutions</h2>
+        <p class="text-text-muted max-w-xl mx-auto">
+          Whatever your plumbing needs, Kurt has the expertise and certifications to get it done right.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        {services.map((service, index) => (
+          <div class={`glass-card-solid p-8 reveal ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+              <div class={`lg:w-2/5 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  width="480"
+                  height="320"
+                  loading="lazy"
+                  class="rounded-lg w-full object-cover aspect-[3/2]"
+                />
+              </div>
+              <div class={`lg:w-3/5 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center text-primary mb-4">
+                  <Fragment set:html={icons[service.icon] || icons.wrench} />
+                </div>
+                <h3 class="font-heading text-h3 text-primary mb-1">{service.title}</h3>
+                <p class="text-accent font-semibold text-sm mb-3">{service.subtitle}</p>
+                <p class="text-text-muted leading-relaxed mb-6">{service.description}</p>
+                <a href="/booking" class="btn-primary cursor-pointer">
+                  {service.cta}
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section class="py-section bg-surface" aria-label="How we work">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">How It Works</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Simple, Straightforward Process</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+        {processSteps.map((step) => (
+          <div class="glass-card-solid p-6 text-center relative">
+            <div class="text-accent font-heading text-h2 mb-3 opacity-30">{step.step}</div>
+            <h3 class="font-heading text-h4 text-primary mb-2">{step.title}</h3>
+            <p class="text-text-muted text-sm">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <BeforeAfterSlider />
+
+  <!-- FAQ -->
+  <section class="py-section bg-background" aria-label="Frequently asked questions">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Common Questions</h2>
+      </div>
+
+      <div class="space-y-4 reveal">
+        {faqs.map((faq) => (
+          <details class="glass-card-solid group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-semibold text-primary list-none">
+              <span>{faq.q}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-text-muted text-sm leading-relaxed border-t border-primary/5 pt-4">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <TestimonialScroller />
+  <EmergencyBanner />
+  <CTABanner />
+</BaseLayout>

@@ -1,0 +1,209 @@
+/* ─── Hero Glass Card ─── */
+
+.hero-glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 40px rgba(30, 58, 95, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ─── Liquid Glass Utilities ─── */
+
+.glass-card {
+  background: var(--color-glass-bg-strong);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
+  transition: box-shadow var(--duration-normal) var(--ease-smooth),
+              transform var(--duration-normal) var(--ease-smooth),
+              border-color var(--duration-normal) var(--ease-smooth);
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-glass-hover);
+  border-color: var(--color-glass-border-strong);
+  transform: translateY(-2px);
+}
+
+.glass-card-solid {
+  background: var(--color-surface);
+  border: 1px solid rgba(30, 58, 95, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--duration-normal) var(--ease-smooth),
+              transform var(--duration-normal) var(--ease-smooth);
+}
+
+.glass-card-solid:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid rgba(30, 58, 95, 0.06);
+  box-shadow: 0 1px 8px rgba(30, 58, 95, 0.04);
+}
+
+.glass-nav-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 16px rgba(30, 58, 95, 0.08);
+}
+
+.glass-hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 95, 0.85) 0%,
+    rgba(46, 90, 143, 0.65) 50%,
+    rgba(30, 58, 95, 0.75) 100%
+  );
+}
+
+.glass-section {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ─── Button Styles ─── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: var(--color-accent);
+  color: white;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-body);
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-amber-glow);
+  transition: all var(--duration-normal) var(--ease-smooth);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+  box-shadow: var(--shadow-amber-glow-hover);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-body);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-body);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-emergency {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: var(--color-emergency);
+  color: white;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-body);
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-emergency-glow);
+  animation: pulse-glow 2s ease-in-out infinite;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-emergency:hover {
+  background: var(--color-emergency-dark);
+  transform: translateY(-1px);
+}
+
+/* ─── Continuous Scroll ─── */
+
+.scroll-strip {
+  display: flex;
+  width: max-content;
+  animation: var(--animate-scroll);
+}
+
+.scroll-strip:hover {
+  animation-play-state: paused;
+}
+
+.scroll-strip-fast {
+  animation: var(--animate-scroll-fast);
+}
+
+.scroll-strip-fast:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Section Reveal (GSAP-enhanced) ─── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal.revealed {
+  animation: var(--animate-fade-up);
+}

@@ -1,0 +1,46 @@
+---
+import testimonials from '../../data/testimonials.json';
+
+// Duplicate for seamless loop
+const allTestimonials = [...testimonials, ...testimonials];
+---
+
+<section class="py-section bg-surface overflow-hidden" aria-label="Customer testimonials">
+  <div class="max-w-[1200px] mx-auto px-6 mb-10 reveal">
+    <div class="text-center">
+      <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Testimonials</span>
+      <h2 class="font-heading text-h2 text-primary mb-4">What Our Customers Say</h2>
+      <p class="text-text-muted max-w-xl mx-auto">
+        Don't just take our word for it — hear from homeowners and businesses across Auckland.
+      </p>
+    </div>
+  </div>
+
+  <!-- Continuous Scroll Strip -->
+  <div class="relative">
+    <div class="scroll-strip gap-6 py-4 px-4">
+      {allTestimonials.map((t) => (
+        <div class="glass-card-solid p-6 min-w-[320px] max-w-[380px] flex-shrink-0">
+          <!-- Stars -->
+          <div class="flex gap-1 mb-3">
+            {Array.from({ length: t.rating }).map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#E8A04C" stroke="#E8A04C" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ))}
+          </div>
+          <!-- Quote -->
+          <p class="text-text text-sm leading-relaxed mb-4 italic">"{t.text}"</p>
+          <!-- Author -->
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-sm">
+              {t.name.charAt(0)}
+            </div>
+            <div>
+              <p class="font-semibold text-primary text-sm">{t.name}</p>
+              <p class="text-text-muted text-xs">{t.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

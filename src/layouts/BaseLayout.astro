@@ -1,0 +1,141 @@
+---
+import '../styles/global.css';
+import '../styles/glass.css';
+import NavBar from '../components/foundation/NavBar.astro';
+import TrustBar from '../components/sections/TrustBar.astro';
+import Footer from '../components/foundation/Footer.astro';
+import SEOHead from '../components/foundation/SEOHead.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+}
+
+const { title, description, ogImage = '/images/og-default.jpg', canonicalUrl } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <SEOHead
+    title={title}
+    description={description}
+    ogImage={ogImage}
+    canonicalUrl={canonicalUrl}
+  />
+</head>
+<body class="min-h-screen flex flex-col">
+  <NavBar currentPath={currentPath} />
+  <TrustBar />
+  <!-- Spacer for fixed nav (72px) + fixed trust bar (40px) -->
+  <div class="h-[112px]"></div>
+  <main class="flex-1">
+    <slot />
+  </main>
+  <Footer />
+
+  <script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Reveal animations for sections
+    document.querySelectorAll('.reveal').forEach((el) => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            once: true,
+          },
+        }
+      );
+    });
+
+    // Staggered reveals for grid children
+    document.querySelectorAll('.reveal-stagger').forEach((container) => {
+      const children = container.children;
+      gsap.fromTo(children,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top 85%',
+            once: true,
+          },
+        }
+      );
+    });
+
+    // NavBar scroll effect
+    const nav = document.querySelector('.glass-nav');
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.classList.add('glass-nav-scrolled');
+        } else {
+          nav.classList.remove('glass-nav-scrolled');
+        }
+      }, { passive: true });
+    }
+
+    // Video hero: play once then show end-frame
+    document.querySelectorAll('.video-hero').forEach((container) => {
+      const video = container.querySelector('video') as HTMLVideoElement;
+      const poster = container.querySelector('.video-poster') as HTMLElement;
+      if (video && poster) {
+        video.play().catch(() => {
+          // Autoplay blocked — show poster immediately
+          video.style.display = 'none';
+          poster.style.opacity = '1';
+        });
+        video.addEventListener('ended', () => {
+          poster.style.opacity = '1';
+          video.style.opacity = '0';
+          setTimeout(() => { video.style.display = 'none'; }, 500);
+        });
+      }
+    });
+
+    // Stats counter animation
+    document.querySelectorAll('.stat-counter').forEach((el) => {
+      const target = parseInt(el.getAttribute('data-target') || '0');
+      const suffix = el.getAttribute('data-suffix') || '';
+      const prefix = el.getAttribute('data-prefix') || '';
+
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 85%',
+        once: true,
+        onEnter: () => {
+          gsap.to({ val: 0 }, {
+            val: target,
+            duration: 2,
+            ease: 'power2.out',
+            onUpdate: function() {
+              el.textContent = prefix + Math.round(this.targets()[0].val) + suffix;
+            },
+          });
+        },
+      });
+    });
+  </script>
+</body>
+</html>

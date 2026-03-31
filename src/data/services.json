@@ -1,0 +1,56 @@
+[
+  {
+    "id": "plumbing-repair",
+    "title": "Plumbing Repair",
+    "subtitle": "Stop the drip before it becomes a flood",
+    "description": "A small leak left alone can quietly cause thousands in damage. Kurt responds fast — diagnosing the problem accurately and fixing it on the spot so you're not left waiting or wondering. Whether it's a burst pipe at 2am or a tap that won't stop dripping, you get a certified plumber who carries the parts and knows Auckland homes inside out. One visit, fixed right, no callbacks needed.",
+    "icon": "wrench",
+    "cta": "Request a Repair",
+    "image": "/images/services/plumbing-repair.webp"
+  },
+  {
+    "id": "renovations",
+    "title": "Renovations & Maintenance",
+    "subtitle": "Your dream bathroom or kitchen, plumbed to perfection",
+    "description": "Renovations are exciting until the plumbing goes wrong. Kurt works alongside your builder or directly with you to make sure every pipe, drain, and fixture is installed to code and built to last. From relocating waste lines to fitting that rainfall shower you've been eyeing — the plumbing is the one part of your reno you won't have to think about twice. We also handle ongoing maintenance so everything keeps running smoothly long after the job's done.",
+    "icon": "hammer",
+    "cta": "Get a Reno Quote",
+    "image": "/images/services/renovations.webp"
+  },
+  {
+    "id": "new-installations",
+    "title": "New Installations",
+    "subtitle": "Fitted properly the first time — guaranteed",
+    "description": "Whether you're building new or upgrading what you've got, proper installation matters. Kurt handles everything from dishwashers and waste disposals to full plumbing systems for new builds — all to New Zealand standards. You get clear communication on what's needed, an upfront quote with no surprises, and workmanship that passes inspection first time. Most installations are completed in a single visit.",
+    "icon": "plus-circle",
+    "cta": "Plan Your Install",
+    "image": "/images/services/new-installations.webp"
+  },
+  {
+    "id": "hot-water",
+    "title": "Hot Water Systems",
+    "subtitle": "No one should start their day with a cold shower",
+    "description": "When your hot water dies, you need it sorted today — not next week. Kurt carries common cylinder parts on the van and can often restore your hot water the same day. If your system is past its best, he'll walk you through your replacement options honestly — no upselling, just straight advice on what suits your household and budget. We install, repair, and replace all major brands across Auckland.",
+    "icon": "flame",
+    "cta": "Fix My Hot Water",
+    "image": "/images/services/hot-water.webp"
+  },
+  {
+    "id": "drain-laying",
+    "title": "Drain Laying",
+    "subtitle": "Certified drain layer — compliant, consented, done right",
+    "description": "Drainage work isn't something you want to cut corners on. As a certified drain layer, Kurt is licensed to design, install, and repair stormwater and wastewater systems that meet council requirements. That means your project stays compliant and you avoid costly rework down the line. From new subdivision drainage to replacing old clay pipes, every job is documented, inspected, and built to code.",
+    "icon": "layers",
+    "cta": "Get Drain Help",
+    "image": "/images/services/drain-laying.jpg"
+  },
+  {
+    "id": "consulting",
+    "title": "Consulting",
+    "subtitle": "Get expert advice before you spend a dollar",
+    "description": "Not sure where to start with your plumbing project? Kurt offers straightforward consulting to help you plan the work, understand what's required for compliance, and budget accurately before anything gets ripped out. It's the kind of honest advice you'd expect from a mate in the trade — except backed by years of certified experience. A quick consultation now can save you thousands in surprises later.",
+    "icon": "message-circle",
+    "cta": "Book a Consult",
+    "image": "/images/services/consulting.webp"
+  }
+]

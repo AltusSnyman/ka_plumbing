@@ -1,0 +1,94 @@
+---
+const projects = [
+  { before: '/images/projects/before1.jpg', after: '/images/projects/after1.jpg', label: 'Bathroom Renovation' },
+  { before: '/images/projects/before2.jpg', after: '/images/projects/after2.jpg', label: 'Plumbing Upgrade' },
+  { before: '/images/projects/before3.jpg', after: '/images/projects/after3.jpg', label: 'Complete Refit' },
+];
+---
+
+<section class="py-section bg-background" aria-label="Before and after projects">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Work</span>
+      <h2 class="font-heading text-h2 text-primary mb-4">See the Transformation</h2>
+      <p class="text-text-muted max-w-xl mx-auto">
+        Real projects, real results. Drag the slider to see the before and after of our recent work.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
+      {projects.map((project, index) => (
+        <div class="glass-card-solid overflow-hidden" data-slider-id={index}>
+          <div class="relative w-full aspect-[4/3] overflow-hidden cursor-ew-resize select-none" data-before-after>
+            <!-- After (base layer) -->
+            <img
+              src={project.after}
+              alt={`${project.label} — After`}
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              width="600"
+              height="450"
+            />
+            <!-- Before (clipped layer) -->
+            <div class="absolute inset-0 overflow-hidden" style="width: 50%;" data-before-clip>
+              <img
+                src={project.before}
+                alt={`${project.label} — Before`}
+                class="absolute inset-0 w-full h-full object-cover"
+                style="min-width: 200%; width: 200%;"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+            </div>
+            <!-- Slider Handle -->
+            <div class="absolute top-0 bottom-0 w-1 bg-white shadow-lg cursor-ew-resize z-10" style="left: 50%;" data-slider-handle>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18-6-6 6-6"/><path d="m15 6 6 6-6 6"/>
+                </svg>
+              </div>
+            </div>
+            <!-- Labels -->
+            <span class="absolute top-3 left-3 bg-primary/80 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">Before</span>
+            <span class="absolute top-3 right-3 bg-accent/90 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">After</span>
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-primary text-sm">{project.label}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-before-after]').forEach((container) => {
+    const clip = container.querySelector('[data-before-clip]') as HTMLElement;
+    const handle = container.querySelector('[data-slider-handle]') as HTMLElement;
+    const beforeImg = clip?.querySelector('img') as HTMLElement;
+    if (!clip || !handle || !beforeImg) return;
+
+    let isDragging = false;
+
+    const updatePosition = (clientX: number) => {
+      const rect = (container as HTMLElement).getBoundingClientRect();
+      let x = ((clientX - rect.left) / rect.width) * 100;
+      x = Math.max(5, Math.min(95, x));
+      clip.style.width = `${x}%`;
+      handle.style.left = `${x}%`;
+      // Scale the before image to fill the full container width
+      beforeImg.style.minWidth = `${(100 / x) * 100}%`;
+      beforeImg.style.width = `${(100 / x) * 100}%`;
+    };
+
+    container.addEventListener('mousedown', (e) => { isDragging = true; updatePosition((e as MouseEvent).clientX); });
+    container.addEventListener('touchstart', (e) => { isDragging = true; updatePosition((e as TouchEvent).touches[0].clientX); }, { passive: true });
+
+    document.addEventListener('mousemove', (e) => { if (isDragging) updatePosition(e.clientX); });
+    document.addEventListener('touchmove', (e) => { if (isDragging) updatePosition(e.touches[0].clientX); }, { passive: true });
+
+    document.addEventListener('mouseup', () => { isDragging = false; });
+    document.addEventListener('touchend', () => { isDragging = false; });
+  });
+</script>

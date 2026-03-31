@@ -1,0 +1,97 @@
+---
+const galleryItems = [
+  { src: '/images/gallery/bathroom-vanity.jpg', alt: 'Modern bathroom vanity installation with stone tiles and matte black fixtures', label: 'Bathroom Renovation' },
+  { src: '/images/gallery/shower-install.jpg', alt: 'Rainfall shower installation with matte black tapware and recessed shelving', label: 'Shower Install' },
+  { src: '/images/gallery/toilet-project.jpg', alt: 'New toilet installation with natural stone tiling', label: 'Toilet & Tiling' },
+  { src: '/images/gallery/hot-water-system.jpg', alt: 'Hot water cylinder installation with copper pipework', label: 'Hot Water System' },
+  { src: '/images/gallery/commercial-bathroom.jpg', alt: 'Commercial accessible bathroom fit-out with grab rails', label: 'Commercial Fit-Out' },
+  { src: '/images/gallery/drain-laying.jpg', alt: 'Downpipe and drainage installation on residential property', label: 'Drain Laying' },
+  { src: '/images/gallery/renovation-after.jpg', alt: 'Completed plumbing renovation project', label: 'Renovation Complete' },
+  { src: '/images/gallery/kitchen-plumbing.jpg', alt: 'Kitchen plumbing upgrade and installation', label: 'Kitchen Plumbing' },
+];
+---
+
+<section class="py-section bg-background" aria-label="Project gallery">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Work</span>
+      <h2 class="font-heading text-h2 text-primary mb-4">Recent Projects</h2>
+      <p class="text-text-muted max-w-xl mx-auto">
+        Real work from real Auckland homes and businesses. Every project completed by Kurt to the highest standard.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal-stagger">
+      {galleryItems.map((item) => (
+        <button
+          type="button"
+          class="gallery-item group relative rounded-xl overflow-hidden aspect-square cursor-pointer border-0 p-0 bg-transparent"
+          data-src={item.src}
+          data-alt={item.alt}
+          aria-label={`View full size: ${item.label}`}
+        >
+          <img
+            src={item.src}
+            alt={item.alt}
+            width="400"
+            height="400"
+            loading="lazy"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-sm">{item.label}</span>
+          </div>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="gallery-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button
+    type="button"
+    id="lightbox-close"
+    class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors cursor-pointer z-10"
+    aria-label="Close image viewer"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+  </button>
+  <img id="lightbox-img" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl" />
+</div>
+
+<script>
+  const lightbox = document.getElementById('gallery-lightbox') as HTMLElement;
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const lightboxClose = document.getElementById('lightbox-close') as HTMLElement;
+
+  document.querySelectorAll('.gallery-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      const src = item.getAttribute('data-src') || '';
+      const alt = item.getAttribute('data-alt') || '';
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    });
+  });
+
+  lightboxClose?.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+  });
+
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    }
+  });
+</script>

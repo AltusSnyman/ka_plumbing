@@ -1,0 +1,49 @@
+---
+const badges = [
+  { src: '/images/badges/master-plumbers.png', alt: 'Master Plumbers Guarantee', name: 'Master Plumbers' },
+  { src: '/images/badges/certified-plumber.jpeg', alt: 'Certifying Plumber', name: 'Certified Plumber' },
+  { src: '/images/badges/certified-drainlayer.jpeg', alt: 'Certifying Drainlayer', name: 'Certified Drainlayer' },
+  { src: '/images/badges/rheem.png', alt: 'Rheem Partner', name: 'Rheem' },
+  { src: '/images/badges/rinnai.png', alt: 'Rinnai Partner', name: 'Rinnai' },
+  { src: '/images/badges/auckland-council.jpg', alt: 'Auckland Council Approved', name: 'Auckland Council' },
+];
+
+// Duplicate for seamless loop
+const allBadges = [...badges, ...badges];
+---
+
+<section class="py-14 bg-background border-y border-primary/5 overflow-hidden" aria-label="Trusted partners and certifications">
+  <div class="max-w-[1200px] mx-auto px-6 mb-8">
+    <p class="text-center text-text-muted text-sm font-medium uppercase tracking-widest">Trusted Partners & Certifications</p>
+  </div>
+
+  <div class="relative">
+    <div class="trust-scroll-strip gap-16 py-4 px-4 items-center">
+      {allBadges.map((badge) => (
+        <div class="flex-shrink-0 flex flex-col items-center gap-3 px-8 py-6 bg-surface rounded-xl border border-primary/5 min-w-[160px] shadow-sm">
+          <img
+            src={badge.src}
+            alt={badge.alt}
+            width="80"
+            height="80"
+            loading="lazy"
+            class="h-14 w-auto object-contain"
+          />
+          <span class="text-primary/70 font-semibold text-sm whitespace-nowrap">{badge.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust-scroll-strip {
+    display: flex;
+    width: max-content;
+    animation: scroll 45s linear infinite;
+  }
+
+  .trust-scroll-strip:hover {
+    animation-play-state: paused;
+  }
+</style>

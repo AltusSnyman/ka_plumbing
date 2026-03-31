@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+}
+
+const { title, description, ogImage = '/images/og-default.jpg', canonicalUrl } = Astro.props;
+const siteUrl = 'https://www.kaplumbingltd.co.nz';
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+const canonical = canonicalUrl || Astro.url.href;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullOgImage} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content="KA Plumbing LTD" />
+<meta property="og:locale" content="en_NZ" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={fullOgImage} />
+
+<!-- Geo -->
+<meta name="geo.region" content="NZ-AUK" />
+<meta name="geo.placename" content="Auckland" />
+
+<!-- Local Business JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "KA Plumbing LTD",
+  "description": "Trusted, locally owned plumbing and drain laying services in Auckland. Certified plumber and drain layer offering 24/7 emergency service.",
+  "url": siteUrl,
+  "telephone": "+64-21-277-9151",
+  "email": "KAPlumbingLtd@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Auckland",
+    "addressRegion": "Auckland",
+    "addressCountry": "NZ"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Auckland"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$",
+  "image": `${siteUrl}/images/logos/logo-square.webp`,
+  "sameAs": [],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Plumbing Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Repair" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovations & Maintenance" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New Installations" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hot Water Systems" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drain Laying" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consulting" } }
+    ]
+  }
+})} />

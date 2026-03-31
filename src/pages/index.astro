@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import VideoHero from '../components/sections/VideoHero.astro';
+import ServicesGrid from '../components/sections/ServicesGrid.astro';
+import StatsCounter from '../components/sections/StatsCounter.astro';
+import AboutSnippet from '../components/sections/AboutSnippet.astro';
+import BeforeAfterSlider from '../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../components/sections/TestimonialScroller.astro';
+import TrustScroller from '../components/sections/TrustScroller.astro';
+import ServiceAreaMap from '../components/sections/ServiceAreaMap.astro';
+import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
+import CTABanner from '../components/sections/CTABanner.astro';
+---
+
+<BaseLayout
+  title="KA Plumbing LTD — Trusted Plumber Auckland | 24/7 Emergency Service"
+  description="Auckland's trusted plumber and drain layer. KA Plumbing LTD offers 24/7 emergency plumbing, repairs, renovations, hot water systems, and drain laying. Call Kurt on 021 277 9151."
+>
+  <VideoHero
+    videoSrc="/videos/kitchen-transform.mp4"
+    posterSrc="/videos/kitchen-poster.jpg"
+    headline="Trusted, Local Plumbing — Done Right the First Time"
+    subheadline="Certified plumber and drain layer serving all of Auckland. From emergency repairs to complete renovations, Kurt delivers honest, quality workmanship every time."
+  />
+
+  <ServicesGrid />
+
+  <StatsCounter />
+
+  <AboutSnippet />
+
+  <BeforeAfterSlider />
+
+  <TestimonialScroller />
+
+  <TrustScroller />
+
+  <ServiceAreaMap />
+
+  <EmergencyBanner />
+
+  <CTABanner />
+</BaseLayout>
