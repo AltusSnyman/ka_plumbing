@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
+import ShutterText from '../components/ui/ShutterText.astro';
 import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
 ---
 
@@ -19,7 +19,7 @@ import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
     <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-32 flex items-center justify-center w-full">
       <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">
         <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Get In Touch</span>
-        <h1 class="font-heading text-h1 text-primary mb-4">Contact KA Plumbing</h1>
+        <h1 class="text-h1 mb-4"><ShutterText text="Contact KA Plumbing" /></h1>
         <p class="text-text-muted max-w-md mx-auto text-lg">Have a question or need a quote? Kurt personally responds to every enquiry.</p>
       </div>
     </div>

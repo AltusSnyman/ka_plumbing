@@ -1,0 +1,58 @@
+---
+interface Props {
+  text: string;
+  class?: string;
+}
+
+const { text, class: className = '' } = Astro.props;
+
+// Split into words, then characters within each word — prevents mid-word line breaks
+const words = text.split(' ');
+let charIndex = 0;
+---
+
+<div class:list={['shutter-text flex flex-wrap justify-center items-center w-full gap-y-1', className]} data-shutter>
+  {words.map((word, wordIdx) => (
+    <>
+      <span class="shutter-word inline-flex whitespace-nowrap">
+        {word.split('').map((char) => {
+          const i = charIndex++;
+          return (
+            <span class="shutter-char relative overflow-hidden inline-block" data-char-index={i}>
+              <span class="shutter-main inline-block opacity-0 font-heading text-primary" style="filter: blur(10px);">
+                {char}
+              </span>
+              <span
+                class="shutter-slice shutter-slice-top absolute inset-0 inline-block font-heading text-accent pointer-events-none"
+                style="clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%); transform: translateX(-100%); opacity: 0;"
+                aria-hidden="true"
+              >{char}</span>
+              <span
+                class="shutter-slice shutter-slice-mid absolute inset-0 inline-block font-heading text-primary-light pointer-events-none"
+                style="clip-path: polygon(0 35%, 100% 35%, 100% 65%, 0 65%); transform: translateX(100%); opacity: 0;"
+                aria-hidden="true"
+              >{char}</span>
+              <span
+                class="shutter-slice shutter-slice-bot absolute inset-0 inline-block font-heading text-accent pointer-events-none"
+                style="clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%); transform: translateX(-100%); opacity: 0;"
+                aria-hidden="true"
+              >{char}</span>
+            </span>
+          );
+        })}
+      </span>
+      {/* Word space — wrappable break point */}
+      {wordIdx < words.length - 1 && (
+        <span class="shutter-char relative overflow-hidden inline-block" data-char-index={charIndex++}>
+          <span class="shutter-main inline-block opacity-0 font-heading text-primary" style="filter: blur(10px);">&nbsp;</span>
+        </span>
+      )}
+    </>
+  ))}
+</div>
+
+<style>
+  .shutter-char {
+    line-height: 1.15;
+  }
+</style>

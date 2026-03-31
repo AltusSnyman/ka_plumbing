@@ -114,6 +114,68 @@ const currentPath = Astro.url.pathname;
       }
     });
 
+    // Shutter text animation
+    document.querySelectorAll('[data-shutter]').forEach((container) => {
+      const chars = container.querySelectorAll('.shutter-char');
+
+      chars.forEach((charEl, i) => {
+        const main = charEl.querySelector('.shutter-main') as HTMLElement;
+        const sliceTop = charEl.querySelector('.shutter-slice-top') as HTMLElement;
+        const sliceMid = charEl.querySelector('.shutter-slice-mid') as HTMLElement;
+        const sliceBot = charEl.querySelector('.shutter-slice-bot') as HTMLElement;
+
+        const baseDelay = i * 0.04;
+
+        // Main character: blur in
+        gsap.to(main, {
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 0.8,
+          delay: baseDelay + 0.3,
+          ease: 'power2.out',
+        });
+
+        // Top slice: sweep left to right
+        gsap.fromTo(sliceTop,
+          { x: '-100%', opacity: 0 },
+          {
+            x: '100%',
+            opacity: 1,
+            duration: 0.7,
+            delay: baseDelay,
+            ease: 'power2.inOut',
+            onComplete: () => { sliceTop.style.opacity = '0'; },
+          }
+        );
+
+        // Middle slice: sweep right to left
+        gsap.fromTo(sliceMid,
+          { x: '100%', opacity: 0 },
+          {
+            x: '-100%',
+            opacity: 1,
+            duration: 0.7,
+            delay: baseDelay + 0.1,
+            ease: 'power2.inOut',
+            onComplete: () => { sliceMid.style.opacity = '0'; },
+          }
+        );
+
+        // Bottom slice: sweep left to right
+        gsap.fromTo(sliceBot,
+          { x: '-100%', opacity: 0 },
+          {
+            x: '100%',
+            opacity: 1,
+            duration: 0.7,
+            delay: baseDelay + 0.2,
+            ease: 'power2.inOut',
+            onComplete: () => { sliceBot.style.opacity = '0'; },
+          }
+        );
+      });
+    });
+
     // Stats counter animation
     document.querySelectorAll('.stat-counter').forEach((el) => {
       const target = parseInt(el.getAttribute('data-target') || '0');

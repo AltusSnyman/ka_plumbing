@@ -1,4 +1,6 @@
 ---
+import ShutterText from '../ui/ShutterText.astro';
+
 interface Props {
   videoSrc: string;
   posterSrc: string;
@@ -41,8 +43,8 @@ const {
   <!-- Content — centered liquid glass card over clear video -->
   <div class="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6 py-32 flex items-center justify-center">
     <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-16 rounded-2xl">
-      <h1 class="font-heading text-h1 md:text-hero text-primary leading-tight mb-4">
-        {headline}
+      <h1 class="text-h1 md:text-hero leading-tight mb-4">
+        <ShutterText text={headline} />
       </h1>
       <p class="text-text text-lg mb-8 leading-relaxed max-w-lg mx-auto">
         {subheadline}
