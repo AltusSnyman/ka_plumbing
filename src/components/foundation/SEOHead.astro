@@ -4,10 +4,11 @@ interface Props {
   description: string;
   ogImage?: string;
   canonicalUrl?: string;
+  additionalSchemas?: Record<string, any>[];
 }
 
-const { title, description, ogImage = '/images/og-default.jpg', canonicalUrl } = Astro.props;
-const siteUrl = 'https://www.kaplumbingltd.co.nz';
+const { title, description, ogImage = '/images/og-default.webp', canonicalUrl, additionalSchemas } = Astro.props;
+const siteUrl = 'https://kaplumbingltd.co.nz';
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 const canonical = canonicalUrl || Astro.url.href;
 ---
@@ -54,15 +55,38 @@ const canonical = canonicalUrl || Astro.url.href;
     "@type": "City",
     "name": "Auckland"
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
   "priceRange": "$$",
   "image": `${siteUrl}/images/logos/logo-square.webp`,
   "sameAs": [],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "6",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    { "@type": "Review", "author": { "@type": "Person", "name": "Sarah M." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Kurt was fantastic! He arrived on time, diagnosed the issue quickly, and had our burst pipe fixed within the hour. Highly recommend KA Plumbing." },
+    { "@type": "Review", "author": { "@type": "Person", "name": "James T." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "We use KA Plumbing for all our rental properties. Kurt is reliable, professional, and always communicates clearly. Best plumber in Auckland." },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Maria L." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Kurt handled our entire centre's plumbing upgrade with minimal disruption. His attention to safety and compliance was impressive." },
+    { "@type": "Review", "author": { "@type": "Person", "name": "David R." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Complete bathroom renovation done beautifully. Kurt's workmanship is top quality and he kept us informed every step of the way." },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Lisa & Mark W." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Kurt did all the plumbing and drainage for our new build. Professional, certified, and the work passed inspection first time." },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Tony P." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Emergency call-out on a Saturday night — Kurt was there within 30 minutes. Saved us from flooding. Absolute legend." }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Plumbing Services",
@@ -76,3 +100,7 @@ const canonical = canonicalUrl || Astro.url.href;
     ]
   }
 })} />
+
+{additionalSchemas?.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

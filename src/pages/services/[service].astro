@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShutterText from '../../components/ui/ShutterText.astro';
+import BeforeAfterSlider from '../../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../../components/sections/TestimonialScroller.astro';
+import EmergencyBanner from '../../components/sections/EmergencyBanner.astro';
+import CTABanner from '../../components/sections/CTABanner.astro';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../../utils/breadcrumbs';
+import servicesData from '../../data/services-extended.json';
+
+export function getStaticPaths() {
+  return servicesData.map((service) => ({
+    params: { service: service.id },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+
+const siteUrl = 'https://kaplumbingltd.co.nz';
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: service.title,
+  provider: {
+    '@type': 'Plumber',
+    name: 'KA Plumbing LTD',
+    url: siteUrl,
+    telephone: '+64-21-277-9151',
+  },
+  areaServed: { '@type': 'City', name: 'Auckland' },
+  description: service.seoDescription,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'NZD',
+    description: 'Free quote',
+  },
+};
+
+const relatedServices = servicesData.filter((s) => service.relatedServices?.includes(s.id));
+const paragraphs = service.longDescription.split('\n\n');
+
+const processSteps = [
+  { step: '01', title: 'Call or Book Online', desc: 'Reach out by phone or use our online booking form. We respond fast.' },
+  { step: '02', title: 'Free Quote', desc: 'Kurt assesses your needs and provides a clear, upfront quote — no hidden fees.' },
+  { step: '03', title: 'Schedule the Work', desc: 'We book a time that works for you. Flexible scheduling, including weekends.' },
+  { step: '04', title: 'Job Done Right', desc: 'Professional workmanship with a clean finish. We treat your home like our own.' },
+];
+---
+
+<BaseLayout
+  title={service.seoTitle}
+  description={service.seoDescription}
+  canonicalUrl={`${siteUrl}/services/${service.id}/`}
+  additionalSchemas={[
+    buildBreadcrumbSchema([
+      { name: 'Services', path: '/services/' },
+      { name: service.title, path: `/services/${service.id}/` },
+    ]),
+    buildFAQSchema(service.faqs),
+    serviceSchema,
+  ]}
+>
+  <!-- Hero — 16:9 Background Image + Glass Card -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden" aria-label={`${service.title} hero`}>
+    <img
+      src={service.heroImage || service.image}
+      alt={`${service.title} services in Auckland`}
+      width="1920"
+      height="1080"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-32 flex items-center justify-center w-full">
+      <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">{service.title}</span>
+        <h1 class="text-h1 mb-4"><ShutterText text={service.heroHeadline} /></h1>
+        <p class="text-text-muted max-w-md mx-auto text-lg">{service.heroSubheadline}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/booking" class="btn-primary">Get a Free Quote</a>
+          <a href="tel:+64212779151" class="btn-outline">Call 021 277 9151</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Intro — Two Column Layout -->
+  <section class="py-section bg-background" aria-label={`About ${service.title}`}>
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="glass-card-solid p-8 reveal">
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <div class="lg:w-2/5">
+            <img
+              src={service.detailImage || service.image}
+              alt={service.title}
+              width="480"
+              height="480"
+              loading="lazy"
+              class="rounded-lg w-full object-cover aspect-square"
+            />
+          </div>
+          <div class="lg:w-3/5">
+            <h2 class="font-heading text-h3 text-primary mb-2">{service.introHeading || service.title}</h2>
+            <p class="text-accent font-semibold text-sm mb-4">{service.heroSubheadline}</p>
+            {paragraphs.map((paragraph: string) => (
+              <p class="text-text-muted leading-relaxed mb-4 last:mb-0">{paragraph}</p>
+            ))}
+            <div class="mt-6">
+              <a href="/booking" class="btn-primary cursor-pointer">
+                {service.title === 'Consulting' ? 'Book a Consultation' : `Get a ${service.title} Quote`}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-section bg-surface" aria-label="What's included">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">What You Get</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">What's Included</h2>
+        <p class="text-text-muted max-w-xl mx-auto">
+          Every {service.title.toLowerCase()} job comes with certified workmanship, upfront pricing, and our quality guarantee.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto reveal-stagger">
+        {service.includes.map((item: string) => (
+          <div class="glass-card-solid p-5 flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-text-body text-sm">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works — Process Timeline -->
+  <section class="py-section bg-background" aria-label="How we work">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">How It Works</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Simple, Straightforward Process</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+        {processSteps.map((step) => (
+          <div class="glass-card-solid p-6 text-center relative">
+            <div class="text-accent font-heading text-h2 mb-3 opacity-30">{step.step}</div>
+            <h3 class="font-heading text-h4 text-primary mb-2">{step.title}</h3>
+            <p class="text-text-muted text-sm">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Before & After Slider -->
+  <BeforeAfterSlider />
+
+  <!-- FAQ -->
+  <section class="py-section bg-background" aria-label="Frequently asked questions">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Common Questions</h2>
+      </div>
+
+      <div class="space-y-4 reveal">
+        {service.faqs.map((faq: { q: string; a: string }) => (
+          <details class="glass-card-solid group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-semibold text-primary list-none">
+              <span>{faq.q}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-text-muted text-sm leading-relaxed border-t border-primary/5 pt-4">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <TestimonialScroller />
+
+  <!-- Related Services -->
+  {relatedServices.length > 0 && (
+    <section class="py-section bg-surface" aria-label="Related services">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="text-center mb-8 reveal">
+          <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Explore More</span>
+          <h2 class="font-heading text-h3 text-primary">Related Services</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto reveal-stagger">
+          {relatedServices.map((related) => (
+            <a href={`/services/${related.id}/`} class="glass-card-solid p-6 hover:border-accent/30 transition-colors group">
+              <h3 class="font-heading text-primary group-hover:text-accent transition-colors mb-2">{related.title}</h3>
+              <p class="text-text-muted text-sm">{related.heroSubheadline}</p>
+              <span class="inline-block mt-3 text-accent text-sm font-semibold group-hover:underline">Learn More &rarr;</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA + Emergency -->
+  <CTABanner
+    headline={`Need ${service.title}?`}
+    subheadline="Get a free, no-obligation quote. Kurt personally responds to every enquiry."
+  />
+  <EmergencyBanner />
+</BaseLayout>

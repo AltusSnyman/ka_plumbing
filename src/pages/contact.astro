@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbs';
 import ShutterText from '../components/ui/ShutterText.astro';
 import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
 ---
@@ -7,6 +8,8 @@ import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
 <BaseLayout
   title="Contact KA Plumbing LTD — Auckland Plumber | 021 277 9151"
   description="Contact KA Plumbing LTD for all your plumbing needs in Auckland. Call Kurt on 021 277 9151 or send us a message. Available 24/7 for emergencies."
+  canonicalUrl="https://kaplumbingltd.co.nz/contact/"
+  additionalSchemas={[buildBreadcrumbSchema([{ name: 'Contact', path: '/contact/' }])]}
 >
   <!-- Hero -->
   <section class="relative min-h-[50vh] flex items-center overflow-hidden" aria-label="Contact hero">

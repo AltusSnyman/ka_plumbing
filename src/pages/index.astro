@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbs';
 
 import VideoHero from '../components/sections/VideoHero.astro';
 import ServicesGrid from '../components/sections/ServicesGrid.astro';
@@ -16,13 +17,32 @@ import CTABanner from '../components/sections/CTABanner.astro';
 <BaseLayout
   title="KA Plumbing LTD — Trusted Plumber Auckland | 24/7 Emergency Service"
   description="Auckland's trusted plumber and drain layer. KA Plumbing LTD offers 24/7 emergency plumbing, repairs, renovations, hot water systems, and drain laying. Call Kurt on 021 277 9151."
+  canonicalUrl="https://kaplumbingltd.co.nz/"
+  additionalSchemas={[buildBreadcrumbSchema([])]}
 >
   <VideoHero
     videoSrc="/videos/kitchen-transform.mp4"
-    posterSrc="/videos/kitchen-poster.jpg"
+    posterSrc="/videos/kitchen-poster.webp"
     headline="Trusted, Local Plumbing — Done Right the First Time"
     subheadline="Certified plumber and drain layer serving all of Auckland. From emergency repairs to complete renovations, Kurt delivers honest, quality workmanship every time."
   />
+
+  <!-- SEO Intro Section -->
+  <section class="py-12 bg-background" aria-label="Auckland plumbing services introduction">
+    <div class="max-w-[1200px] mx-auto px-6 reveal">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-heading text-h2 text-primary mb-6">Auckland Plumbing & Drain Laying Services</h2>
+        <p class="text-text-muted text-lg leading-relaxed">
+          KA Plumbing LTD provides professional Auckland plumbing services for homes and businesses across the city.
+          As a certified plumber and certified drain layer, Kurt brings dual qualifications to every job — from
+          emergency plumber callouts on the North Shore to bathroom renovations in Central Auckland. Whether you need
+          a burst pipe fixed in Takapuna, a hot water cylinder replaced in Albany, or drainage solutions in Devonport,
+          we deliver honest advice, quality workmanship, and fair pricing. Available 24/7 for emergencies across all
+          Auckland suburbs.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <ServicesGrid />
 

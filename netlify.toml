@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirect www to apex domain (301 permanent)
+[[redirects]]
+  from = "https://www.kaplumbingltd.co.nz/*"
+  to = "https://kaplumbingltd.co.nz/:splat"
+  status = 301
+  force = true

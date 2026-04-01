@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../utils/breadcrumbs';
 import ShutterText from '../components/ui/ShutterText.astro';
 ---
 
 <BaseLayout
   title="Book a Plumber Auckland — KA Plumbing LTD | Free Quote"
   description="Book a plumbing service with KA Plumbing LTD in Auckland. Easy online booking for repairs, renovations, hot water, drain laying, and more. Free quotes available."
+  canonicalUrl="https://kaplumbingltd.co.nz/booking/"
+  additionalSchemas={[buildBreadcrumbSchema([{ name: 'Book a Service', path: '/booking/' }])]}
 >
   <!-- Hero -->
   <section class="relative min-h-[50vh] flex items-center overflow-hidden" aria-label="Booking hero">

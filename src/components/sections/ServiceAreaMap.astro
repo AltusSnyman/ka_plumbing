@@ -1,11 +1,54 @@
 ---
-const suburbs = [
-  'Mt Eden', 'Ponsonby', 'Grey Lynn', 'Remuera', 'Parnell',
-  'Newmarket', 'Epsom', 'Mt Albert', 'Avondale', 'Henderson',
-  'New Lynn', 'Titirangi', 'Glen Eden', 'Te Atatu', 'Westmere',
-  'Herne Bay', 'CBD', 'Grafton', 'Onehunga', 'Royal Oak',
-  'Mt Roskill', 'Sandringham', 'Kingsland', 'Morningside', 'Blockhouse Bay',
-];
+const suburbGroups: Record<string, { name: string; slug: string }[]> = {
+  'North Shore': [
+    { name: 'Paremoremo', slug: 'paremoremo' },
+    { name: 'Albany', slug: 'albany' },
+    { name: 'Greenhithe', slug: 'greenhithe' },
+    { name: 'Long Bay', slug: 'long-bay' },
+    { name: 'Torbay', slug: 'torbay' },
+    { name: 'Browns Bay', slug: 'browns-bay' },
+    { name: 'Glenfield', slug: 'glenfield' },
+    { name: 'Beach Haven', slug: 'beach-haven' },
+    { name: 'Takapuna', slug: 'takapuna' },
+    { name: 'Devonport', slug: 'devonport' },
+    { name: 'Milford', slug: 'milford' },
+    { name: 'Birkenhead', slug: 'birkenhead' },
+    { name: 'Northcote', slug: 'northcote' },
+    { name: 'Sunnynook', slug: 'sunnynook' },
+    { name: 'Mairangi Bay', slug: 'mairangi-bay' },
+  ],
+  'Central Auckland': [
+    { name: 'Mt Eden', slug: 'mt-eden' },
+    { name: 'Ponsonby', slug: 'ponsonby' },
+    { name: 'Grey Lynn', slug: 'grey-lynn' },
+    { name: 'Remuera', slug: 'remuera' },
+    { name: 'Parnell', slug: 'parnell' },
+    { name: 'Newmarket', slug: 'newmarket' },
+    { name: 'Epsom', slug: 'epsom' },
+    { name: 'CBD', slug: 'cbd' },
+    { name: 'Grafton', slug: 'grafton' },
+    { name: 'Herne Bay', slug: 'herne-bay' },
+    { name: 'Westmere', slug: 'westmere' },
+  ],
+  'West Auckland': [
+    { name: 'Mt Albert', slug: 'mt-albert' },
+    { name: 'Avondale', slug: 'avondale' },
+    { name: 'Henderson', slug: 'henderson' },
+    { name: 'New Lynn', slug: 'new-lynn' },
+    { name: 'Titirangi', slug: 'titirangi' },
+    { name: 'Glen Eden', slug: 'glen-eden' },
+    { name: 'Te Atatu', slug: 'te-atatu' },
+    { name: 'Blockhouse Bay', slug: 'blockhouse-bay' },
+  ],
+  'South Auckland': [
+    { name: 'Onehunga', slug: 'onehunga' },
+    { name: 'Royal Oak', slug: 'royal-oak' },
+    { name: 'Mt Roskill', slug: 'mt-roskill' },
+    { name: 'Sandringham', slug: 'sandringham' },
+    { name: 'Kingsland', slug: 'kingsland' },
+    { name: 'Morningside', slug: 'morningside' },
+  ],
+};
 ---
 
 <section class="py-section bg-surface" aria-label="Service areas in Auckland">
@@ -14,7 +57,7 @@ const suburbs = [
       <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Service Area</span>
       <h2 class="font-heading text-h2 text-primary mb-4">Serving All of Auckland</h2>
       <p class="text-text-muted max-w-xl mx-auto">
-        From the CBD to the Western suburbs, KA Plumbing covers all of Auckland.
+        From the North Shore to West Auckland, KA Plumbing covers all of Auckland.
         No job is too far — we come to you with our fully equipped service vehicle.
       </p>
     </div>
@@ -38,21 +81,29 @@ const suburbs = [
 
       <!-- Suburbs Grid -->
       <div class="reveal flex flex-col gap-6">
-        <div class="glass-card-solid p-8 flex-1">
-          <h3 class="font-heading text-h4 text-primary mb-4">Areas We Cover</h3>
-          <div class="flex flex-wrap gap-2">
-            {suburbs.map((suburb) => (
-              <span class="inline-block px-3 py-1.5 bg-primary/5 text-primary text-xs font-medium rounded-full hover:bg-accent/10 hover:text-accent transition-colors cursor-default">
-                {suburb}
-              </span>
-            ))}
-          </div>
+        <div class="glass-card-solid p-8 flex-1 overflow-y-auto max-h-[500px] lg:max-h-none">
+          {Object.entries(suburbGroups).map(([region, suburbs]) => (
+            <div class="mb-5 last:mb-0">
+              <h3 class="font-heading text-sm font-semibold text-primary uppercase tracking-wide mb-2">{region}</h3>
+              <div class="flex flex-wrap gap-2">
+                {suburbs.map((suburb) => (
+                  <a
+                    href={`/areas/${suburb.slug}/`}
+                    title={`Plumber in ${suburb.name}, Auckland`}
+                    class="inline-block px-3 py-1.5 bg-primary/5 text-primary text-xs font-medium rounded-full hover:bg-accent/10 hover:text-accent transition-colors"
+                  >
+                    {suburb.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
           <p class="text-text-muted text-xs mt-4">
-            Don't see your area? <a href="/contact" class="text-accent hover:underline cursor-pointer">Contact us</a> — we likely cover it.
+            Don't see your area? <a href="/contact" class="text-accent hover:underline">Contact us</a> — we likely cover it.
           </p>
         </div>
 
-        <a href="/booking" class="btn-primary cursor-pointer self-start">
+        <a href="/booking" class="btn-primary self-start">
           Book a Service in Your Area
         </a>
       </div>

@@ -1,0 +1,14 @@
+# KA Plumbing LTD — https://kaplumbingltd.co.nz
+User-agent: *
+Allow: /
+Sitemap: https://kaplumbingltd.co.nz/sitemap-index.xml
+
+# AI search crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /

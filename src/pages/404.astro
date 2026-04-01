@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | KA Plumbing LTD"
+  description="The page you're looking for doesn't exist. Contact KA Plumbing LTD for plumbing and drain laying services across Auckland. Call 021 277 9151."
+>
+  <!-- Hero -->
+  <section class="relative min-h-[50vh] flex items-center overflow-hidden" aria-label="Page not found">
+    <img
+      src="/images/backgrounds/pipes-business.webp"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-32 flex items-center justify-center w-full">
+      <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">404 Error</span>
+        <h1 class="text-h1 mb-4">Page Not Found</h1>
+        <p class="text-text-muted max-w-md mx-auto text-lg mb-8">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="btn-primary">Back to Home</a>
+          <a href="/services" class="btn-outline">View Services</a>
+          <a href="/contact" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Banner -->
+  <EmergencyBanner />
+</BaseLayout>

@@ -3,7 +3,7 @@
     "id": "plumbing-repair",
     "title": "Plumbing Repair",
     "subtitle": "Stop the drip before it becomes a flood",
-    "description": "A small leak left alone can quietly cause thousands in damage. Kurt responds fast — diagnosing the problem accurately and fixing it on the spot so you're not left waiting or wondering. Whether it's a burst pipe at 2am or a tap that won't stop dripping, you get a certified plumber who carries the parts and knows Auckland homes inside out. One visit, fixed right, no callbacks needed.",
+    "description": "A small leak left alone can quietly cause thousands in damage. Kurt responds fast — diagnosing the problem accurately and fixing it on the spot so you're not left waiting or wondering. Whether it's a burst pipe at 2am in Takapuna or a tap that won't stop dripping in Browns Bay, you get a certified plumber who carries the parts and knows Auckland homes inside out. One visit, fixed right, no callbacks needed.",
     "icon": "wrench",
     "cta": "Request a Repair",
     "image": "/images/services/plumbing-repair.webp"
@@ -30,7 +30,7 @@
     "id": "hot-water",
     "title": "Hot Water Systems",
     "subtitle": "No one should start their day with a cold shower",
-    "description": "When your hot water dies, you need it sorted today — not next week. Kurt carries common cylinder parts on the van and can often restore your hot water the same day. If your system is past its best, he'll walk you through your replacement options honestly — no upselling, just straight advice on what suits your household and budget. We install, repair, and replace all major brands across Auckland.",
+    "description": "When your hot water dies, you need it sorted today — not next week. Kurt carries common cylinder parts on the van and can often restore your hot water the same day. If your system is past its best, he'll walk you through your replacement options honestly — no upselling, just straight advice on what suits your household and budget. We install, repair, and replace all major brands — from the North Shore to South Auckland.",
     "icon": "flame",
     "cta": "Fix My Hot Water",
     "image": "/images/services/hot-water.webp"
@@ -39,10 +39,10 @@
     "id": "drain-laying",
     "title": "Drain Laying",
     "subtitle": "Certified drain layer — compliant, consented, done right",
-    "description": "Drainage work isn't something you want to cut corners on. As a certified drain layer, Kurt is licensed to design, install, and repair stormwater and wastewater systems that meet council requirements. That means your project stays compliant and you avoid costly rework down the line. From new subdivision drainage to replacing old clay pipes, every job is documented, inspected, and built to code.",
+    "description": "Drainage work isn't something you want to cut corners on. As a certified drain layer, Kurt is licensed to design, install, and repair stormwater and wastewater systems that meet council requirements. That means your project stays compliant and you avoid costly rework down the line. From new subdivision drainage in Albany to replacing old clay pipes in Devonport, every job is documented, inspected, and built to code.",
     "icon": "layers",
     "cta": "Get Drain Help",
-    "image": "/images/services/drain-laying.jpg"
+    "image": "/images/services/drain-laying.webp"
   },
   {
     "id": "consulting",

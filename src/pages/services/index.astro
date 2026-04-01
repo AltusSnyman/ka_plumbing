@@ -1,12 +1,13 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
-import VideoHero from '../components/sections/VideoHero.astro';
-import BeforeAfterSlider from '../components/sections/BeforeAfterSlider.astro';
-import TestimonialScroller from '../components/sections/TestimonialScroller.astro';
-import EmergencyBanner from '../components/sections/EmergencyBanner.astro';
-import CTABanner from '../components/sections/CTABanner.astro';
-import services from '../data/services.json';
+import VideoHero from '../../components/sections/VideoHero.astro';
+import BeforeAfterSlider from '../../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../../components/sections/TestimonialScroller.astro';
+import EmergencyBanner from '../../components/sections/EmergencyBanner.astro';
+import CTABanner from '../../components/sections/CTABanner.astro';
+import services from '../../data/services.json';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../../utils/breadcrumbs';
 
 const icons: Record<string, string> = {
   wrench: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
@@ -26,7 +27,7 @@ const processSteps = [
 
 const faqs = [
   { q: 'Do you offer free quotes?', a: 'Yes! We provide free, no-obligation quotes for all plumbing and drain laying work. Call us or book online to get started.' },
-  { q: 'What areas do you serve?', a: 'We serve all of Auckland — from the CBD to the western suburbs and everywhere in between.' },
+  { q: 'What areas do you serve?', a: 'We serve all of Auckland including the North Shore (Takapuna, Albany, Browns Bay, Devonport and more), Central Auckland, West Auckland, and South Auckland. No job is too far.' },
   { q: 'Are you available for emergencies?', a: 'Absolutely. Kurt is available 24/7 for plumbing emergencies including burst pipes, flooding, and blocked drains. Call 021 277 9151 anytime.' },
   { q: 'Are you a certified plumber?', a: 'Yes, Kurt is a fully certified plumber and certified drain layer, licensed to carry out all plumbing and drainage work in New Zealand.' },
   { q: 'How quickly can you get to my property?', a: 'For emergencies, we aim to arrive within 30-60 minutes across Auckland. For scheduled work, we offer flexible booking including weekends.' },
@@ -36,10 +37,15 @@ const faqs = [
 <BaseLayout
   title="Plumbing Services Auckland — KA Plumbing LTD | Repairs, Renovations, Drain Laying"
   description="Expert plumbing services in Auckland: repairs, renovations, new installations, hot water systems, drain laying, and consulting. Certified plumber available 24/7. Get a free quote."
+  canonicalUrl="https://kaplumbingltd.co.nz/services/"
+  additionalSchemas={[
+    buildBreadcrumbSchema([{ name: 'Services', path: '/services/' }]),
+    buildFAQSchema(faqs),
+  ]}
 >
   <VideoHero
     videoSrc="/videos/bathroom-transform.mp4"
-    posterSrc="/videos/bathroom-poster.jpg"
+    posterSrc="/videos/bathroom-poster.webp"
     headline="Expert Plumbing Services for Every Need"
     subheadline="From quick repairs to complete renovations, KA Plumbing delivers certified, professional plumbing and drain laying services across Auckland."
     ctaPrimary={{ label: 'Book a Service', href: '/booking' }}
@@ -51,7 +57,7 @@ const faqs = [
     <div class="max-w-[1200px] mx-auto px-6">
       <div class="text-center mb-16 reveal">
         <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</span>
-        <h2 class="font-heading text-h2 text-primary mb-4">Comprehensive Plumbing Solutions</h2>
+        <h2 class="font-heading text-h2 text-primary mb-4">Auckland Plumbing & Drain Laying Solutions</h2>
         <p class="text-text-muted max-w-xl mx-auto">
           Whatever your plumbing needs, Kurt has the expertise and certifications to get it done right.
         </p>
@@ -78,9 +84,14 @@ const faqs = [
                 <h3 class="font-heading text-h3 text-primary mb-1">{service.title}</h3>
                 <p class="text-accent font-semibold text-sm mb-3">{service.subtitle}</p>
                 <p class="text-text-muted leading-relaxed mb-6">{service.description}</p>
-                <a href="/booking" class="btn-primary cursor-pointer">
-                  {service.cta}
-                </a>
+                <div class="flex flex-wrap gap-3">
+                  <a href={`/services/${service.id}/`} class="btn-primary cursor-pointer">
+                    Learn More
+                  </a>
+                  <a href="/booking" class="btn-outline cursor-pointer">
+                    {service.cta}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

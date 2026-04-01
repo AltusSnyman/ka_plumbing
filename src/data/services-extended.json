@@ -1,0 +1,170 @@
+[
+  {
+    "id": "plumbing-repair",
+    "title": "Plumbing Repair",
+    "seoTitle": "Plumbing Repair Auckland | Emergency Plumber | KA Plumbing LTD",
+    "seoDescription": "Fast, reliable plumbing repairs across Auckland. Burst pipes, leaking taps, blocked drains. Certified plumber available 24/7. Free quotes. Call 021 277 9151.",
+    "heroHeadline": "Fast, Reliable Plumbing Repairs Across Auckland",
+    "heroSubheadline": "From burst pipes to leaking taps — Kurt gets it sorted fast so you can get back to normal.",
+    "image": "/images/services/plumbing-repair.webp",
+    "heroImage": "/images/services/heroes/plumbing-repair.webp",
+    "detailImage": "/images/services/detail/plumbing-repair.webp",
+    "introHeading": "Auckland's Go-To Plumber for Fast, Permanent Repairs",
+    "longDescription": "When something goes wrong with your plumbing, you need it fixed fast — not in a few days, not after three phone calls, but now. KA Plumbing provides reliable plumbing repair services across all of Auckland, from the North Shore to South Auckland.\n\nKurt is a fully certified plumber who arrives equipped to handle the most common plumbing repairs in a single visit. Whether you're dealing with a burst pipe flooding your kitchen in Takapuna, a persistently dripping tap in Glenfield, or a toilet that won't stop running in Devonport, the diagnosis is accurate and the fix is permanent.\n\nOur plumbing repair services cover leaking pipes and joints, burst pipes and water main repairs, dripping and faulty taps, running or blocked toilets, water pressure issues, shower and bath repairs, washing machine and dishwasher connections, and general plumbing maintenance.\n\nEvery repair comes with honest, upfront pricing — you'll know the cost before any work begins. No call-out fees for standard repairs, and 24/7 availability for genuine emergencies.",
+    "includes": [
+      "Burst pipe and water main repairs",
+      "Leaking tap and mixer replacement",
+      "Toilet repairs and replacements",
+      "Water pressure diagnosis and fixes",
+      "Shower, bath, and basin repairs",
+      "Washing machine and dishwasher connections",
+      "General plumbing maintenance"
+    ],
+    "faqs": [
+      { "q": "How fast can you respond to a plumbing emergency in Auckland?", "a": "For emergencies like burst pipes or flooding, Kurt aims to arrive within 30-60 minutes across Auckland, including the North Shore, Central, and West Auckland." },
+      { "q": "Do you charge a call-out fee for plumbing repairs?", "a": "No call-out fee for standard plumbing repairs during business hours. Emergency after-hours callouts may have a small surcharge, always disclosed upfront." },
+      { "q": "Can you repair all types of pipes?", "a": "Yes — copper, PEX, polybutylene, galvanised, and PVC. Kurt carries common fittings on the van for fast same-day repairs." }
+    ],
+    "relatedServices": ["hot-water", "new-installations"]
+  },
+  {
+    "id": "renovations",
+    "title": "Renovations & Maintenance",
+    "seoTitle": "Bathroom & Kitchen Renovation Plumber Auckland | KA Plumbing LTD",
+    "seoDescription": "Expert renovation plumbing for bathrooms and kitchens across Auckland. Certified plumber works with your builder or directly with you. Free quotes.",
+    "heroHeadline": "Renovation Plumbing Done Right the First Time",
+    "heroSubheadline": "Your dream bathroom or kitchen deserves plumbing that's built to last. Kurt works alongside your builder or directly with you.",
+    "image": "/images/services/renovations.webp",
+    "heroImage": "/images/services/heroes/renovations.webp",
+    "detailImage": "/images/services/detail/renovations.webp",
+    "introHeading": "Bathroom & Kitchen Renovation Plumbing Experts",
+    "longDescription": "A renovation is only as good as the plumbing behind the walls. KA Plumbing provides specialist renovation plumbing services for bathrooms, kitchens, and laundries across Auckland — from complete gut-and-rebuild projects to targeted upgrades.\n\nKurt coordinates directly with your builder, tiler, and other trades to ensure the plumbing is done on schedule and to code. Whether you're renovating a heritage villa in Ponsonby, updating a townhouse bathroom on the North Shore, or fitting out a new kitchen in Albany, every connection is pressure-tested and council-compliant.\n\nOur renovation plumbing services include bathroom plumbing — relocating waste and water lines, fitting showers, baths, vanities, and heated towel rails. Kitchen plumbing — dishwasher connections, sink and tap installations, waste disposal units, and gas conversions. Laundry plumbing — washing machine connections, tub installations, and drainage upgrades. General maintenance — preventive checks, re-washering, and pipe inspections.\n\nKurt is also a certified drain layer, which means drainage modifications during your renovation don't require a second contractor. One tradesperson, one point of contact, fewer delays.",
+    "includes": [
+      "Full bathroom plumbing fit-outs",
+      "Kitchen sink, tap, and dishwasher plumbing",
+      "Waste line and water line relocation",
+      "Heated towel rail installation",
+      "Laundry plumbing upgrades",
+      "Drainage modifications (certified drain layer)",
+      "Coordination with builders and other trades"
+    ],
+    "faqs": [
+      { "q": "Can you handle the drainage work during a renovation too?", "a": "Yes — Kurt is a certified drain layer as well as a certified plumber, so all plumbing and drainage work is handled by one tradesperson. No need for a second contractor." },
+      { "q": "Do you work with builders on renovation projects?", "a": "Absolutely. Kurt coordinates directly with builders, tilers, and other trades to ensure plumbing work fits the project timeline." },
+      { "q": "How long does renovation plumbing typically take?", "a": "A standard bathroom rough-in takes 1-2 days. Final fit-off (connecting fixtures) is usually half a day. Kurt provides a timeline during the quote." }
+    ],
+    "relatedServices": ["new-installations", "consulting"]
+  },
+  {
+    "id": "new-installations",
+    "title": "New Installations",
+    "seoTitle": "Plumbing Installation Auckland | New Build Plumber | KA Plumbing LTD",
+    "seoDescription": "Professional plumbing installations across Auckland. New builds, appliance connections, fixture upgrades. Certified plumber. Passes inspection first time.",
+    "heroHeadline": "Professional Plumbing Installations Across Auckland",
+    "heroSubheadline": "From new builds to appliance upgrades — fitted properly the first time, guaranteed.",
+    "image": "/images/services/new-installations.webp",
+    "heroImage": "/images/services/heroes/new-installations.webp",
+    "detailImage": "/images/services/detail/new-installations.webp",
+    "introHeading": "New Build & Upgrade Plumbing — Certified & Code-Compliant",
+    "longDescription": "Whether you're building a new home in Albany, adding a granny flat in Beach Haven, or simply upgrading your fixtures in Takapuna, KA Plumbing delivers installation work that passes inspection the first time.\n\nKurt handles the full range of plumbing installations to New Zealand standards. New build plumbing from rough-in to final fit-off, appliance connections including dishwashers, washing machines, and waste disposals, fixture upgrades including taps, toilets, basins, showers, and baths, water filtration system installation, outdoor plumbing for garden taps, water features, and irrigation connections.\n\nEvery installation comes with clear communication about what's needed, an upfront quote with no hidden costs, and workmanship that's built to last. Most standard installations are completed in a single visit, minimising disruption to your household.\n\nAs a certified plumber, all installation work meets the New Zealand Building Code and is signed off properly — protecting your home's compliance and your peace of mind.",
+    "includes": [
+      "New build plumbing (rough-in to fit-off)",
+      "Dishwasher and washing machine connections",
+      "Toilet, basin, and tap installations",
+      "Shower and bath installations",
+      "Water filtration systems",
+      "Outdoor taps and garden plumbing",
+      "Waste disposal unit installation"
+    ],
+    "faqs": [
+      { "q": "Can you do the plumbing for a new build from start to finish?", "a": "Yes — from initial rough-in through to final fit-off and sign-off. Kurt works to your building schedule and coordinates with other trades." },
+      { "q": "Do installations pass council inspection?", "a": "Every installation is done to NZ Building Code standards. Kurt's work passes inspection first time — avoiding costly re-inspection fees." },
+      { "q": "How quickly can you install a new appliance?", "a": "Most appliance connections (dishwasher, washing machine, etc.) are completed in under 2 hours in a single visit." }
+    ],
+    "relatedServices": ["plumbing-repair", "renovations"]
+  },
+  {
+    "id": "hot-water",
+    "title": "Hot Water Systems",
+    "seoTitle": "Hot Water Cylinder Auckland | Repair & Replacement | KA Plumbing LTD",
+    "seoDescription": "Hot water cylinder repair, replacement, and installation across Auckland. Rheem & Rinnai certified installer. Same-day service available. Call 021 277 9151.",
+    "heroHeadline": "Hot Water Repairs & Replacements — Same Day Service",
+    "heroSubheadline": "No one should start their day with a cold shower. Kurt carries common parts on the van for fast same-day hot water fixes.",
+    "image": "/images/services/hot-water.webp",
+    "heroImage": "/images/services/heroes/hot-water.webp",
+    "detailImage": "/images/services/detail/hot-water.webp",
+    "introHeading": "Auckland's Trusted Hot Water Cylinder Specialists",
+    "longDescription": "When your hot water goes out, you want it back today — not next week. KA Plumbing provides fast hot water cylinder repair and replacement services across all of Auckland, from the North Shore to South Auckland.\n\nKurt carries common hot water cylinder parts on the van and can often restore your hot water the same day. If your system is beyond repair, he'll walk you through replacement options honestly — electric cylinders, gas continuous flow, heat pumps — matching the right system to your household size, usage patterns, and budget.\n\nWe install, repair, and service all major hot water brands including Rheem, Rinnai, Dux, and Aquamax. Our hot water services cover cylinder repairs and element replacements, thermostat diagnosis and replacement, tempering valve installation and testing, full cylinder replacement and upgrades, gas continuous flow system installation, and hot water heat pump installation.\n\nAll hot water work is done to NZ plumbing standards with proper certification. Whether you're in Takapuna, Albany, Glenfield, or anywhere across Auckland, Kurt provides upfront pricing and genuine advice on what your home actually needs.",
+    "includes": [
+      "Hot water cylinder repairs",
+      "Element and thermostat replacement",
+      "Tempering valve installation",
+      "Full cylinder replacement",
+      "Gas continuous flow installation",
+      "Heat pump hot water systems",
+      "All major brands: Rheem, Rinnai, Dux, Aquamax"
+    ],
+    "faqs": [
+      { "q": "Can you fix my hot water the same day?", "a": "In most cases, yes. Kurt carries common cylinder parts and elements on the van. If a replacement is needed, we can often source and install within 24 hours." },
+      { "q": "What hot water brands do you install?", "a": "We install and service all major brands including Rheem, Rinnai, Dux, and Aquamax. Kurt will recommend the best option for your household." },
+      { "q": "Should I repair or replace my hot water cylinder?", "a": "It depends on the age and condition. Cylinders over 15 years old are usually more cost-effective to replace. Kurt gives honest advice — no upselling." }
+    ],
+    "relatedServices": ["plumbing-repair", "new-installations"]
+  },
+  {
+    "id": "drain-laying",
+    "title": "Drain Laying",
+    "seoTitle": "Drain Layer Auckland | Certified Drain Laying Services | KA Plumbing LTD",
+    "seoDescription": "Certified drain layer in Auckland. Stormwater, wastewater, new drainage, and repairs. Council-compliant work across the North Shore and all Auckland. Free quotes.",
+    "heroHeadline": "Certified Drain Laying Services Across Auckland",
+    "heroSubheadline": "As a certified drain layer, Kurt is licensed to design, install, and repair drainage systems that meet council requirements.",
+    "image": "/images/services/drain-laying.webp",
+    "heroImage": "/images/services/heroes/drain-laying.webp",
+    "detailImage": "/images/services/detail/drain-laying.webp",
+    "introHeading": "Licensed Drain Layer — Compliant, Consented, Built to Last",
+    "longDescription": "Drainage work is one area where cutting corners costs you dearly. As a certified drain layer, Kurt is fully licensed to design, install, and repair stormwater and wastewater drainage systems that meet Auckland Council requirements.\n\nWhether you're developing a new section in Albany, replacing old clay pipes in Devonport, adding drainage to a renovation in Takapuna, or dealing with a blocked drain in Glenfield, KA Plumbing has you covered. Every drain laying job is properly documented, inspected, and built to code — protecting your property and keeping you compliant.\n\nOur drain laying services include new stormwater and wastewater drainage installation, replacement of old clay, earthenware, and concrete pipes, drainage for new builds and subdivisions, drainage modifications during renovations, blocked drain clearing and diagnosis, CCTV drain inspection and reporting, and soak pit and stormwater management solutions.\n\nKurt's dual certification as both a plumber and drain layer means your project needs only one contractor. That means fewer scheduling conflicts, better coordination, and lower costs. From small residential repairs on the North Shore to large-scale drainage work across Auckland, the standard of work is always the same — council-compliant, properly consented, and built to last.",
+    "includes": [
+      "Stormwater and wastewater drainage installation",
+      "Old pipe replacement (clay, earthenware, concrete)",
+      "New build and subdivision drainage",
+      "Renovation drainage modifications",
+      "Blocked drain clearing",
+      "CCTV drain inspection",
+      "Soak pit and stormwater solutions"
+    ],
+    "faqs": [
+      { "q": "What's the difference between a plumber and a drain layer?", "a": "A plumber handles water supply and internal waste pipes. A drain layer handles external drainage — stormwater and wastewater systems outside the building. Kurt holds both certifications." },
+      { "q": "Do I need council consent for drainage work?", "a": "Most drainage work in Auckland requires a building consent. As a certified drain layer, Kurt handles the documentation and ensures all work meets Auckland Council requirements." },
+      { "q": "Can you clear blocked drains?", "a": "Yes — from simple blockages to complex root intrusion. We also offer CCTV drain inspections to identify the exact cause before any digging." }
+    ],
+    "relatedServices": ["plumbing-repair", "consulting"]
+  },
+  {
+    "id": "consulting",
+    "title": "Consulting",
+    "seoTitle": "Plumbing Consultant Auckland | Expert Advice | KA Plumbing LTD",
+    "seoDescription": "Get expert plumbing advice before you start. Building consent guidance, project planning, and honest budgeting from a certified Auckland plumber. Free consultations.",
+    "heroHeadline": "Expert Plumbing Advice Before You Spend a Dollar",
+    "heroSubheadline": "Not sure where to start? Kurt provides straightforward consulting to help you plan, budget, and avoid costly surprises.",
+    "image": "/images/services/consulting.webp",
+    "heroImage": "/images/services/heroes/consulting.webp",
+    "detailImage": "/images/services/detail/consulting.webp",
+    "introHeading": "Plan Smart, Save Thousands — Expert Plumbing Consulting",
+    "longDescription": "Starting a plumbing project without proper advice is one of the most expensive mistakes homeowners make. KA Plumbing offers straightforward plumbing consulting across Auckland to help you understand what's needed, plan the work properly, and budget accurately before anything gets ripped out.\n\nWhether you're planning a bathroom renovation on the North Shore, scoping drainage requirements for a new build in Albany, or just trying to understand why your water bill is suddenly sky-high in Browns Bay, Kurt provides honest, experience-backed advice.\n\nOur consulting services cover project scoping and planning for renovations and new builds, building consent guidance for plumbing and drainage work, budget estimation and cost-saving recommendations, second opinions on quotes from other plumbers, plumbing system assessments for pre-purchase property inspections, and water efficiency audits and recommendations.\n\nThink of it as having a mate in the trade — except backed by years of certified plumbing and drain laying experience. A quick consultation now can save you thousands in surprises later. Kurt is happy to visit your property, review plans, or chat over the phone to point you in the right direction.",
+    "includes": [
+      "Project scoping and planning",
+      "Building consent guidance",
+      "Budget estimation and cost-saving advice",
+      "Second opinions on other quotes",
+      "Pre-purchase plumbing assessments",
+      "Water efficiency audits",
+      "Phone and on-site consultations"
+    ],
+    "faqs": [
+      { "q": "Is the initial consultation free?", "a": "Yes — a phone consultation is always free. For on-site assessments, Kurt provides a clear quote before visiting if needed." },
+      { "q": "Can you help with building consent applications?", "a": "Kurt can advise on plumbing and drainage requirements for consent and provide the documentation needed to support your application." },
+      { "q": "Do you offer pre-purchase plumbing inspections?", "a": "Yes — a plumbing assessment before buying a property can reveal hidden issues. Kurt inspects pipes, drainage, hot water, and fixtures." }
+    ],
+    "relatedServices": ["renovations", "drain-laying"]
+  }
+]
