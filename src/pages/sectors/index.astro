@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import VideoHero from '../../components/sections/VideoHero.astro';
+import BeforeAfterSlider from '../../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../../components/sections/TestimonialScroller.astro';
+import EmergencyBanner from '../../components/sections/EmergencyBanner.astro';
+import CTABanner from '../../components/sections/CTABanner.astro';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../../utils/breadcrumbs';
+import sectorsData from '../../data/sectors-extended.json';
+
+const sectorIcons: Record<string, string> = {
+  residential: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+  commercial: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>',
+  developers: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>',
+  retail: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>',
+};
+
+const faqs = [
+  { q: 'What sectors does KA Plumbing serve?', a: 'KA Plumbing serves residential homeowners, commercial businesses, building developers, and retail stores across Auckland. Each sector receives tailored plumbing and drain laying services suited to their specific needs.' },
+  { q: 'Do you have different pricing for commercial vs residential?', a: 'Pricing is based on the scope and complexity of each job, not the sector. All clients receive free, upfront quotes with no hidden fees. Commercial and developer projects are quoted on a stage-by-stage basis for accurate budget management.' },
+  { q: 'Can you handle both plumbing and drainage?', a: 'Yes — Kurt is both a certified plumber and certified drain layer. This dual certification means one contractor handles your entire plumbing and drainage scope, eliminating coordination issues and reducing costs.' },
+];
+---
+
+<BaseLayout
+  title="Plumbing Sectors Auckland — Residential, Commercial, Developer & Retail | KA Plumbing LTD"
+  description="KA Plumbing serves all sectors across Auckland: residential homes, commercial businesses, building developers, and retail stores. Certified plumber and drain layer. Call 021 277 9151."
+  canonicalUrl="https://kaplumbingltd.co.nz/sectors/"
+  additionalSchemas={[
+    buildBreadcrumbSchema([{ name: 'Sectors', path: '/sectors/' }]),
+    buildFAQSchema(faqs),
+  ]}
+>
+  <VideoHero
+    videoSrc="/videos/sectors-transform.mp4"
+    posterSrc="/videos/sectors-poster.webp"
+    headline="Plumbing for Every Sector"
+    subheadline="From family homes to commercial buildings, new developments to retail fit-outs — KA Plumbing delivers certified plumbing and drain laying services tailored to your sector."
+    ctaPrimary={{ label: 'Get a Free Quote', href: '/booking' }}
+    ctaSecondary={{ label: 'Call for Advice', href: 'tel:+64212779151' }}
+  />
+
+  <!-- Sector Cards -->
+  <section class="py-section bg-background" aria-label="All sectors">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Sectors</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Expert Plumbing for Your Industry</h2>
+        <p class="text-text-muted max-w-xl mx-auto">
+          Kurt delivers the same certified quality across every sector — with specialised knowledge for each industry's unique plumbing requirements.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-stagger">
+        {sectorsData.map((sector) => (
+          <a href={`/sectors/${sector.id}/`} class="glass-card-solid p-8 group hover:border-accent/30 transition-all duration-200 cursor-pointer">
+            <div class="flex items-start gap-6">
+              <div class="w-16 h-16 rounded-xl bg-primary/5 flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-accent/10 group-hover:text-accent transition-colors">
+                <Fragment set:html={sectorIcons[sector.id] || sectorIcons.residential} />
+              </div>
+              <div>
+                <h3 class="font-heading text-h3 text-primary group-hover:text-accent transition-colors mb-1">{sector.title}</h3>
+                <p class="text-accent font-semibold text-sm mb-3">{sector.heroSubheadline.split('.')[0]}.</p>
+                <p class="text-text-muted text-sm leading-relaxed mb-4">{sector.introContent[0].substring(0, 200)}...</p>
+                <span class="inline-block text-accent text-sm font-semibold group-hover:underline">Learn More &rarr;</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why KA Plumbing -->
+  <section class="py-section bg-surface" aria-label="Why choose us">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Why KA Plumbing</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">One Plumber for Every Sector</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+        {[
+          { title: 'Dual Certification', desc: 'Certified plumber and certified drain layer — one contractor for the complete scope, regardless of sector.' },
+          { title: 'Owner-Operator', desc: 'You deal directly with Kurt. No call centres, no subcontractors. Personal accountability on every job.' },
+          { title: '24/7 Emergency', desc: 'Plumbing emergencies don\'t wait for business hours. Kurt is available around the clock for urgent callouts.' },
+          { title: 'All Auckland', desc: 'Serving the North Shore, Central, West, and South Auckland. Fast response times across the city.' },
+          { title: 'Free Quotes', desc: 'Every job starts with a free, no-obligation quote. No hidden fees, no surprises, upfront pricing.' },
+          { title: 'Code Compliant', desc: 'All work meets NZ Building Code requirements and Auckland Council standards. Passes inspection first time.' },
+        ].map((item) => (
+          <div class="glass-card-solid p-6 text-center">
+            <h3 class="font-heading text-primary mb-2">{item.title}</h3>
+            <p class="text-text-muted text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <BeforeAfterSlider />
+
+  <!-- FAQ -->
+  <section class="py-section bg-background" aria-label="Frequently asked questions">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Common Questions</h2>
+      </div>
+
+      <div class="space-y-4 reveal">
+        {faqs.map((faq) => (
+          <details class="glass-card-solid group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-semibold text-primary list-none">
+              <span>{faq.q}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-text-muted text-sm leading-relaxed border-t border-primary/5 pt-4">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <TestimonialScroller />
+  <CTABanner />
+  <EmergencyBanner />
+</BaseLayout>

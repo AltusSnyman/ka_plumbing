@@ -1,0 +1,262 @@
+[
+  {
+    "id": "residential",
+    "title": "Residential Plumbing",
+    "seoTitle": "Residential Plumbing Auckland | Home Plumber & Drain Layer | KA Plumbing LTD",
+    "seoDescription": "Expert residential plumbing services across Auckland. Repairs, renovations, hot water systems, and certified drain laying for homeowners. Call Kurt on 021 277 9151 for a free quote.",
+    "heroHeadline": "Trusted Residential Plumbing for Auckland Homes",
+    "heroSubheadline": "From leaking taps to full bathroom renovations — Kurt looks after your home's plumbing like it's his own. Certified plumber and drain layer serving Auckland homeowners.",
+    "heroImage": "/images/sectors/heroes/residential.webp",
+    "introHeading": "Auckland's Go-To Plumber for Homeowners",
+    "introContent": [
+      "Your home's plumbing is the backbone of everyday comfort — from your morning shower to the kitchen sink you use every night. When something goes wrong, you need a plumber who shows up on time, diagnoses the issue honestly, and fixes it properly the first time. That's exactly what Kurt delivers at KA Plumbing LTD. As a fully certified plumber and certified drain layer based on Auckland's North Shore, Kurt brings dual qualifications to every residential job — whether it's a simple tap repair in Takapuna or a complete bathroom renovation in Albany.",
+      "KA Plumbing provides the full range of residential plumbing services across Auckland. Burst pipes, blocked drains, hot water cylinder replacements, leaking toilets, new fixture installations, bathroom and kitchen renovations, stormwater drainage, and everything in between. Kurt handles jobs of every size for homeowners, rental property investors, and property managers throughout the North Shore, Central Auckland, West Auckland, and South Auckland. No job is too small, and no call-out is too far.",
+      "What sets KA Plumbing apart from larger plumbing companies is the personal, owner-operator approach. When you call, you speak to Kurt directly. When he arrives at your property, he treats your home with the same care and respect he'd give his own. You get a free, upfront quote with no hidden fees, honest advice about what actually needs doing, and a clean finish when the work is complete. Kurt's dual certification as both a plumber and drain layer means you need only one tradesman for jobs that would normally require two — saving you time, money, and the hassle of coordinating multiple contractors."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/sectors/content/residential-1.webp",
+        "imageAlt": "Plumber repairing kitchen mixer tap in Auckland home",
+        "heading": "Kitchen & Bathroom Plumbing",
+        "content": "Your kitchen and bathroom are the most plumbing-intensive rooms in your home, and they're where problems show up first. Dripping taps that drive up your water bill. A shower that's lost pressure. A toilet that won't stop running. A waste disposal that's jammed. KA Plumbing handles all kitchen and bathroom plumbing repairs and installations for Auckland homeowners — from replacing a worn mixer cartridge to installing a brand new freestanding bath. Kurt works with all fixture brands and styles, whether you're maintaining an older Auckland villa or fitting out a modern renovation. Every repair is done to code, with quality parts that last. If your kitchen or bathroom plumbing needs attention, call Kurt for a same-day assessment and clear, honest pricing."
+      },
+      {
+        "image": "/images/sectors/content/residential-2.webp",
+        "imageAlt": "Hot water cylinder installation in Auckland residential property",
+        "heading": "Hot Water Systems for Your Home",
+        "content": "Nothing disrupts your household like losing hot water — especially in Auckland's cooler months. KA Plumbing specialises in hot water cylinder repair, replacement, and upgrades for residential properties across Auckland. Kurt works with all major brands including Rheem, Rinnai, Dux, and Aquamax, and can advise on the best system for your household size, budget, and energy goals. Whether your existing cylinder has a leaking element, a faulty thermostat, or has simply reached the end of its life, Kurt will diagnose the issue and give you a clear recommendation. Upgrading from an old low-pressure cylinder to a mains-pressure system? Considering a continuous flow gas unit or an energy-efficient heat pump? Kurt handles the full installation including any necessary pipework modifications, tempering valves, and council compliance."
+      },
+      {
+        "image": "/images/sectors/content/residential-3.webp",
+        "imageAlt": "Drain laying in residential garden in Auckland",
+        "heading": "Drainage & Stormwater Solutions",
+        "content": "Auckland's heavy rainfall and clay soils make residential drainage a critical issue for homeowners. Blocked drains, overflowing gutters, ponding water, and failing stormwater systems can cause serious property damage if left unaddressed. Kurt holds a certified drain layer qualification in addition to his plumber certification — meaning he's licensed to handle all drainage and stormwater work on your property without needing a second contractor. KA Plumbing provides CCTV drain inspections to identify blockages and damage, high-pressure water jetting to clear stubborn clogs, drain relining and repair for aging pipes, new stormwater and wastewater connections, soak pit installation, and full drainage system replacements. Whether your 1970s concrete drains are cracking or your new extension needs drainage connections, Kurt delivers compliant, council-approved work that protects your property for the long term."
+      }
+    ],
+    "servicesOffered": [
+      { "serviceId": "plumbing-repair", "contextDescription": "Leaking taps, burst pipes, running toilets, water pressure issues — fast same-day repairs for your home with upfront pricing." },
+      { "serviceId": "renovations", "contextDescription": "Bathroom and kitchen renovation plumbing, waste and water relocation, heated towel rail installation — coordinated with your builder." },
+      { "serviceId": "new-installations", "contextDescription": "New fixture installations, appliance connections, water filtration systems, and outdoor plumbing for your property." },
+      { "serviceId": "hot-water", "contextDescription": "Hot water cylinder repair, replacement, and upgrades — Rheem, Rinnai, Dux, Aquamax. All system types for your household." },
+      { "serviceId": "drain-laying", "contextDescription": "Certified drain laying for residential stormwater, wastewater, blocked drains, CCTV inspection, and drainage repairs." },
+      { "serviceId": "consulting", "contextDescription": "Pre-purchase plumbing inspections, renovation planning advice, and budget estimation for your home project." }
+    ],
+    "locationContent": {
+      "heading": "Residential Plumbing Across Auckland & the North Shore",
+      "paragraphs": [
+        "KA Plumbing serves homeowners across all of Auckland, with a particular focus on the North Shore. Whether you're in a character villa in Devonport, a modern townhouse in Albany, a family home in Browns Bay, or a lifestyle property in Paremoremo — Kurt has the local knowledge and experience to handle your residential plumbing needs efficiently. Response times for the North Shore are typically within 60 minutes for emergencies, with flexible scheduling available for planned work including evenings and weekends.",
+        "Auckland's diverse housing stock means residential plumbing needs vary widely. Older homes in suburbs like Takapuna, Birkenhead, and Glenfield often have aging galvanised or copper pipework that needs upgrading. Newer developments in Long Bay, Albany, and Greenhithe may need modifications or additions as families grow. Whatever your property's age or type, Kurt delivers plumbing solutions that meet current New Zealand building code requirements and Auckland Council standards."
+      ],
+      "suburbs": ["Takapuna", "Albany", "Browns Bay", "Devonport", "Glenfield", "Torbay", "Beach Haven", "Long Bay", "Paremoremo", "Greenhithe"]
+    },
+    "processSteps": [
+      { "step": "01", "title": "Call or Book Online", "desc": "Tell us about your plumbing issue. We respond fast — often within the hour for Auckland homeowners." },
+      { "step": "02", "title": "Free Home Assessment", "desc": "Kurt visits your property, diagnoses the issue, and provides a clear, no-obligation quote with no hidden fees." },
+      { "step": "03", "title": "Schedule at Your Convenience", "desc": "We work around your schedule — including after-hours and weekends when needed. Your home, your timing." },
+      { "step": "04", "title": "Job Done, Home Protected", "desc": "Professional workmanship, a tidy finish, and your plumbing sorted for the long term. We treat your home like our own." }
+    ],
+    "faqs": [
+      { "q": "How much does a residential plumber cost in Auckland?", "a": "Costs vary depending on the job. A standard repair typically starts from around $120 plus GST, while larger projects like bathroom renovations or hot water cylinder replacements are quoted individually. Kurt provides free, upfront quotes with no hidden fees — you'll always know the cost before work begins. Call 021 277 9151 for a no-obligation assessment." },
+      { "q": "Do you offer 24/7 emergency plumbing for homes?", "a": "Yes — KA Plumbing provides 24/7 emergency plumbing for residential properties across Auckland. Burst pipes, flooding, blocked drains, gas leaks — call Kurt on 021 277 9151 anytime, day or night. Emergency response times on the North Shore are typically within 30-60 minutes." },
+      { "q": "Are you a certified plumber and drain layer?", "a": "Yes. Kurt holds dual certification as both a New Zealand certified plumber and certified drain layer. This means he's licensed to carry out all plumbing and drainage work on your residential property — from tap repairs and hot water installations to stormwater connections and drain laying. One qualified tradesman for the complete job." },
+      { "q": "Do you work on older Auckland villas and character homes?", "a": "Absolutely. Kurt has extensive experience with Auckland's older housing stock — including villas, bungalows, state houses, and character homes with aging galvanised, copper, or earthenware pipework. He understands the specific challenges these properties present, from low water pressure to deteriorating drainage, and delivers solutions that respect the character of your home while bringing it up to modern standards." },
+      { "q": "Can you handle a full bathroom renovation?", "a": "Yes — from initial consultation and planning through to final fit-off. Kurt handles all plumbing and drainage modifications for bathroom renovations including waste relocation, water supply changes, shower installation, bath connections, heated towel rails, and underfloor heating connections. He coordinates with your builder or project manager to ensure the plumbing integrates seamlessly with the overall renovation timeline." }
+    ],
+    "keywords": ["residential plumber auckland", "home plumber north shore", "house plumbing repairs auckland", "bathroom plumber auckland", "kitchen plumber auckland", "emergency home plumber auckland", "certified plumber residential auckland"]
+  },
+  {
+    "id": "commercial",
+    "title": "Commercial Plumbing",
+    "seoTitle": "Commercial Plumbing Auckland | Business Plumber & Drain Layer | KA Plumbing LTD",
+    "seoDescription": "Reliable commercial plumbing services for Auckland businesses. Offices, restaurants, retail, hospitality. Certified plumber and drain layer. Minimal disruption, after-hours available. Call 021 277 9151.",
+    "heroHeadline": "Reliable Commercial Plumbing for Auckland Businesses",
+    "heroSubheadline": "Minimal disruption, maximum compliance. Kurt keeps your business flowing with certified plumbing and drain laying services across Auckland.",
+    "heroImage": "/images/sectors/heroes/commercial.webp",
+    "introHeading": "Commercial Plumbing That Keeps Your Business Running",
+    "introContent": [
+      "When your business has a plumbing problem, every minute of downtime costs money. A blocked drain in a restaurant kitchen means dishes stop. A leaking pipe in an office ceiling means evacuated staff. A broken hot water system in a hotel means unhappy guests and bad reviews. Commercial plumbing demands a different approach — faster response, minimal disruption to your operations, work scheduled around your business hours, and strict compliance with commercial building codes and health regulations. That's exactly what KA Plumbing delivers for Auckland businesses.",
+      "Kurt brings the same certified expertise and personal service that residential clients love, adapted specifically for commercial environments. As a certified plumber and certified drain layer, he handles the full scope of commercial plumbing work — from routine maintenance and emergency repairs to complete fit-outs and drainage installations. KA Plumbing works with offices, restaurants, cafes, hotels, gyms, medical centres, childcare facilities, warehouses, and commercial buildings across Auckland, with a strong presence on the North Shore's growing commercial district.",
+      "What makes KA Plumbing the right choice for commercial clients? Reliability and communication. Kurt understands that businesses need a plumber who shows up when promised, communicates clearly about timelines and costs, works cleanly and efficiently to minimise disruption, and gets the job right the first time. You get direct access to Kurt — no call centres, no dispatchers, no mystery about who's turning up. He provides detailed quotes, works to agreed schedules, and offers after-hours and weekend availability so your business doesn't lose a single trading hour."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/sectors/content/commercial-1.webp",
+        "imageAlt": "Commercial plumbing infrastructure in Auckland office building",
+        "heading": "Office & Workspace Plumbing",
+        "content": "Modern Auckland offices and workspaces rely on well-maintained plumbing for bathrooms, kitchen facilities, water supply, and fire sprinkler systems. KA Plumbing handles all aspects of commercial office plumbing — from installing new bathroom fit-outs in multi-tenanted buildings to repairing leaking pipes in ceiling cavities and upgrading aging water supply infrastructure. Kurt is experienced with backflow prevention devices, TMV installation, water-efficient fixtures, and building WOF plumbing requirements. Whether you're fitting out a new office space on the North Shore, maintaining an existing commercial building in the CBD, or upgrading facilities to meet modern compliance standards, KA Plumbing delivers professional, code-compliant work with minimal disruption to your tenants and staff."
+      },
+      {
+        "image": "/images/sectors/content/commercial-2.webp",
+        "imageAlt": "Commercial kitchen plumbing in Auckland restaurant",
+        "heading": "Hospitality & Food Service Plumbing",
+        "content": "Restaurants, cafes, bars, and food service businesses have specialised plumbing requirements that go beyond standard commercial work. Grease trap installation and compliance, commercial dishwasher connections, multi-compartment sink installations, gas plumbing for commercial cooktops, and drainage systems designed to handle the heavy demands of a commercial kitchen. KA Plumbing understands the specific plumbing needs of Auckland's hospitality industry and the strict health and safety regulations that govern food premises. Kurt works with restaurant owners, cafe operators, and hospitality managers to deliver plumbing solutions that keep your kitchen running efficiently while meeting all Auckland Council health code requirements. After-hours installation and maintenance available to avoid disruption during trading hours."
+      },
+      {
+        "image": "/images/sectors/content/commercial-3.webp",
+        "imageAlt": "Commercial bathroom fit-out in Auckland office building",
+        "heading": "Compliance & Preventive Maintenance",
+        "content": "Commercial plumbing isn't just about fixing problems — it's about preventing them. A plumbing failure in a commercial building can mean property damage, business interruption, health code violations, and costly emergency repairs. KA Plumbing offers preventive maintenance programmes for Auckland businesses that include regular inspections, scheduled servicing of hot water systems and backflow prevention devices, drain clearing and CCTV inspection, and compliance checks for building WOF requirements. Kurt also handles all documentation and certification required for commercial plumbing compliance, giving building owners and property managers complete peace of mind. For businesses that need guaranteed emergency response, we offer priority service agreements with committed response times across Auckland."
+      }
+    ],
+    "servicesOffered": [
+      { "serviceId": "plumbing-repair", "contextDescription": "Emergency repairs for burst pipes, leaking fixtures, and plumbing failures that threaten your business operations — fast response, minimal disruption." },
+      { "serviceId": "renovations", "contextDescription": "Commercial bathroom and kitchen renovations, tenant fit-outs, and facility upgrades — scheduled around your business hours." },
+      { "serviceId": "new-installations", "contextDescription": "New fixture installations, commercial appliance connections, water filtration systems, and backflow prevention devices for your premises." },
+      { "serviceId": "hot-water", "contextDescription": "Commercial hot water system installation, repair, and replacement — continuous flow, cylinder, and heat pump systems for business needs." },
+      { "serviceId": "drain-laying", "contextDescription": "Certified drain laying for commercial properties — grease traps, stormwater, wastewater, CCTV inspection, and drainage compliance." },
+      { "serviceId": "consulting", "contextDescription": "Commercial plumbing assessments, building WOF compliance guidance, fit-out planning, and budget estimation for your business project." }
+    ],
+    "locationContent": {
+      "heading": "Commercial Plumbing Across Auckland's Business Districts",
+      "paragraphs": [
+        "KA Plumbing serves commercial clients across all of Auckland's major business districts. From the high-rise offices of the Auckland CBD to the growing commercial precincts of Takapuna and Albany on the North Shore, the industrial areas of East Tamaki and Penrose, and the retail centres of Newmarket and Ponsonby — Kurt delivers reliable commercial plumbing wherever your business is located.",
+        "The North Shore's commercial growth, particularly around Albany, Takapuna, and Smales Farm, has created strong demand for commercial plumbing services. Kurt's base on the North Shore means fast response times for businesses in these areas, with emergency attendance typically within 30-60 minutes. For planned commercial work, Kurt offers flexible scheduling including after-hours and weekend service to ensure zero disruption to your business operations."
+      ],
+      "suburbs": ["Takapuna", "Albany", "Browns Bay", "Glenfield", "Newmarket", "Ponsonby", "Auckland CBD", "Parnell", "Mt Eden"]
+    },
+    "processSteps": [
+      { "step": "01", "title": "Call or Book Online", "desc": "Describe your commercial plumbing needs. Kurt responds within the hour for Auckland businesses." },
+      { "step": "02", "title": "Site Assessment & Quote", "desc": "Kurt visits your premises, assesses the scope, and provides a detailed, itemised quote with no hidden costs." },
+      { "step": "03", "title": "Scheduled Around Your Business", "desc": "Work is scheduled to minimise disruption — after-hours, weekends, or staged during quiet periods." },
+      { "step": "04", "title": "Compliant, Professional Finish", "desc": "Code-compliant workmanship with full documentation. Your business keeps running, your plumbing is sorted." }
+    ],
+    "faqs": [
+      { "q": "Do you work after hours to avoid disrupting my business?", "a": "Yes — KA Plumbing offers after-hours and weekend scheduling for commercial clients. Kurt understands that plumbing work during trading hours costs your business money, so he's happy to schedule installations, maintenance, and non-emergency repairs outside your normal operating hours. Call 021 277 9151 to discuss scheduling." },
+      { "q": "Can you handle plumbing for a restaurant or cafe?", "a": "Absolutely. Kurt has extensive experience with hospitality plumbing including grease trap installation and compliance, commercial dishwasher connections, multi-compartment sinks, gas plumbing, and commercial kitchen drainage. All work meets Auckland Council health code requirements for food premises." },
+      { "q": "Do you offer maintenance contracts for commercial properties?", "a": "Yes. KA Plumbing offers preventive maintenance programmes for commercial buildings and businesses. These typically include scheduled inspections, hot water system servicing, backflow prevention testing, drain clearing, and priority emergency response. Maintenance contracts help prevent costly breakdowns and keep your premises compliant." },
+      { "q": "What about backflow prevention and compliance?", "a": "Kurt is experienced with backflow prevention device installation, testing, and certification for commercial properties. Auckland Council requires annual testing of backflow preventers on commercial premises. KA Plumbing handles installation of new devices, annual testing and certification, and any repairs or replacements needed to maintain compliance." },
+      { "q": "Can you handle plumbing for a new commercial fit-out?", "a": "Yes — from bare shell to operational premises. Kurt handles the complete plumbing scope for commercial fit-outs including water supply, hot water, waste and drainage connections, fixture installation, gas plumbing, and all required compliance documentation. He works to your builder's programme and coordinates with other trades to keep your project on schedule." }
+    ],
+    "keywords": ["commercial plumber auckland", "business plumber auckland", "office plumbing auckland", "restaurant plumber auckland", "hospitality plumbing north shore", "after hours commercial plumber auckland"]
+  },
+  {
+    "id": "developers",
+    "title": "Residential Project Plumbing",
+    "seoTitle": "New Build Plumber Auckland | Residential Developer Plumbing & Drain Laying | KA Plumbing LTD",
+    "seoDescription": "End-to-end plumbing and drain laying for Auckland building developers. New builds, subdivisions, multi-unit developments. Certified plumber and drain layer. Call 021 277 9151.",
+    "heroHeadline": "End-to-End Plumbing for Auckland Developers",
+    "heroSubheadline": "New builds, subdivisions, multi-unit developments. One certified contractor for plumbing and drain laying — from ground works to final fit-off.",
+    "heroImage": "/images/sectors/heroes/developers.webp",
+    "introHeading": "One Certified Contractor for Your Entire Development",
+    "introContent": [
+      "Building developers need a plumbing contractor who understands project timelines, works seamlessly with builders and other trades, and doesn't cause delays. Most importantly, you need someone who can handle both plumbing and drainage — because coordinating two separate contractors for what should be a single scope of work creates unnecessary complexity, scheduling conflicts, and accountability gaps. Kurt at KA Plumbing is both a certified plumber and a certified drain layer, meaning one contractor manages your entire plumbing and drainage package from site works through to code compliance sign-off.",
+      "KA Plumbing delivers the complete plumbing and drainage scope for residential developments across Auckland — from single standalone new builds through to multi-unit townhouse developments and subdivision infrastructure. Kurt works at every stage of the build process: drainage rough-in during ground works, plumbing rough-in during framing, pipework pressure testing at pre-line, and final fixture fit-off at completion. His work passes Auckland Council inspection first time because he understands the current New Zealand Building Code requirements, AS/NZS plumbing standards, and Auckland Council's specific drainage and connection specifications.",
+      "What developers appreciate most about working with KA Plumbing is the reliability and communication. Kurt works to your builder's programme, provides accurate stage-by-stage quoting so you can manage your project budget, and keeps you informed at every milestone. There are no surprises, no missed inspections, and no rework. When you engage KA Plumbing for your development, you get a single point of accountability for all plumbing and drainage — from the first trench to the final tap."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/sectors/content/developers-1.webp",
+        "imageAlt": "Plumber installing rough-in plumbing in new build timber frame house",
+        "heading": "New Build Plumbing — Rough-In to Fit-Off",
+        "content": "New residential construction demands precision plumbing at every stage. KA Plumbing manages the complete new build plumbing scope: slab penetrations and under-floor pipework during foundations, wall rough-in during framing (hot and cold water supply, waste lines, vent stacks), pressure testing and pre-line inspection coordination, and final fixture installation during fit-off. Kurt works with PEX, copper, and HDPE systems depending on your specification and budget. He coordinates with your builder, electrician, and other trades to ensure plumbing rough-in is completed on schedule without holding up other works. Every installation meets NZ Building Code clause G12 and G13 requirements, and Kurt provides all documentation needed for your building consent sign-offs."
+      },
+      {
+        "image": "/images/sectors/content/developers-2.webp",
+        "imageAlt": "Stormwater drainage installation in new Auckland subdivision",
+        "heading": "Subdivision Drainage & Infrastructure",
+        "content": "Auckland's growing suburbs — particularly in the North Shore corridors of Albany, Long Bay, and Paremoremo — are seeing intensive residential subdivision development. These projects require certified drain laying for both stormwater and wastewater connections to council mains, on-site stormwater management systems, and individual lot connections. As a certified drain layer, Kurt handles the complete drainage infrastructure scope: main line connections, lateral connections to each lot, stormwater attenuation and soakage systems, inspection and testing, and as-built documentation for council acceptance. He's experienced with Auckland Council's specific requirements for residential subdivision drainage and works efficiently to keep your development programme on track."
+      },
+      {
+        "image": "/images/sectors/content/developers-3.webp",
+        "imageAlt": "Final plumbing fit-off in completed new build bathroom",
+        "heading": "Multi-Unit & Townhouse Developments",
+        "content": "Multi-unit residential developments — duplexes, terraced housing, and townhouse complexes — present unique plumbing challenges. Shared drainage infrastructure, individual water metering, efficient hot water system selection across multiple dwellings, and coordinated staging across units that may be at different build phases simultaneously. KA Plumbing has the capability and experience to manage plumbing for multi-unit Auckland developments, delivering consistent quality across every unit while maintaining the schedule flexibility that staged construction demands. Kurt works with developers to optimise system specifications — recommending the most cost-effective hot water solutions, pipe materials, and fixture selections for your target market without compromising quality or compliance. One contractor, one relationship, consistent results across every unit in your development."
+      }
+    ],
+    "servicesOffered": [
+      { "serviceId": "plumbing-repair", "contextDescription": "Warranty period repairs, defect rectification, and maintenance callbacks for completed developments — responsive and accountable." },
+      { "serviceId": "renovations", "contextDescription": "Plumbing modifications and upgrades for renovation projects within existing residential developments and apartment complexes." },
+      { "serviceId": "new-installations", "contextDescription": "Complete new build plumbing installations — from slab rough-in through framing to final fit-off, meeting all building code requirements." },
+      { "serviceId": "hot-water", "contextDescription": "Hot water system specification, supply, and installation for new builds — cylinder, continuous flow, and heat pump systems to match your development's needs." },
+      { "serviceId": "drain-laying", "contextDescription": "Certified drain laying for new subdivisions, individual lot connections, stormwater systems, and wastewater infrastructure — council-compliant with as-built documentation." },
+      { "serviceId": "consulting", "contextDescription": "Development plumbing scoping, building consent documentation, budget estimation, and specification advice for your residential project." }
+    ],
+    "locationContent": {
+      "heading": "Serving Auckland's Growth Corridors",
+      "paragraphs": [
+        "Auckland's residential development is concentrated in key growth corridors where KA Plumbing is already active. The North Shore — particularly Albany, Long Bay, Paremoremo, and Greenhithe — is seeing significant new build and subdivision activity. Kurt's base on the North Shore means fast mobilisation to development sites in these areas, with established relationships with local builders, council inspectors, and materials suppliers.",
+        "Beyond the North Shore, KA Plumbing serves residential developments across Greater Auckland including the western growth areas of Henderson, Te Atatu, and New Lynn, the central urban intensification zones of Mt Eden, Mt Albert, and Sandringham, and the southern development corridors. Wherever your Auckland development is located, Kurt delivers the same certified quality, reliable scheduling, and comprehensive documentation that developers depend on."
+      ],
+      "suburbs": ["Albany", "Long Bay", "Paremoremo", "Greenhithe", "Henderson", "Te Atatu", "Mt Eden", "Mt Albert", "Glenfield"]
+    },
+    "processSteps": [
+      { "step": "01", "title": "Project Scoping", "desc": "Share your plans and specifications. Kurt reviews and provides a detailed, stage-by-stage quote for the complete plumbing and drainage scope." },
+      { "step": "02", "title": "Programme Integration", "desc": "Kurt aligns his work schedule with your builder's programme — drainage, rough-in, and fit-off staged to keep your project moving." },
+      { "step": "03", "title": "Build & Inspect", "desc": "Professional installation at each stage, coordinated with council inspections. No rework, no delays, no surprises." },
+      { "step": "04", "title": "Sign-Off & Documentation", "desc": "Compliant work that passes inspection first time. Full as-built documentation and producer statements for your building consent." }
+    ],
+    "faqs": [
+      { "q": "Can you handle both plumbing and drainage for a new build?", "a": "Yes — this is one of KA Plumbing's key advantages. Kurt holds dual certification as both a certified plumber and certified drain layer, meaning one contractor manages your entire plumbing and drainage scope. This eliminates coordination issues between separate plumbing and drainage contractors, reduces scheduling complexity, and gives you a single point of accountability from ground works through to final fit-off." },
+      { "q": "Do you work to builder schedules and project programmes?", "a": "Absolutely. Kurt understands that residential development runs on tight programmes and that plumbing delays affect every trade that follows. He works to your builder's schedule, coordinates with other trades, and ensures plumbing stages are completed on time. Kurt is responsive to programme changes and prioritises clear communication so your project manager always knows the plumbing status." },
+      { "q": "Will the work pass Auckland Council inspection first time?", "a": "Kurt's work consistently passes council inspection first time. He understands the current NZ Building Code requirements (G12, G13), AS/NZS plumbing standards, and Auckland Council's specific requirements for residential plumbing and drainage. He coordinates directly with council inspectors, provides all required testing and documentation, and ensures every installation is compliant before calling for inspection." },
+      { "q": "Can you handle multi-unit development plumbing?", "a": "Yes. KA Plumbing manages plumbing for multi-unit residential developments including duplexes, terraced housing, and townhouse complexes. Kurt handles the added complexity of shared drainage infrastructure, individual water supply connections, staged construction across multiple units, and consistent specification across the development. He provides stage-by-stage quoting for accurate budget management." },
+      { "q": "What documentation do you provide for new builds?", "a": "KA Plumbing provides comprehensive documentation for building consent including pressure test certificates, drainage camera inspection footage, as-built drainage plans, producer statements (PS3/PS4 as required), and all inspection records. Kurt handles the documentation process so your building consent completion is straightforward and fully supported." }
+    ],
+    "keywords": ["new build plumber auckland", "subdivision plumber auckland", "developer plumber auckland", "residential project plumbing", "new build drain layer auckland", "plumber for building developers auckland"]
+  },
+  {
+    "id": "retail",
+    "title": "Plumbing for Stores & Shops",
+    "seoTitle": "Retail Plumbing Auckland | Shop & Store Plumber | KA Plumbing LTD",
+    "seoDescription": "Specialist plumbing for Auckland retail stores and shops. Tenant fit-outs, food retail compliance, emergency repairs, after-hours service. Certified plumber. Call 021 277 9151.",
+    "heroHeadline": "Specialist Plumbing for Auckland Retail & Shops",
+    "heroSubheadline": "Fast response, minimal disruption, after-hours service. Keep your store open while we sort the plumbing. Certified plumber and drain layer for Auckland retail.",
+    "heroImage": "/images/sectors/heroes/retail.webp",
+    "introHeading": "Plumbing That Works Around Your Store",
+    "introContent": [
+      "Retail businesses can't afford plumbing problems — and they definitely can't afford to close their doors while a plumber sorts things out. A flooded shop floor during trading hours, a blocked toilet in your customer bathroom, a burst pipe threatening your stock — these are emergencies that need immediate, expert attention with minimal disruption to your business. KA Plumbing understands the unique pressures of retail plumbing because Kurt works with shop owners, retail managers, and commercial landlords across Auckland who depend on fast, reliable service that doesn't cost them trading time.",
+      "Whether you're opening a new store that needs a complete plumbing fit-out, an established retailer dealing with aging plumbing in an older building, or a food retailer who needs to meet strict health code compliance — KA Plumbing delivers the specialist retail plumbing services you need. Kurt's dual certification as a plumber and drain layer means he handles everything from fixture installation and water supply to drainage connections and grease trap compliance, without you needing to coordinate multiple contractors.",
+      "Retail plumbing is about more than pipes and taps — it's about protecting your investment, your stock, your reputation, and your customers' experience. KA Plumbing provides after-hours service so plumbing work can be completed outside your trading hours, emergency response when things go wrong during business, and preventive maintenance to stop problems before they start. Kurt works with retail businesses of all sizes across Auckland — from single boutique shops to multi-store retail operations — delivering the same personal, certified service that makes KA Plumbing Auckland's trusted plumber."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/sectors/content/retail-1.webp",
+        "imageAlt": "Plumber installing commercial sink in Auckland cafe",
+        "heading": "Tenant Fit-Out Plumbing",
+        "content": "Moving into a new retail space? Whether you're fitting out a bare-shell tenancy from scratch or modifying an existing space, KA Plumbing handles the complete plumbing scope for your retail fit-out. This includes new water supply connections, hot water installation, waste and drainage connections, customer and staff bathroom installation, kitchenette or break room plumbing, and any specialist connections your business requires. Kurt works to your fit-out programme and coordinates with your shopfitter, builder, and other trades to ensure plumbing is completed on schedule. He's experienced with the specific requirements of retail tenancies including landlord compliance, building consent coordination, and the practical considerations of working in shopping centres and retail precincts across Auckland."
+      },
+      {
+        "image": "/images/sectors/content/retail-2.webp",
+        "imageAlt": "After-hours plumbing maintenance in Auckland retail store",
+        "heading": "Food Retail & Health Compliance",
+        "content": "Food retail businesses — cafes, bakeries, food courts, supermarkets, and food-handling retailers — face strict plumbing requirements under Auckland Council's food premises regulations. Grease trap installation and regular maintenance, commercial dishwasher connections with appropriate backflow prevention, hand wash basin placement and temperature compliance, food preparation area drainage, and waste management systems all need to meet specific health code standards. Kurt understands these requirements inside and out and delivers plumbing installations that pass health inspection first time. KA Plumbing also provides ongoing grease trap maintenance and compliance servicing for Auckland food retailers, ensuring your premises stay compliant year-round without you having to track inspection schedules yourself."
+      },
+      {
+        "image": "/images/sectors/content/retail-3.webp",
+        "imageAlt": "Modern retail washroom fit-out with accessible design",
+        "heading": "Emergency Response & Maintenance",
+        "content": "A plumbing emergency in a retail environment needs immediate attention — a flooded shop floor doesn't just damage stock, it poses a safety risk to customers and staff, and every hour your store is closed costs revenue. KA Plumbing provides emergency response for Auckland retail businesses with priority attendance times. Kurt arrives quickly, contains the situation, and completes repairs efficiently so you can reopen as fast as possible. Beyond emergencies, KA Plumbing offers preventive maintenance programmes for retail businesses that include regular inspections of plumbing systems, scheduled drain clearing to prevent blockages, hot water system servicing, and seasonal checks before Auckland's wet winter months. Prevention is always cheaper than emergency — and Kurt helps Auckland retailers stay ahead of plumbing problems."
+      }
+    ],
+    "servicesOffered": [
+      { "serviceId": "plumbing-repair", "contextDescription": "Emergency repairs for retail plumbing failures — burst pipes, blocked drains, leaking fixtures. Fast response to get your store back open." },
+      { "serviceId": "renovations", "contextDescription": "Retail bathroom renovations, kitchen upgrades, and facility improvements — scheduled after hours to avoid lost trading time." },
+      { "serviceId": "new-installations", "contextDescription": "New fixture installations for retail fit-outs — basins, toilets, dishwashers, water filtration, and specialist retail connections." },
+      { "serviceId": "hot-water", "contextDescription": "Hot water system installation and repair for retail premises — compact solutions for shops, high-capacity systems for food retailers." },
+      { "serviceId": "drain-laying", "contextDescription": "Certified drainage work for retail tenancies — grease traps, floor drains, stormwater connections, and CCTV drain inspections." },
+      { "serviceId": "consulting", "contextDescription": "Retail fit-out plumbing planning, landlord compliance advice, food premises health code guidance, and budget estimation." }
+    ],
+    "locationContent": {
+      "heading": "Serving Auckland's Retail Precincts",
+      "paragraphs": [
+        "KA Plumbing serves retail businesses across Auckland's major shopping districts and retail centres. From the boutique shops of Takapuna and Devonport to the large-format retail of Albany's Westfield and the bustling cafes of Ponsonby and Newmarket — Kurt delivers specialist retail plumbing wherever your store is located. North Shore retailers benefit from particularly fast response times given Kurt's local base.",
+        "Auckland's retail landscape is diverse — standalone high-street shops, shopping centre tenancies, mixed-use commercial developments, food courts, and pop-up retail spaces all have different plumbing requirements. Kurt's experience across this range means he understands the practical challenges of retail plumbing: limited access during trading hours, landlord coordination requirements, shared building services, and the need for work that's clean, fast, and doesn't disrupt your customers' experience."
+      ],
+      "suburbs": ["Takapuna", "Albany", "Devonport", "Ponsonby", "Newmarket", "Browns Bay", "Glenfield", "Auckland CBD", "Parnell"]
+    },
+    "processSteps": [
+      { "step": "01", "title": "Call or Book Online", "desc": "Tell us about your retail plumbing needs. Kurt responds fast — within the hour for Auckland retail businesses." },
+      { "step": "02", "title": "Site Visit & Quote", "desc": "Kurt visits your store, assesses the scope, and provides a clear quote. For fit-outs, he reviews your plans and provides a detailed breakdown." },
+      { "step": "03", "title": "After-Hours Scheduling", "desc": "Planned work is scheduled outside your trading hours. Emergencies are attended immediately with minimal disruption to your store." },
+      { "step": "04", "title": "Clean, Fast, Compliant", "desc": "Professional workmanship with a retail-ready finish. Your store stays clean, your customers stay happy, and your plumbing is sorted." }
+    ],
+    "faqs": [
+      { "q": "Can you work after hours so my shop stays open?", "a": "Yes — after-hours and weekend scheduling is standard for KA Plumbing's retail clients. Kurt understands that closing your store for plumbing work costs you revenue, so he schedules installations, maintenance, and non-emergency repairs outside your trading hours. For emergencies during business hours, he works as quickly and cleanly as possible to minimise disruption." },
+      { "q": "Do you handle plumbing for food retail premises?", "a": "Yes. Kurt has extensive experience with food retail plumbing including cafes, bakeries, food courts, and food-handling retailers. He understands Auckland Council's food premises regulations and delivers installations that meet health code requirements — including grease traps, commercial dishwasher connections, hand wash stations, and food preparation area drainage." },
+      { "q": "What about grease trap installation and compliance?", "a": "KA Plumbing handles grease trap installation, sizing, and ongoing maintenance for Auckland food retailers. Auckland Council requires food premises to have appropriately sized grease traps that are regularly maintained. Kurt installs compliant grease traps, provides scheduled maintenance servicing, and ensures your premises meet all regulatory requirements." },
+      { "q": "Can you do a full plumbing fit-out for a new shop lease?", "a": "Absolutely. Kurt handles the complete plumbing scope for retail fit-outs — from bare-shell tenancies to operational stores. This includes water supply, hot water, waste and drainage, bathroom and kitchenette installations, and any specialist connections. He coordinates with your shopfitter and other trades, and handles all landlord coordination and building consent requirements." },
+      { "q": "Do you service shopping centre tenancies?", "a": "Yes. KA Plumbing works with retail tenants in shopping centres across Auckland. Kurt is familiar with the specific requirements of shopping centre work including after-hours access procedures, landlord approval processes, shared building services, and the clean, quiet work practices required in multi-tenant environments." }
+    ],
+    "keywords": ["retail plumber auckland", "shop plumber auckland", "store plumbing auckland", "tenant fit-out plumber auckland", "food retail plumber auckland", "after hours shop plumber north shore"]
+  }
+]

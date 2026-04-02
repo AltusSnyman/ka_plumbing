@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShutterText from '../../components/ui/ShutterText.astro';
+import BeforeAfterSlider from '../../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../../components/sections/TestimonialScroller.astro';
+import EmergencyBanner from '../../components/sections/EmergencyBanner.astro';
+import CTABanner from '../../components/sections/CTABanner.astro';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../../utils/breadcrumbs';
+import sectorsData from '../../data/sectors-extended.json';
+import servicesData from '../../data/services.json';
+
+export function getStaticPaths() {
+  return sectorsData.map((sector) => ({
+    params: { sector: sector.id },
+    props: { sector },
+  }));
+}
+
+const { sector } = Astro.props;
+
+const siteUrl = 'https://kaplumbingltd.co.nz';
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: sector.title,
+  provider: {
+    '@type': 'Plumber',
+    name: 'KA Plumbing LTD',
+    url: siteUrl,
+    telephone: '+64-21-277-9151',
+  },
+  areaServed: { '@type': 'City', name: 'Auckland' },
+  description: sector.seoDescription,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'NZD',
+    description: 'Free quote',
+  },
+};
+
+const icons: Record<string, string> = {
+  wrench: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+  hammer: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></svg>',
+  'plus-circle': '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>',
+  flame: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+  layers: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>',
+  'message-circle': '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>',
+};
+
+// Map service IDs to their icons from services.json
+const serviceIconMap: Record<string, string> = {};
+servicesData.forEach((s: any) => { serviceIconMap[s.id] = s.icon; });
+---
+
+<BaseLayout
+  title={sector.seoTitle}
+  description={sector.seoDescription}
+  canonicalUrl={`${siteUrl}/sectors/${sector.id}/`}
+  additionalSchemas={[
+    buildBreadcrumbSchema([
+      { name: 'Sectors', path: '/sectors/' },
+      { name: sector.title, path: `/sectors/${sector.id}/` },
+    ]),
+    buildFAQSchema(sector.faqs),
+    serviceSchema,
+  ]}
+>
+  <!-- Hero — 16:9 Background Image + Glass Card -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden" aria-label={`${sector.title} hero`}>
+    <img
+      src={sector.heroImage}
+      alt={`${sector.title} services in Auckland`}
+      width="1920"
+      height="1080"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-32 flex items-center justify-center w-full">
+      <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">{sector.title}</span>
+        <h1 class="text-h1 mb-4"><ShutterText text={sector.heroHeadline} /></h1>
+        <p class="text-text-muted max-w-md mx-auto text-lg">{sector.heroSubheadline}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/booking" class="btn-primary">Get a Free Quote</a>
+          <a href="tel:+64212779151" class="btn-outline">Call 021 277 9151</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sector Intro -->
+  <section class="py-section bg-background" aria-label={`About ${sector.title}`}>
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="max-w-3xl mx-auto reveal">
+        <h2 class="font-heading text-h2 text-primary mb-6 text-center">{sector.introHeading}</h2>
+        {sector.introContent.map((paragraph: string) => (
+          <p class="text-text-muted text-lg leading-relaxed mb-6 last:mb-0">{paragraph}</p>
+        ))}
+        <div class="text-center mt-8">
+          <a href="/booking" class="btn-primary cursor-pointer">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image + Content Grid — Alternating Rows -->
+  <section class="py-section bg-surface" aria-label={`${sector.title} expertise`}>
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Expertise</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">What We Cover</h2>
+      </div>
+
+      <div class="space-y-8">
+        {sector.contentGrid.map((item: any, index: number) => (
+          <div class="glass-card-solid p-8 reveal">
+            <div class={`flex flex-col lg:flex-row gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div class="lg:w-2/5">
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  width="480"
+                  height="480"
+                  loading="lazy"
+                  class="rounded-lg w-full object-cover aspect-square"
+                />
+              </div>
+              <div class="lg:w-3/5">
+                <h3 class="font-heading text-h3 text-primary mb-4">{item.heading}</h3>
+                <p class="text-text-muted leading-relaxed">{item.content}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services We Offer for This Sector -->
+  <section class="py-section bg-background" aria-label="Related services">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Services</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Services for {sector.title}</h2>
+        <p class="text-text-muted max-w-xl mx-auto">
+          Every service below is available for {sector.title.toLowerCase()} clients across Auckland, delivered by Kurt — your certified plumber and drain layer.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+        {sector.servicesOffered.map((offered: any) => {
+          const iconKey = serviceIconMap[offered.serviceId] || 'wrench';
+          return (
+            <a href={`/services/${offered.serviceId}/`} class="glass-card-solid p-6 group hover:border-accent/30 transition-all duration-200 cursor-pointer">
+              <div class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:bg-accent/10 group-hover:text-accent transition-colors">
+                <Fragment set:html={icons[iconKey] || icons.wrench} />
+              </div>
+              <h3 class="font-heading text-primary group-hover:text-accent transition-colors mb-2">
+                {servicesData.find((s: any) => s.id === offered.serviceId)?.title || offered.serviceId}
+              </h3>
+              <p class="text-text-muted text-sm leading-relaxed">{offered.contextDescription}</p>
+              <span class="inline-block mt-3 text-accent text-sm font-semibold group-hover:underline">Learn More &rarr;</span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="py-section bg-surface" aria-label="Service areas">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="text-center mb-8">
+          <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Areas We Serve</span>
+          <h2 class="font-heading text-h2 text-primary mb-4">{sector.locationContent.heading}</h2>
+        </div>
+        {sector.locationContent.paragraphs.map((paragraph: string) => (
+          <p class="text-text-muted text-lg leading-relaxed mb-6">{paragraph}</p>
+        ))}
+        <div class="flex flex-wrap gap-2 justify-center mt-8">
+          {sector.locationContent.suburbs.map((suburb: string) => (
+            <a
+              href={`/areas/${suburb.toLowerCase().replace(/\s+/g, '-')}/`}
+              class="inline-block px-4 py-2 rounded-full bg-primary/5 text-primary text-sm font-medium hover:bg-accent/10 hover:text-accent transition-colors cursor-pointer"
+              title={`Plumber in ${suburb}, Auckland`}
+            >
+              {suburb}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works — Process Timeline -->
+  <section class="py-section bg-background" aria-label="How we work">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">How It Works</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Simple, Straightforward Process</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+        {sector.processSteps.map((step: any) => (
+          <div class="glass-card-solid p-6 text-center relative">
+            <div class="text-accent font-heading text-h2 mb-3 opacity-30">{step.step}</div>
+            <h3 class="font-heading text-h4 text-primary mb-2">{step.title}</h3>
+            <p class="text-text-muted text-sm">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Before & After Slider -->
+  <BeforeAfterSlider />
+
+  <!-- FAQ -->
+  <section class="py-section bg-background" aria-label="Frequently asked questions">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Common Questions</h2>
+      </div>
+
+      <div class="space-y-4 reveal">
+        {sector.faqs.map((faq: { q: string; a: string }) => (
+          <details class="glass-card-solid group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-semibold text-primary list-none">
+              <span>{faq.q}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-text-muted text-sm leading-relaxed border-t border-primary/5 pt-4">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <TestimonialScroller />
+
+  <!-- CTA + Emergency -->
+  <CTABanner
+    headline={`Need ${sector.title} Services?`}
+    subheadline="Get a free, no-obligation quote. Kurt personally responds to every enquiry."
+  />
+  <EmergencyBanner />
+</BaseLayout>
