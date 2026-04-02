@@ -35,6 +35,16 @@ export default defineConfig({
           item.priority = 0.8;
           item.changefreq = 'monthly';
         }
+        // Blog index page
+        else if (url === 'https://kaplumbingltd.co.nz/blog/') {
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
+        }
+        // Individual blog articles
+        else if (url.includes('/blog/')) {
+          item.priority = 0.7;
+          item.changefreq = 'monthly';
+        }
         // North Shore location pages (priority suburbs)
         else if (url.match(/\/areas\/(takapuna|albany|browns-bay|devonport|glenfield|torbay|long-bay|beach-haven|greenhithe|paremoremo)\//)) {
           item.priority = 0.8;

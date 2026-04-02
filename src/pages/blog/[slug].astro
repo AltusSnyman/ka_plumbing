@@ -1,0 +1,227 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShutterText from '../../components/ui/ShutterText.astro';
+import BeforeAfterSlider from '../../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../../components/sections/TestimonialScroller.astro';
+import EmergencyBanner from '../../components/sections/EmergencyBanner.astro';
+import CTABanner from '../../components/sections/CTABanner.astro';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../../utils/breadcrumbs';
+import blogData from '../../data/blog.json';
+
+export function getStaticPaths() {
+  return blogData.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+const siteUrl = 'https://kaplumbingltd.co.nz';
+const blogPostingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.title,
+  description: post.seoDescription,
+  image: `${siteUrl}${post.heroImage}`,
+  datePublished: post.date,
+  dateModified: post.date,
+  author: {
+    '@type': 'Person',
+    name: 'Kurt',
+    jobTitle: 'Certified Plumber & Drain Layer',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'KA Plumbing LTD',
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/images/logos/logo-square.webp`,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/blog/${post.slug}/`,
+  },
+};
+
+const relatedPosts = blogData.filter((p) => post.relatedSlugs?.includes(p.slug));
+
+const formatDate = (dateStr: string) => {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-NZ', { day: 'numeric', month: 'long', year: 'numeric' });
+};
+---
+
+<BaseLayout
+  title={post.seoTitle}
+  description={post.seoDescription}
+  ogImage={post.heroImage}
+  canonicalUrl={`${siteUrl}/blog/${post.slug}/`}
+  additionalSchemas={[
+    buildBreadcrumbSchema([
+      { name: 'Blog', path: '/blog/' },
+      { name: post.title, path: `/blog/${post.slug}/` },
+    ]),
+    buildFAQSchema(post.faqs),
+    blogPostingSchema,
+  ]}
+>
+  <!-- Hero — 16:9 Background Image + Glass Card -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden" aria-label="Article hero">
+    <img
+      src={post.heroImage}
+      alt={post.title}
+      width="1920"
+      height="1080"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-32 flex items-center justify-center w-full">
+      <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">{post.category}</span>
+        <h1 class="text-h2 md:text-h1 mb-4"><ShutterText text={post.title} /></h1>
+        <div class="flex items-center justify-center gap-4 text-text-muted text-sm">
+          <span>{formatDate(post.date)}</span>
+          <span class="w-1 h-1 rounded-full bg-text-muted"></span>
+          <span>{post.readTime}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Meta -->
+  <section class="py-6 bg-background border-b border-primary/5">
+    <div class="max-w-[800px] mx-auto px-6 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="/images/logos/logo-round.webp" alt="Kurt" width="40" height="40" class="rounded-full" />
+        <div>
+          <p class="text-primary font-semibold text-sm">{post.author}</p>
+          <p class="text-text-muted text-xs">{formatDate(post.date)}</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold">{post.category}</span>
+        <span class="text-text-muted text-xs">{post.readTime}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <article class="py-section bg-background" aria-label="Article content">
+    <div class="max-w-[800px] mx-auto px-6 reveal">
+      {post.content.map((block: any) => {
+        if (block.type === 'paragraph') {
+          return <p class="text-text-muted text-lg leading-relaxed mb-6">{block.text}</p>;
+        }
+        if (block.type === 'heading') {
+          return <h2 class="font-heading text-h3 text-primary mt-10 mb-4">{block.text}</h2>;
+        }
+        if (block.type === 'callout') {
+          return (
+            <div class="glass-card-solid p-6 my-6 border-l-4 border-accent">
+              <p class="text-primary font-medium leading-relaxed">{block.text}</p>
+            </div>
+          );
+        }
+        if (block.type === 'list') {
+          return (
+            <ul class="space-y-3 mb-6 ml-4">
+              {block.items.map((item: string) => (
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-accent mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-text-muted leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        return null;
+      })}
+
+      <!-- CTA within article -->
+      <div class="glass-card-solid p-8 my-10 text-center">
+        <h3 class="font-heading text-h3 text-primary mb-3">Need Help With This Issue?</h3>
+        <p class="text-text-muted mb-6">Kurt is available for emergency callouts and free assessments across Auckland.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/booking" class="btn-primary">Get a Free Quote</a>
+          <a href="tel:+64212779151" class="btn-outline">Call 021 277 9151</a>
+        </div>
+      </div>
+
+      <!-- Related Service -->
+      {post.relatedService && (
+        <p class="text-text-muted text-sm mt-8">
+          Related service: <a href={`/services/${post.relatedService}/`} class="text-accent font-semibold hover:underline">View our {post.relatedService.replace(/-/g, ' ')} service &rarr;</a>
+        </p>
+      )}
+    </div>
+  </article>
+
+  <!-- FAQ -->
+  <section class="py-section bg-surface" aria-label="Frequently asked questions">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Common Questions</h2>
+      </div>
+
+      <div class="space-y-4 reveal">
+        {post.faqs.map((faq: { q: string; a: string }) => (
+          <details class="glass-card-solid group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-semibold text-primary list-none">
+              <span>{faq.q}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-text-muted text-sm leading-relaxed border-t border-primary/5 pt-4">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Articles -->
+  {relatedPosts.length > 0 && (
+    <section class="py-section bg-background" aria-label="Related articles">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="text-center mb-8 reveal">
+          <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Keep Reading</span>
+          <h2 class="font-heading text-h3 text-primary">Related Articles</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto reveal-stagger">
+          {relatedPosts.map((related) => (
+            <a href={`/blog/${related.slug}/`} class="glass-card-solid overflow-hidden group hover:border-accent/30 transition-all duration-200 cursor-pointer">
+              <img
+                src={related.heroImage}
+                alt={related.title}
+                width="600"
+                height="338"
+                loading="lazy"
+                class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="p-6">
+                <span class="inline-block px-2 py-0.5 rounded-full bg-accent/10 text-accent text-xs font-semibold mb-2">{related.category}</span>
+                <h3 class="font-heading text-primary group-hover:text-accent transition-colors mb-2 text-sm">{related.title}</h3>
+                <p class="text-text-muted text-xs">{related.readTime}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Bottom 4 sections -->
+  <BeforeAfterSlider />
+  <TestimonialScroller />
+  <CTABanner
+    headline="Need a Certified Plumber?"
+    subheadline="Get a free, no-obligation quote. Kurt personally responds to every enquiry."
+  />
+  <EmergencyBanner />
+</BaseLayout>

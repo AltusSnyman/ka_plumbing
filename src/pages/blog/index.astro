@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import VideoHero from '../../components/sections/VideoHero.astro';
+import BeforeAfterSlider from '../../components/sections/BeforeAfterSlider.astro';
+import TestimonialScroller from '../../components/sections/TestimonialScroller.astro';
+import EmergencyBanner from '../../components/sections/EmergencyBanner.astro';
+import CTABanner from '../../components/sections/CTABanner.astro';
+import { buildBreadcrumbSchema } from '../../utils/breadcrumbs';
+import blogData from '../../data/blog.json';
+
+const formatDate = (dateStr: string) => {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-NZ', { day: 'numeric', month: 'long', year: 'numeric' });
+};
+---
+
+<BaseLayout
+  title="Plumbing Blog Auckland — Expert Tips & Guides | KA Plumbing LTD"
+  description="Practical plumbing advice for Auckland homeowners from a certified plumber. Emergency guides, maintenance tips, and answers to common plumbing questions. Read now."
+  canonicalUrl="https://kaplumbingltd.co.nz/blog/"
+  additionalSchemas={[
+    buildBreadcrumbSchema([{ name: 'Blog', path: '/blog/' }]),
+  ]}
+>
+  <VideoHero
+    videoSrc="/videos/bathroom-transform.mp4"
+    posterSrc="/videos/bathroom-poster.webp"
+    headline="Plumbing Tips & Expert Advice"
+    subheadline="Practical guides from a certified Auckland plumber. Emergency steps, maintenance tips, and honest answers to the plumbing questions homeowners ask most."
+    ctaPrimary={{ label: 'Get a Free Quote', href: '/booking' }}
+    ctaSecondary={{ label: 'Our Services', href: '/services' }}
+  />
+
+  <!-- Article Grid -->
+  <section class="py-section bg-background" aria-label="Blog articles">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Latest Articles</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Expert Plumbing Guides</h2>
+        <p class="text-text-muted max-w-xl mx-auto">
+          Practical advice from Kurt — a certified plumber and drain layer serving Auckland. Real answers to the questions homeowners ask most.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-stagger">
+        {blogData.map((post) => (
+          <a href={`/blog/${post.slug}/`} class="glass-card-solid overflow-hidden group hover:border-accent/30 transition-all duration-200 cursor-pointer">
+            <div class="overflow-hidden">
+              <img
+                src={post.heroImage}
+                alt={post.title}
+                width="600"
+                height="338"
+                loading="lazy"
+                class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold">{post.category}</span>
+                <span class="text-text-muted text-xs">{post.readTime}</span>
+              </div>
+              <h3 class="font-heading text-h4 text-primary group-hover:text-accent transition-colors mb-3">{post.title}</h3>
+              <p class="text-text-muted text-sm leading-relaxed mb-4">{post.excerpt}</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img src="/images/logos/logo-round.webp" alt="Kurt" width="28" height="28" class="rounded-full" />
+                  <span class="text-text-muted text-xs">Kurt</span>
+                </div>
+                <span class="text-text-muted text-xs">{formatDate(post.date)}</span>
+              </div>
+              <span class="inline-block mt-4 text-accent text-sm font-semibold group-hover:underline">Read Article &rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom 4 sections -->
+  <BeforeAfterSlider />
+  <TestimonialScroller />
+  <CTABanner />
+  <EmergencyBanner />
+</BaseLayout>
