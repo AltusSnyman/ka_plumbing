@@ -3,21 +3,38 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ShutterText from '../../components/ui/ShutterText.astro';
 import EmergencyBanner from '../../components/sections/EmergencyBanner.astro';
 import CTABanner from '../../components/sections/CTABanner.astro';
+import EnhancedLocationLayout from '../../components/sections/EnhancedLocationLayout.astro';
 import { buildBreadcrumbSchema, buildFAQSchema } from '../../utils/breadcrumbs';
 import locationsData from '../../data/locations.json';
+import enhancedData from '../../data/locations-enhanced.json';
 import servicesData from '../../data/services.json';
 
 export function getStaticPaths() {
-  return locationsData.map((location) => ({
+  // Thin pages from locations.json
+  const thinPaths = locationsData.map((location) => ({
     params: { suburb: location.slug },
     props: { location },
   }));
+
+  // Enhanced-only slugs not already in locations.json
+  const existingSlugs = new Set(locationsData.map((l: any) => l.slug));
+  const enhancedOnlyPaths = enhancedData
+    .filter((e: any) => !existingSlugs.has(e.slug))
+    .map((e: any) => ({
+      params: { suburb: e.slug },
+      props: { location: { slug: e.slug, suburb: e.name, region: e.region, priority: 1, description: '', nearbySuburbs: [], responseTime: e.responseTime } },
+    }));
+
+  return [...thinPaths, ...enhancedOnlyPaths];
 }
 
 const { location } = Astro.props;
 const siteUrl = 'https://kaplumbingltd.co.nz';
 
-const nearbyLocations = locationsData.filter((l) => location.nearbySuburbs.includes(l.slug));
+// Check if this slug has enhanced content
+const enhancedLocation = enhancedData.find((e: any) => e.slug === location.slug);
+
+const nearbyLocations = locationsData.filter((l) => (location.nearbySuburbs || []).includes(l.slug));
 
 const faqs = [
   { q: `How fast can a plumber get to ${location.suburb}?`, a: `For plumbing emergencies in ${location.suburb}, Kurt typically arrives within ${location.responseTime}. For scheduled work, we offer flexible booking including weekends.` },
@@ -25,27 +42,122 @@ const faqs = [
   { q: `What plumbing and drain laying services are available in ${location.suburb}?`, a: `We offer the full range of plumbing and drain laying services in ${location.suburb}: repairs, renovations, new installations, hot water systems, drain laying, and consulting. Kurt is a certified plumber and certified drain layer.` },
 ];
 
+// Enhanced page schema
+const enhancedBreadcrumb = enhancedLocation ? (() => {
+  const crumbs = [{ name: 'Areas', path: '/areas/' }];
+  if (enhancedLocation.parentPage) {
+    crumbs.push({ name: enhancedLocation.parentPage.name, path: `/areas/${enhancedLocation.parentPage.slug}/` });
+  }
+  crumbs.push({ name: enhancedLocation.name, path: `/areas/${enhancedLocation.slug}/` });
+  return crumbs;
+})() : null;
+
+// Geo-coordinates for Auckland suburbs (approximate centroids)
+const geoCoords: Record<string, { lat: number; lng: number }> = {
+  'auckland': { lat: -36.8485, lng: 174.7633 },
+  'north-shore': { lat: -36.7783, lng: 174.7576 },
+  'auckland-cbd': { lat: -36.8485, lng: 174.7633 },
+  'takapuna': { lat: -36.7876, lng: 174.7728 },
+  'albany': { lat: -36.7271, lng: 174.6972 },
+  'browns-bay': { lat: -36.7178, lng: 174.7442 },
+  'glenfield': { lat: -36.7809, lng: 174.7227 },
+  'devonport': { lat: -36.8271, lng: 174.7969 },
+  'milford': { lat: -36.7687, lng: 174.7656 },
+  'birkenhead': { lat: -36.8103, lng: 174.7246 },
+  'northcote': { lat: -36.8005, lng: 174.7440 },
+  'beach-haven': { lat: -36.7963, lng: 174.7076 },
+  'sunnynook': { lat: -36.7507, lng: 174.7321 },
+  'torbay': { lat: -36.6969, lng: 174.7364 },
+  'long-bay': { lat: -36.6780, lng: 174.7357 },
+  'greenhithe': { lat: -36.7707, lng: 174.6581 },
+  'paremoremo': { lat: -36.7439, lng: 174.6608 },
+  'mairangi-bay': { lat: -36.7389, lng: 174.7492 },
+  'ponsonby': { lat: -36.8515, lng: 174.7451 },
+  'grey-lynn': { lat: -36.8606, lng: 174.7352 },
+  'mt-eden': { lat: -36.8773, lng: 174.7590 },
+  'remuera': { lat: -36.8741, lng: 174.7899 },
+  'parnell': { lat: -36.8554, lng: 174.7831 },
+  'newmarket': { lat: -36.8699, lng: 174.7776 },
+  'epsom': { lat: -36.8888, lng: 174.7718 },
+  'grafton': { lat: -36.8608, lng: 174.7709 },
+  'herne-bay': { lat: -36.8413, lng: 174.7372 },
+  'westmere': { lat: -36.8530, lng: 174.7295 },
+  'mt-albert': { lat: -36.8814, lng: 174.7133 },
+  'avondale': { lat: -36.8922, lng: 174.6977 },
+  'henderson': { lat: -36.8763, lng: 174.6310 },
+  'new-lynn': { lat: -36.9059, lng: 174.6836 },
+  'titirangi': { lat: -36.9315, lng: 174.6518 },
+  'glen-eden': { lat: -36.9174, lng: 174.6558 },
+  'te-atatu': { lat: -36.8533, lng: 174.6545 },
+  'blockhouse-bay': { lat: -36.9012, lng: 174.7133 },
+  'onehunga': { lat: -36.9220, lng: 174.7865 },
+  'royal-oak': { lat: -36.9020, lng: 174.7764 },
+  'mt-roskill': { lat: -36.9041, lng: 174.7464 },
+  'sandringham': { lat: -36.8881, lng: 174.7434 },
+  'kingsland': { lat: -36.8710, lng: 174.7409 },
+  'morningside': { lat: -36.8719, lng: 174.7277 },
+};
+
+const currentSlug = enhancedLocation ? enhancedLocation.slug : location.slug;
+const currentName = enhancedLocation ? enhancedLocation.name : location.suburb;
+const coords = geoCoords[currentSlug] || geoCoords['auckland'];
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'Plumber',
   name: 'KA Plumbing LTD',
   url: siteUrl,
-  telephone: '+64-21-277-9151',
+  telephone: '+64212779151',
   email: 'KAPlumbingLtd@gmail.com',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: coords.lat,
+    longitude: coords.lng,
+  },
   areaServed: {
     '@type': 'Place',
-    name: `${location.suburb}, Auckland`,
+    name: `${currentName}, Auckland`,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: location.suburb,
+      addressLocality: currentName,
       addressRegion: 'Auckland',
       addressCountry: 'NZ',
     },
   },
-  description: `Professional plumber and certified drain layer serving ${location.suburb}, Auckland. 24/7 emergency plumbing, repairs, renovations, hot water, and drain laying.`,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '18:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '08:00',
+      closes: '14:00',
+    },
+  ],
+  description: `Professional plumber and certified drain layer serving ${currentName}, Auckland. 24/7 emergency plumbing, repairs, renovations, hot water, and drain laying.`,
 };
 ---
 
+{/* ====== ENHANCED PAGE ====== */}
+{enhancedLocation ? (
+<BaseLayout
+  title={enhancedLocation.seoTitle}
+  description={enhancedLocation.seoDescription}
+  canonicalUrl={`${siteUrl}/areas/${enhancedLocation.slug}/`}
+  additionalSchemas={[
+    buildBreadcrumbSchema(enhancedBreadcrumb!),
+    buildFAQSchema(enhancedLocation.faqs),
+    localBusinessSchema,
+  ]}
+>
+  <EnhancedLocationLayout location={enhancedLocation} />
+</BaseLayout>
+) : (
+/* ====== THIN PAGE (unchanged) ====== */
 <BaseLayout
   title={`Plumber in ${location.suburb} | Auckland Plumbing & Drain Laying | KA Plumbing LTD`}
   description={`Need a plumber in ${location.suburb}, Auckland? KA Plumbing offers emergency plumbing, drain laying, hot water repairs & renovations. Certified plumber. Call 021 277 9151.`}
@@ -68,6 +180,7 @@ const localBusinessSchema = {
       height="1080"
       class="absolute inset-0 w-full h-full object-cover"
       loading="eager"
+      fetchpriority="high"
     />
     <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-32 flex items-center justify-center w-full">
       <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">
@@ -190,3 +303,4 @@ const localBusinessSchema = {
   />
   <EmergencyBanner />
 </BaseLayout>
+)}

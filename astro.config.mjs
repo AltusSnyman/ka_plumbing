@@ -5,6 +5,9 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://kaplumbingltd.co.nz',
+  redirects: {
+    '/areas/cbd/': '/areas/auckland-cbd/',
+  },
   integrations: [
     sitemap({
       filter: (page) => !page.includes('/404'),
@@ -45,8 +48,13 @@ export default defineConfig({
           item.priority = 0.7;
           item.changefreq = 'monthly';
         }
+        // Enhanced location pages (city/region/featured suburbs)
+        else if (url.match(/\/areas\/(auckland|north-shore|auckland-cbd|takapuna|albany|browns-bay|glenfield)\//)) {
+          item.priority = 0.9;
+          item.changefreq = 'weekly';
+        }
         // North Shore location pages (priority suburbs)
-        else if (url.match(/\/areas\/(takapuna|albany|browns-bay|devonport|glenfield|torbay|long-bay|beach-haven|greenhithe|paremoremo)\//)) {
+        else if (url.match(/\/areas\/(devonport|torbay|long-bay|beach-haven|greenhithe|paremoremo)\//)) {
           item.priority = 0.8;
           item.changefreq = 'monthly';
         }

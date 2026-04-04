@@ -35,6 +35,8 @@ const canonical = canonicalUrl || Astro.url.href;
 <!-- Geo -->
 <meta name="geo.region" content="NZ-AUK" />
 <meta name="geo.placename" content="Auckland" />
+<meta name="geo.position" content="-36.8485;174.7633" />
+<meta name="ICBM" content="-36.8485, 174.7633" />
 
 <!-- Local Business JSON-LD -->
 <script type="application/ld+json" set:html={JSON.stringify({
@@ -43,7 +45,7 @@ const canonical = canonicalUrl || Astro.url.href;
   "name": "KA Plumbing LTD",
   "description": "Trusted, locally owned plumbing and drain laying services in Auckland. Certified plumber and drain layer offering 24/7 emergency service.",
   "url": siteUrl,
-  "telephone": "+64-21-277-9151",
+  "telephone": "+64212779151",
   "email": "KAPlumbingLtd@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -51,10 +53,18 @@ const canonical = canonicalUrl || Astro.url.href;
     "addressRegion": "Auckland",
     "addressCountry": "NZ"
   },
-  "areaServed": {
-    "@type": "City",
-    "name": "Auckland"
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -36.8485,
+    "longitude": 174.7633
   },
+  "areaServed": [
+    { "@type": "City", "name": "Auckland", "sameAs": "https://en.wikipedia.org/wiki/Auckland" },
+    { "@type": "Place", "name": "North Shore, Auckland" },
+    { "@type": "Place", "name": "Auckland CBD" },
+    { "@type": "Place", "name": "West Auckland" },
+    { "@type": "Place", "name": "South Auckland" }
+  ],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",

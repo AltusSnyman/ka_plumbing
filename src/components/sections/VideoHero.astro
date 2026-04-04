@@ -25,18 +25,18 @@ const {
 <section class="video-hero relative min-h-[85vh] flex items-center overflow-hidden" aria-label="Hero">
   <!-- Video Background -->
   <video
-    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
     muted
     playsinline
-    preload="metadata"
-    poster={posterSrc}
+    preload="none"
+    data-lazy-video
   >
     <source src={videoSrc} type="video/mp4" />
   </video>
 
-  <!-- Static Poster (shown after video ends) -->
+  <!-- Static Poster (visible immediately for fast LCP, fades when video plays) -->
   <div
-    class="video-poster absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500"
+    class="video-poster absolute inset-0 w-full h-full transition-opacity duration-500"
     style={`background-image: url('${posterSrc}'); background-size: cover; background-position: center;`}
   ></div>
 

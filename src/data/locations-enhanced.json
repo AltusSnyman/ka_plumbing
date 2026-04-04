@@ -1,0 +1,399 @@
+[
+  {
+    "slug": "auckland",
+    "pageType": "city",
+    "name": "Auckland",
+    "region": "Auckland",
+    "seoTitle": "Plumber in Auckland — 24/7 Plumbing & Drain Laying | KA Plumbing LTD",
+    "seoDescription": "Auckland's trusted plumber and certified drain layer. Emergency callouts, repairs, renovations, hot water systems, and drain laying across all Auckland suburbs. Call 021 277 9151.",
+    "heroHeadline": "Auckland's Trusted Plumber & Drain Layer",
+    "heroSubheadline": "Certified plumber and drain layer serving every Auckland suburb — from the North Shore to South Auckland. Emergency callouts 24/7, honest pricing, one contractor for everything.",
+    "heroImage": "/images/areas/heroes/auckland.webp",
+    "introHeading": "Your Local Auckland Plumber — Serving the Entire City",
+    "introContent": [
+      "Auckland is New Zealand's largest city, home to over 1.7 million people spread across hundreds of suburbs — each with its own housing stock, infrastructure age, and plumbing challenges. From the volcanic soil of the central isthmus to the clay-heavy hillsides of the North Shore, from the aging galvanised pipes in 1950s state houses to brand-new plumbing in Albany's latest apartment complexes, no two Auckland plumbing jobs are the same. That's why you need a plumber who genuinely knows this city.",
+      "Kurt, the owner and sole operator of KA Plumbing LTD, is both a certified plumber and a certified drain layer — a dual qualification that means you only need one contractor for the full scope of residential and light commercial plumbing work. Whether it's a burst pipe flooding your Ponsonby villa at 2am, a blocked drain backing up in your Glenfield kitchen, low water pressure in your Takapuna apartment, or a full bathroom renovation in Remuera, Kurt handles it personally from quote to completion.",
+      "KA Plumbing services all of Auckland, with the fastest response times on the North Shore where Kurt is based. Emergency callouts are available 24 hours a day, 7 days a week — including public holidays. Every job comes with upfront, no-obligation quoting, honest pricing with no hidden fees, and the peace of mind that comes from hiring a fully certified tradesperson who takes pride in his work."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/areas/content/auckland-1.webp",
+        "imageAlt": "Diverse Auckland residential neighbourhood with mix of character villas and modern townhouses",
+        "heading": "Plumbing for Auckland's Diverse Housing Stock",
+        "content": "Auckland's housing ranges from heritage villas built in the 1900s to brand-new townhouse developments. Each era of construction brings different plumbing systems and challenges. Older homes in suburbs like Mt Eden, Ponsonby, and Grey Lynn often have original galvanised iron pipes that are corroding from the inside, leading to rust-coloured water and gradually decreasing flow. Mid-century homes across the Shore and West Auckland frequently have a mix of copper and galvanised pipe, with the galvanised sections failing first. Modern builds in growth areas like Albany, Hobsonville, and Flat Bush typically have polybutylene or PEX piping — more reliable, but still requiring professional installation and maintenance. Kurt has worked across every era of Auckland housing and knows exactly what to expect when he walks through your door."
+      },
+      {
+        "image": "/images/areas/content/auckland-2.webp",
+        "imageAlt": "Professional plumber inspecting pipes under a modern Auckland kitchen sink",
+        "heading": "Auckland's Unique Plumbing Challenges",
+        "content": "Auckland sits on a volcanic field with over 50 volcanic cones, and the city's geology creates specific plumbing challenges that plumbers elsewhere in New Zealand rarely encounter. The heavy clay soil across much of the North Shore and West Auckland shifts seasonally as it expands and contracts with moisture, putting stress on underground drain lines and causing cracks that let tree roots in. The volcanic basalt rock in central suburbs makes trenching for drain repairs more difficult and time-consuming. Auckland's coastal suburbs face salt air corrosion on exposed fittings, while hillside properties in suburbs like Titirangi and Devonport deal with gravity-fed water systems and complex drainage falls. Watercare's supply network also varies significantly across the city — some areas enjoy high mains pressure while others, particularly elevated suburbs, experience chronic low pressure that requires pressure management solutions."
+      },
+      {
+        "image": "/images/areas/content/auckland-3.webp",
+        "imageAlt": "Auckland residential water meter and toby valve on suburban footpath",
+        "heading": "Council Compliance & Auckland Plumbing Regulations",
+        "content": "All plumbing and drain laying work in Auckland must comply with the New Zealand Building Code and Auckland Council requirements. This includes obtaining building consents for significant work such as new drainage, bathroom additions, or hot water cylinder replacements in certain situations. As a certified plumber and certified drain layer, Kurt ensures every job meets or exceeds code requirements — protecting your home and your investment. KA Plumbing handles the compliance side so you don't have to worry about it. We provide documentation for all consented work, coordinate with Auckland Council inspectors when required, and ensure your plumbing meets the standards that matter for insurance claims, property sales, and long-term reliability."
+      }
+    ],
+    "whyChoose": [
+      { "title": "All-Auckland Coverage", "desc": "North Shore, Central, West, and South Auckland — Kurt services the entire city with reliable response times" },
+      { "title": "Dual Certified", "desc": "Certified plumber AND certified drain layer — one contractor for your complete plumbing and drainage needs" },
+      { "title": "24/7 Emergency Service", "desc": "Burst pipe at 3am? Flooding on a Sunday? Kurt is available around the clock for Auckland emergencies" },
+      { "title": "Honest, Upfront Pricing", "desc": "Free no-obligation quotes, transparent pricing, and no hidden fees — ever" }
+    ],
+    "childPages": ["north-shore", "auckland-cbd"],
+    "siblingPages": ["takapuna", "albany", "browns-bay", "glenfield"],
+    "nearbyThinSlugs": ["ponsonby", "grey-lynn", "mt-eden", "remuera", "parnell", "newmarket"],
+    "responseTime": "15-35 minutes",
+    "faqs": [
+      { "q": "How quickly can a plumber get to my Auckland home?", "a": "Response times vary by location. For North Shore suburbs where Kurt is based, expect 15-25 minutes for emergencies. Central Auckland is typically 20-30 minutes, and West or South Auckland 25-40 minutes. For scheduled work, we offer flexible booking including weekends." },
+      { "q": "Do you service all Auckland suburbs?", "a": "Yes — KA Plumbing services the entire Auckland region, from Devonport to Henderson, Albany to Onehunga. Our fastest response times are on the North Shore, but we cover every suburb in Auckland for both emergency and scheduled plumbing work." },
+      { "q": "What does a certified plumber and drain layer mean?", "a": "Kurt holds two separate trade certifications issued by the New Zealand Plumbers, Gasfitters and Drainlayers Board. A certified plumber can legally do all plumbing work, and a certified drain layer can legally do all drainage work. Having both means you only need one contractor — saving you time and money on jobs that involve both plumbing and drainage." },
+      { "q": "How much does a plumber cost in Auckland?", "a": "Costs vary depending on the job. KA Plumbing provides free, no-obligation quotes before any work begins. We charge fairly and transparently — you'll know the price before we start. For emergencies, standard call-out rates apply. Call 021 277 9151 for a quote." },
+      { "q": "Is KA Plumbing available on weekends and public holidays?", "a": "Yes. Emergency plumbing is available 24/7, 365 days a year — including weekends and public holidays. For non-emergency work, Kurt offers flexible scheduling including Saturdays to work around your commitments." }
+    ],
+    "keywords": ["plumber auckland", "auckland plumber", "plumbing auckland", "drain layer auckland", "emergency plumber auckland", "24 hour plumber auckland"]
+  },
+  {
+    "slug": "north-shore",
+    "pageType": "region",
+    "name": "North Shore",
+    "region": "North Shore",
+    "seoTitle": "Plumber North Shore Auckland — 24/7 Emergency & Drain Laying | KA Plumbing",
+    "seoDescription": "North Shore Auckland's local plumber and certified drain layer. Fast response times across Takapuna, Albany, Browns Bay, Glenfield & all Shore suburbs. Call 021 277 9151.",
+    "heroHeadline": "North Shore Auckland's Local Plumber",
+    "heroSubheadline": "Based on the North Shore, serving every suburb from Devonport to Long Bay. Certified plumber and drain layer — fast response, honest pricing, available 24/7.",
+    "heroImage": "/images/areas/heroes/north-shore.webp",
+    "introHeading": "Your Trusted North Shore Plumber — Fast, Local, Certified",
+    "introContent": [
+      "The North Shore is home to KA Plumbing — and it's where Kurt delivers the fastest response times in Auckland. From the bustling commercial hub of Takapuna to the family-friendly streets of Browns Bay, from Albany's rapid new-build developments to Glenfield's established 1970s neighbourhoods, every North Shore suburb has plumbing needs that Kurt handles daily. Being based locally means shorter travel times, deeper local knowledge, and a genuine understanding of the plumbing challenges that Shore homeowners face.",
+      "The North Shore stretches from Devonport's historic harbourside homes at the southern tip to Long Bay's coastal developments in the north, with the Northern Motorway and busway connecting everything in between. This region is home to approximately 250,000 people across 15+ suburbs, with housing stock ranging from Devonport's 1890s character villas to Albany's 2020s apartment towers. Each decade of construction brings different pipe materials, different water systems, and different maintenance requirements — and Kurt has worked on all of them.",
+      "Whether you're dealing with a plumbing emergency that can't wait, planning a bathroom renovation, replacing an aging hot water cylinder, or need a certified drain layer for drainage work on your property, KA Plumbing is the North Shore's go-to choice. Every quote is free and no-obligation, every price is upfront, and every job is completed to the highest standard by a certified tradesperson."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/areas/content/north-shore-1.webp",
+        "imageAlt": "Auckland Harbour Bridge view from North Shore with residential suburbs visible",
+        "heading": "Serving Every North Shore Suburb",
+        "content": "The North Shore is connected to the rest of Auckland by the Harbour Bridge and the Northern Motorway — and KA Plumbing knows every exit, every back road, and every shortcut. Kurt services all North Shore suburbs including Takapuna, Devonport, Milford, Northcote, Birkenhead, Beach Haven, Glenfield, Sunnynook, Albany, Mairangi Bay, Browns Bay, Torbay, Long Bay, Greenhithe, and Paremoremo. Response times across the Shore typically range from 15 to 30 minutes for emergencies, making KA Plumbing one of the fastest-responding plumbers on the North Shore. For scheduled work, Kurt offers morning, afternoon, and weekend appointment windows to fit around your commitments."
+      },
+      {
+        "image": "/images/areas/content/north-shore-2.webp",
+        "imageAlt": "North Shore Auckland residential street with established family homes and mature trees",
+        "heading": "North Shore Plumbing Challenges We See Every Day",
+        "content": "The North Shore's housing stock presents a predictable pattern of plumbing issues that Kurt encounters daily. Homes built in the 1950s through 1970s — common in Glenfield, Birkenhead, Northcote, and Beach Haven — often have original galvanised iron water pipes that are now 50-70 years old and corroding internally. These cause rust-coloured water, reduced flow, and eventually pinhole leaks inside walls. The North Shore's heavy clay soil is another constant challenge: it expands when wet and contracts when dry, putting lateral stress on underground drain lines. Tree roots — particularly from large native pohutukawa and introduced species — find their way into even the smallest cracks in drain pipes, causing blockages that recur until the root intrusion is properly addressed. Coastal suburbs like Devonport, Takapuna, and Browns Bay also deal with salt air corrosion on exposed brass and copper fittings."
+      },
+      {
+        "image": "/images/areas/content/north-shore-3.webp",
+        "imageAlt": "Modern bathroom renovation in progress in a North Shore Auckland home",
+        "heading": "Renovations, New Builds & Hot Water on the Shore",
+        "content": "The North Shore is one of Auckland's most active areas for home renovations and new-build developments. Albany and the upper Shore suburbs are seeing intense residential construction, while established suburbs like Takapuna, Milford, and Devonport have ongoing renovation activity as homeowners modernise aging properties. KA Plumbing handles the full plumbing scope for bathroom and kitchen renovations — from stripping out old pipe work to installing new fixtures, vanities, showers, and waste lines. For hot water, the North Shore's mix of low-pressure and mains-pressure systems means choosing the right replacement cylinder matters. Kurt advises on the best system for your home, installs all major brands including Rheem, Rinnai, Dux, and Aquamax, and ensures your installation meets Building Code requirements."
+      }
+    ],
+    "whyChoose": [
+      { "title": "Based on the Shore", "desc": "Kurt lives and works on the North Shore — fastest response times of any plumber in the region" },
+      { "title": "15+ Suburbs Covered", "desc": "From Devonport to Long Bay, Albany to Beach Haven — every North Shore suburb is in our core service area" },
+      { "title": "Dual Certified", "desc": "Certified plumber and certified drain layer — handle both your plumbing and drainage in one visit" },
+      { "title": "24/7 Emergency", "desc": "Middle-of-the-night burst pipe? Kurt is available around the clock for North Shore emergencies" }
+    ],
+    "childPages": [],
+    "siblingPages": ["auckland-cbd"],
+    "parentPage": { "slug": "auckland", "name": "Auckland" },
+    "suburbPages": ["takapuna", "albany", "browns-bay", "glenfield"],
+    "nearbyThinSlugs": ["devonport", "milford", "birkenhead", "northcote", "sunnynook", "beach-haven", "mairangi-bay", "torbay", "long-bay", "greenhithe", "paremoremo"],
+    "responseTime": "15-30 minutes",
+    "faqs": [
+      { "q": "How fast can a plumber get to the North Shore?", "a": "KA Plumbing is based on the North Shore, so response times are the fastest in Auckland. For emergencies, expect Kurt to arrive within 15-30 minutes depending on your exact suburb and traffic conditions. Takapuna, Glenfield, and Birkenhead are typically under 20 minutes." },
+      { "q": "Which North Shore suburbs do you cover?", "a": "Every single one. Takapuna, Devonport, Milford, Northcote, Birkenhead, Beach Haven, Glenfield, Sunnynook, Albany, Mairangi Bay, Browns Bay, Torbay, Long Bay, Greenhithe, and Paremoremo — plus all surrounding areas." },
+      { "q": "Do you work on both old and new North Shore homes?", "a": "Absolutely. Kurt works on everything from 1890s Devonport villas with original plumbing to brand-new Albany apartment complexes. Different eras of housing require different approaches, and Kurt has hands-on experience with all of them." },
+      { "q": "Can you fix tree root damage in North Shore drains?", "a": "Yes — tree root intrusion is one of the most common drain problems on the North Shore due to the clay soil and mature trees. As a certified drain layer, Kurt can locate the intrusion, clear the blockage, and repair or replace the affected section of drain pipe." },
+      { "q": "Do you offer free quotes on the North Shore?", "a": "Yes. Every quote from KA Plumbing is free and comes with no obligation. Kurt will assess your job, explain what's needed, and give you an upfront price before any work begins. No surprises, no hidden fees." }
+    ],
+    "keywords": ["plumber north shore", "north shore plumber", "plumber north shore auckland", "emergency plumber north shore", "drain layer north shore auckland"]
+  },
+  {
+    "slug": "auckland-cbd",
+    "pageType": "region",
+    "name": "Auckland CBD",
+    "region": "Central Auckland",
+    "seoTitle": "Plumber Auckland CBD — Commercial & Residential Plumbing | KA Plumbing LTD",
+    "seoDescription": "Auckland CBD plumber for apartments, offices, and hospitality venues. Certified plumber and drain layer — emergency callouts, hot water, renovations. Call 021 277 9151.",
+    "heroHeadline": "Auckland CBD Plumber — City Centre Experts",
+    "heroSubheadline": "Professional plumbing for Auckland's city centre — apartments, offices, restaurants, and retail. Certified plumber and drain layer available 24/7.",
+    "heroImage": "/images/areas/heroes/auckland-cbd.webp",
+    "introHeading": "Professional Plumbing in Auckland's City Centre",
+    "introContent": [
+      "Auckland's central business district is unlike any other part of the city when it comes to plumbing. High-rise apartment towers, heritage commercial buildings, busy hospitality venues, and mixed-use developments all present unique challenges that require a plumber with CBD-specific experience. Water pressure management in multi-storey buildings, compliance with body corporate requirements, working around operating businesses, and navigating the logistical realities of city-centre access — these are everyday considerations for plumbing work in the CBD.",
+      "KA Plumbing provides professional plumbing and drain laying services throughout Auckland's CBD, from the waterfront Viaduct and Wynyard Quarter through the Queen Street retail corridor to the apartment towers of Hobson Street and the emerging Karangahape Road precinct. Kurt works with apartment owners, property managers, body corporates, restaurant operators, and commercial tenants to deliver reliable plumbing solutions that minimise disruption to tenants and customers.",
+      "As a certified plumber and certified drain layer, Kurt can handle both the water supply and waste drainage sides of any CBD plumbing job — eliminating the need to coordinate multiple contractors. From emergency burst pipes in apartment buildings to planned hot water upgrades, kitchen fit-outs for new restaurants, and bathroom renovations in city apartments, KA Plumbing delivers CBD-quality work with suburban-level personal service."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/areas/content/auckland-cbd-1.webp",
+        "imageAlt": "Auckland CBD high-rise apartment building exterior",
+        "heading": "Apartment & High-Rise Plumbing",
+        "content": "Auckland's CBD is increasingly residential, with thousands of apartments in towers along Hobson Street, Nelson Street, Federal Street, and the Viaduct Basin. Plumbing in these buildings comes with specific challenges: shared risers mean one apartment's problem can affect neighbours, body corporate rules often dictate when and how work can be done, and access to pipe work behind walls or in ceiling cavities requires careful planning. Water pressure in upper floors can be an issue in older buildings without adequate boosting systems. KA Plumbing has experience working in Auckland CBD apartment buildings — understanding the access requirements, noise restrictions, and communication protocols that body corporates expect. Kurt coordinates with building managers to ensure minimal disruption to other residents while completing your plumbing work to the highest standard."
+      },
+      {
+        "image": "/images/areas/content/auckland-cbd-2.webp",
+        "imageAlt": "Commercial kitchen plumbing installation in Auckland restaurant",
+        "heading": "Commercial & Hospitality Plumbing",
+        "content": "Auckland's CBD is the heart of the city's hospitality scene — restaurants, cafes, bars, and hotels that all depend on reliable plumbing to operate. A blocked drain or failed hot water system doesn't just cause inconvenience in a commercial setting — it can shut down a business and cost thousands in lost revenue. KA Plumbing provides fast-response commercial plumbing for CBD hospitality and retail businesses. This includes grease trap maintenance, commercial dishwasher connections, bar sink installations, bathroom fit-outs for new venues, and emergency repairs when something goes wrong during service. Kurt understands that commercial clients need work done quickly, cleanly, and with minimal disruption to trading hours."
+      },
+      {
+        "image": "/images/areas/content/auckland-cbd-3.webp",
+        "imageAlt": "Modern Auckland apartment bathroom with contemporary fixtures",
+        "heading": "CBD Bathroom & Kitchen Renovations",
+        "content": "Renovating a bathroom or kitchen in a CBD apartment is a different proposition to renovating in a standalone suburban house. Space is typically tighter, access for materials and waste removal is restricted, body corporate regulations may limit working hours, and the existing plumbing layout often dictates what's possible without major structural changes. KA Plumbing specialises in smart renovation solutions for city apartments — maximising the impact of your renovation while working within the practical constraints of apartment living. Kurt can advise on fixture selection that suits your space, reroute pipe work where needed, install modern water-efficient fittings, and ensure all waste connections comply with Building Code and body corporate requirements."
+      }
+    ],
+    "whyChoose": [
+      { "title": "CBD Experience", "desc": "Experienced working in high-rises, body corporate buildings, and commercial premises across Auckland's city centre" },
+      { "title": "Minimal Disruption", "desc": "Kurt works around business hours, noise restrictions, and access protocols that CBD buildings require" },
+      { "title": "Commercial & Residential", "desc": "From apartment bathrooms to restaurant kitchens — certified for both residential and light commercial plumbing" },
+      { "title": "Emergency Callouts", "desc": "24/7 emergency plumbing available for CBD apartments and businesses — fast city-centre response" }
+    ],
+    "childPages": [],
+    "siblingPages": ["north-shore"],
+    "parentPage": { "slug": "auckland", "name": "Auckland" },
+    "suburbPages": [],
+    "nearbyThinSlugs": ["ponsonby", "parnell", "grafton", "newmarket", "grey-lynn", "herne-bay"],
+    "responseTime": "15-25 minutes",
+    "faqs": [
+      { "q": "Can you work in Auckland CBD apartment buildings?", "a": "Yes. KA Plumbing regularly works in CBD apartment towers. Kurt understands body corporate access requirements, noise restrictions, and the logistics of working in multi-storey buildings. He coordinates with building managers to ensure smooth access and minimal disruption to other residents." },
+      { "q": "Do you provide emergency plumbing in the Auckland CBD?", "a": "Yes — 24/7 emergency plumbing is available for CBD apartments and commercial premises. For urgent issues like burst pipes, flooding, or blocked drains, call 021 277 9151 anytime. CBD response times are typically 15-25 minutes." },
+      { "q": "Can you do plumbing for my Auckland restaurant or cafe?", "a": "Absolutely. KA Plumbing provides commercial plumbing services for CBD hospitality venues including grease trap maintenance, dishwasher connections, bar installations, bathroom fit-outs, and emergency repairs. Kurt works around your trading hours to minimise disruption." },
+      { "q": "Is parking difficult for plumbers in the CBD?", "a": "Kurt manages CBD parking logistics so you don't have to worry about it. For apartment buildings with loading zones or basement access, he coordinates with building management. The cost of any parking is included in your quote — no surprise charges." },
+      { "q": "Do you handle body corporate approvals for plumbing work?", "a": "Kurt can provide the documentation that body corporates typically require — scope of work descriptions, insurance certificates, and compliance information. While you'll need to submit these through your body corporate's process, KA Plumbing makes it straightforward by preparing everything you need." }
+    ],
+    "keywords": ["plumber auckland cbd", "cbd plumber auckland", "plumber auckland city centre", "commercial plumber auckland cbd", "apartment plumber auckland"]
+  },
+  {
+    "slug": "takapuna",
+    "pageType": "suburb",
+    "name": "Takapuna",
+    "region": "North Shore",
+    "seoTitle": "Plumber in Takapuna — North Shore Plumbing & Drain Laying | KA Plumbing LTD",
+    "seoDescription": "Takapuna's local plumber and certified drain layer. Emergency plumbing, hot water repairs, renovations, and drain laying. Fast North Shore response. Call 021 277 9151.",
+    "heroHeadline": "Plumber & Drain Layer in Takapuna",
+    "heroSubheadline": "Takapuna's trusted local plumber — certified plumber and drain layer with the fastest response times on the North Shore. Emergency callouts, renovations, and honest pricing.",
+    "heroImage": "/images/areas/heroes/takapuna.webp",
+    "introHeading": "Takapuna's Trusted Local Plumber",
+    "introContent": [
+      "Takapuna is the commercial and cultural heart of Auckland's North Shore — a beachfront suburb where character villas sit alongside modern apartment towers, where Hurstmere Road's cafes buzz with foot traffic, and where a growing number of high-density developments are transforming the skyline. With this mix of old and new comes a wide range of plumbing needs, from replacing corroding pipes in 1930s bungalows to installing modern fixtures in brand-new apartments.",
+      "KA Plumbing is based right here on the North Shore, making Takapuna one of our fastest-response suburbs. Kurt typically arrives within 15-20 minutes for emergencies — whether that's a burst pipe flooding your Hurstmere Road apartment, a blocked drain at your Lake Road villa, or a failed hot water cylinder on a winter morning. As both a certified plumber and certified drain layer, Kurt handles everything from routine tap repairs to full bathroom renovations and underground drainage work.",
+      "Takapuna property owners — whether homeowners, landlords, or body corporate managers — trust KA Plumbing for reliable, honestly-priced plumbing that's done right the first time. Every job gets a free, no-obligation quote, transparent pricing, and the personal attention that comes from working directly with the business owner."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/areas/content/takapuna-1.webp",
+        "imageAlt": "Takapuna Beach with Rangitoto Island and beachfront shops",
+        "heading": "Plumbing for Takapuna's Mix of Old and New",
+        "content": "Takapuna's housing stock spans over a century. The streets between Lake Road and the beach are home to character villas and bungalows from the 1920s-1940s, many with original plumbing systems that are well past their service life. Galvanised iron pipes, lead waste connections, and undersized supply lines are common finds in these older properties. Meanwhile, the Takapuna town centre precinct is seeing intensive redevelopment with apartment buildings of 6-15 storeys, each requiring modern plumbing systems with mains-pressure hot water, adequate ventilation, and building code-compliant drainage. KA Plumbing works across both ends of this spectrum — from careful remediation work in heritage homes to new installations in contemporary apartments. Kurt understands what Takapuna's older homes need without over-capitalising, and what new builds require for compliance and longevity."
+      },
+      {
+        "image": "/images/areas/content/takapuna-2.webp",
+        "imageAlt": "Character villa in Takapuna being renovated with tradesperson working",
+        "heading": "Takapuna Bathroom & Kitchen Renovations",
+        "content": "Takapuna is one of the North Shore's most active renovation suburbs. Property values make renovation worthwhile, and the older housing stock means there's genuine need for modernisation. KA Plumbing handles the complete plumbing scope for Takapuna renovations: removing old galvanised and lead pipe work, installing new copper or PEX supply lines, fitting modern fixtures and tapware, connecting new waste lines, and ensuring everything meets current Building Code requirements. For bathrooms, Kurt works with your builder or project manager to coordinate rough-in timing, fixture placement, and inspection scheduling. For kitchens, he handles everything from sink and dishwasher connections to gas disconnections for cooktop changes. If your Takapuna renovation also involves drainage work — like relocating a shower waste or connecting a new bathroom to the existing sewer line — Kurt's drain laying certification means you don't need a second contractor."
+      },
+      {
+        "image": "/images/areas/content/takapuna-3.webp",
+        "imageAlt": "Modern apartment building construction in Takapuna Auckland",
+        "heading": "Apartment & Body Corporate Plumbing",
+        "content": "Takapuna has one of the highest concentrations of apartment living on the North Shore, with major developments along Hurstmere Road, Anzac Street, and The Strand. Apartment plumbing involves working within body corporate rules — noise restrictions, access protocols, coordination with building managers, and ensuring work on your unit doesn't affect shared services. KA Plumbing has experience working in Takapuna apartment buildings and understands these requirements. Whether it's a leaking mixer tap, a hot water cylinder replacement, a full bathroom refit, or an emergency burst pipe, Kurt coordinates with your building management to ensure smooth access and minimal disruption. He provides the documentation body corporates typically require and ensures all work is compliant with both Building Code and building-specific rules."
+      }
+    ],
+    "whyChoose": [
+      { "title": "15-20 Min Response", "desc": "Takapuna is in KA Plumbing's core zone — expect Kurt within 15-20 minutes for emergencies" },
+      { "title": "Old & New Expertise", "desc": "From 1930s villas to 2020s apartments — Kurt works across Takapuna's full range of housing" },
+      { "title": "Renovation Specialist", "desc": "Full plumbing scope for bathroom and kitchen renovations, including coordination with builders" },
+      { "title": "Free Quotes", "desc": "Every Takapuna job comes with a free, no-obligation quote and upfront pricing" }
+    ],
+    "childPages": [],
+    "siblingPages": ["albany", "browns-bay", "glenfield"],
+    "parentPage": { "slug": "north-shore", "name": "North Shore" },
+    "suburbPages": [],
+    "nearbyThinSlugs": ["milford", "devonport", "northcote"],
+    "responseTime": "15-20 minutes",
+    "faqs": [
+      { "q": "How fast can a plumber get to Takapuna?", "a": "KA Plumbing is based on the North Shore, making Takapuna one of our fastest-response suburbs. For emergencies, Kurt typically arrives within 15-20 minutes. For scheduled work, morning and afternoon appointments are available including Saturdays." },
+      { "q": "Do you work in Takapuna apartment buildings?", "a": "Yes. Kurt regularly works in Takapuna's apartment buildings along Hurstmere Road, Anzac Street, and The Strand. He understands body corporate access requirements and coordinates with building managers to ensure smooth, compliant work." },
+      { "q": "Can you replace old galvanised pipes in a Takapuna villa?", "a": "Absolutely. Many of Takapuna's older homes still have original galvanised iron pipes that cause rust-coloured water and reduced flow. Kurt can replace these with modern copper or PEX piping — improving water quality, pressure, and reliability." },
+      { "q": "Do you do bathroom renovations in Takapuna?", "a": "Yes — KA Plumbing handles the full plumbing scope for Takapuna bathroom renovations. From stripping out old pipe work to installing new fixtures, waste lines, and hot water connections. Kurt coordinates with your builder to ensure the plumbing side runs smoothly." },
+      { "q": "What areas near Takapuna do you also cover?", "a": "KA Plumbing covers all suburbs surrounding Takapuna including Milford, Devonport, Northcote, Hauraki, Belmont, and across the wider North Shore. All with fast response times." }
+    ],
+    "keywords": ["plumber takapuna", "takapuna plumber", "plumber in takapuna", "emergency plumber takapuna", "drain layer takapuna"]
+  },
+  {
+    "slug": "albany",
+    "pageType": "suburb",
+    "name": "Albany",
+    "region": "North Shore",
+    "seoTitle": "Plumber in Albany Auckland — Plumbing & Drain Laying | KA Plumbing LTD",
+    "seoDescription": "Albany Auckland plumber and certified drain layer. New builds, emergency repairs, hot water systems, and drain laying. North Shore based. Call 021 277 9151.",
+    "heroHeadline": "Plumber & Drain Layer in Albany",
+    "heroSubheadline": "Albany's go-to plumber for new builds, emergency repairs, and everything in between. Certified plumber and drain layer — North Shore based, fast response.",
+    "heroImage": "/images/areas/heroes/albany.webp",
+    "introHeading": "Albany's Local Plumber — New Builds to Emergency Repairs",
+    "introContent": [
+      "Albany is Auckland's fastest-growing suburb and the commercial powerhouse of the upper North Shore. Anchored by Westfield Albany, the Massey University campus, and the Northern Motorway interchange, Albany has transformed from rural farmland into a thriving urban centre in just two decades. This rapid growth means Albany has one of the highest concentrations of new-build housing on the North Shore — townhouse developments, apartment complexes, and standalone homes that all need professional plumbing installation, maintenance, and eventually repair.",
+      "KA Plumbing provides comprehensive plumbing and drain laying services throughout Albany and the surrounding upper North Shore suburbs. Whether you've just moved into a new Albany townhouse and need a plumber you can trust, you're dealing with a plumbing emergency in an established Albany home, or you're a developer requiring plumbing installation for a new residential project, Kurt handles it all with the expertise and personal service that sets KA Plumbing apart.",
+      "As both a certified plumber and certified drain layer, Kurt is the only contractor you need for Albany's plumbing requirements. From the moment you call to the final sign-off, you're dealing directly with the business owner — no call centres, no subcontractors, no runarounds."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/areas/content/albany-1.webp",
+        "imageAlt": "Albany Auckland commercial district with retail buildings and new developments",
+        "heading": "Plumbing for Albany's New-Build Boom",
+        "content": "Albany's landscape is dominated by new construction — terraced townhouse developments, medium-density apartment buildings, and master-planned residential communities that have sprung up across the suburb over the past decade. While new builds generally have modern plumbing systems, they're not immune to problems. Common issues Kurt sees in Albany's newer homes include poorly installed fixtures that leak within months, inadequate water pressure in multi-level townhouses, drainage problems caused by poor site preparation on Albany's hilly terrain, and defects in plumbing work done by volume builders under time pressure. KA Plumbing provides both new installation services for Albany developments and remediation work for new homes where the original plumbing hasn't met expectations. Kurt's standards are higher than minimum compliance — every installation is built to last."
+      },
+      {
+        "image": "/images/areas/content/albany-2.webp",
+        "imageAlt": "New townhouse development in Albany Auckland",
+        "heading": "Albany's Established Homes & Renovations",
+        "content": "While Albany is known for new development, the suburb also has established residential areas — particularly around Albany Village, Lucas Heights, and the older streets between Albany Highway and Oteha Valley Road. Homes in these areas, built from the 1980s through early 2000s, are now reaching the age where plumbing maintenance becomes essential. Hot water cylinders that are 15-20 years old, polybutylene pipes approaching their service life, and aging waste connections are all common maintenance items. KA Plumbing helps Albany homeowners stay ahead of these issues with proactive maintenance, honest assessments, and cost-effective solutions. When it's time for a bathroom or kitchen renovation, Kurt handles the complete plumbing scope — from demolition of old pipe work through to installation, testing, and sign-off."
+      },
+      {
+        "image": "/images/areas/content/albany-3.webp",
+        "imageAlt": "Professional plumber installing hot water cylinder in Albany new build home",
+        "heading": "Hot Water Systems for Albany Homes",
+        "content": "Hot water is critical in Auckland's temperate-but-damp climate, and Albany's mix of housing types means there's no one-size-fits-all solution. Older established homes in Albany typically have low-pressure hot water cylinders — reliable but limited in flow rate for modern multi-bathroom homes. Newer townhouses and apartments usually have mains-pressure systems that deliver better performance but require different maintenance. Some Albany homes are switching to continuous-flow gas systems or heat pump hot water for energy efficiency. KA Plumbing advises on the best hot water solution for your Albany home based on your household size, number of bathrooms, existing infrastructure, and budget. Kurt installs and services all major brands — Rheem, Rinnai, Dux, and Aquamax — and ensures every installation meets Building Code requirements."
+      }
+    ],
+    "whyChoose": [
+      { "title": "20-30 Min Response", "desc": "Albany is well within KA Plumbing's North Shore core zone — fast emergency response guaranteed" },
+      { "title": "New Build Experts", "desc": "Extensive experience with Albany's townhouse and apartment developments — both installation and remediation" },
+      { "title": "Dual Certified", "desc": "Certified plumber and drain layer — one contractor for all your plumbing and drainage needs" },
+      { "title": "Developer Friendly", "desc": "Professional service for builders and developers — reliable scheduling, quality work, compliance documentation" }
+    ],
+    "childPages": [],
+    "siblingPages": ["takapuna", "browns-bay", "glenfield"],
+    "parentPage": { "slug": "north-shore", "name": "North Shore" },
+    "suburbPages": [],
+    "nearbyThinSlugs": ["long-bay", "sunnynook", "paremoremo"],
+    "responseTime": "20-30 minutes",
+    "faqs": [
+      { "q": "How fast can a plumber get to Albany?", "a": "KA Plumbing is North Shore based, with Albany well within the core service area. Emergency response time to Albany is typically 20-30 minutes. For scheduled work, flexible appointments are available including Saturdays." },
+      { "q": "Do you work with Albany property developers?", "a": "Yes. KA Plumbing provides plumbing and drain laying services for residential developments in Albany. Kurt offers reliable scheduling, compliant work, and professional documentation that builders and developers need." },
+      { "q": "My new Albany townhouse has plumbing problems — can you help?", "a": "Absolutely. Kurt regularly sees defects in Albany new builds — poor fixture installations, pressure issues, and drainage problems. He'll assess the situation, explain what needs fixing, and provide an upfront quote. If the work should be covered by the builder's warranty, he'll advise you on that too." },
+      { "q": "What hot water system is best for Albany homes?", "a": "It depends on your home type and household needs. Kurt assesses your current system, water pressure, number of bathrooms, and energy preferences before recommending the best option. He installs Rheem, Rinnai, Dux, and Aquamax systems." },
+      { "q": "Do you service the areas around Albany too?", "a": "Yes — KA Plumbing covers all upper North Shore suburbs including Long Bay, Torbay, Sunnynook, Paremoremo, Greenhithe, and Oteha. All with competitive North Shore response times." }
+    ],
+    "keywords": ["plumber albany", "albany plumber", "plumber in albany auckland", "emergency plumber albany", "drain layer albany auckland"]
+  },
+  {
+    "slug": "browns-bay",
+    "pageType": "suburb",
+    "name": "Browns Bay",
+    "region": "North Shore",
+    "seoTitle": "Plumber in Browns Bay — East Coast Bays Plumbing | KA Plumbing LTD",
+    "seoDescription": "Browns Bay plumber and certified drain layer. Serving the East Coast Bays — emergency plumbing, hot water, renovations, and drain laying. Call 021 277 9151.",
+    "heroHeadline": "Plumber & Drain Layer in Browns Bay",
+    "heroSubheadline": "Browns Bay and the East Coast Bays' local plumber — certified plumber and drain layer with fast North Shore response. Emergency callouts, renovations, honest pricing.",
+    "heroImage": "/images/areas/heroes/browns-bay.webp",
+    "introHeading": "Browns Bay's Trusted Plumber — Serving the East Coast Bays",
+    "introContent": [
+      "Browns Bay is the beating heart of Auckland's East Coast Bays — a beachfront suburb with a thriving town centre, excellent schools, and a strong community atmosphere that makes it one of the most desirable places to live on the North Shore. The suburb serves as the commercial and social anchor for the entire eastern coastline, from Mairangi Bay in the south through to Torbay and Long Bay in the north. With its mix of established family homes, retirement living, and growing apartment development, Browns Bay has diverse plumbing needs that require a local, experienced plumber.",
+      "KA Plumbing provides fast, reliable plumbing and drain laying services throughout Browns Bay and the wider East Coast Bays. Kurt is North Shore based, which means Browns Bay is firmly within his core service area — emergency response times of 20-30 minutes, with scheduled appointments available throughout the week including Saturdays. Whether you need an urgent fix for a burst pipe, a planned hot water cylinder replacement, or a complete bathroom renovation, Kurt handles it personally from start to finish.",
+      "The East Coast Bays' coastal location and housing mix create specific plumbing challenges that Kurt deals with regularly. Salt air exposure accelerates corrosion on external fittings, the hilly terrain affects drainage falls, and the older homes scattered throughout Browns Bay often have aging pipe work that's due for attention. As a certified plumber and certified drain layer, Kurt addresses all of these issues with one visit, one quote, and one contractor."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/areas/content/browns-bay-1.webp",
+        "imageAlt": "Browns Bay beach on Auckland's North Shore with coastal village atmosphere",
+        "heading": "East Coast Bays Plumbing Expertise",
+        "content": "The East Coast Bays — Browns Bay, Mairangi Bay, Torbay, and Long Bay — share a coastal character and similar plumbing challenges. Homes along the ridgelines and slopes of the Bays deal with gravity-fed drainage systems that require precise installation to maintain proper fall. The salt-laden coastal air accelerates wear on brass tap fittings, copper pipe joints, and external hose connections. Many of the established homes in Browns Bay were built in the 1970s and 1980s when galvanised iron was the standard pipe material — these pipes are now 40-50 years old and showing their age through reduced flow, discoloured water, and pinhole leaks. KA Plumbing understands the East Coast Bays environment and provides plumbing solutions that account for the coastal conditions. Kurt recommends corrosion-resistant fittings for exposed locations and prioritises pipe replacements in homes where the original galvanised infrastructure is failing."
+      },
+      {
+        "image": "/images/areas/content/browns-bay-2.webp",
+        "imageAlt": "Established family home in Browns Bay Auckland",
+        "heading": "Browns Bay Home Maintenance & Renovations",
+        "content": "Browns Bay's established housing stock means many homeowners are in the maintenance and renovation phase — upgrading aging bathrooms, replacing old hot water cylinders, and addressing pipe work that's past its prime. KA Plumbing is a popular choice for Browns Bay renovations because Kurt provides the complete plumbing service: assessing existing systems, recommending the most cost-effective upgrade path, removing old pipe work, installing new fixtures and connections, and ensuring everything meets Building Code. For hot water, Browns Bay homes commonly have low-pressure cylinders that struggle to serve multiple bathrooms. Kurt advises on mains-pressure upgrades, continuous-flow alternatives, and energy-efficient heat pump options based on your specific situation. Every recommendation is honest and based on what your home actually needs — not what generates the biggest invoice."
+      },
+      {
+        "image": "/images/areas/content/browns-bay-3.webp",
+        "imageAlt": "Plumber repairing outdoor drainage in Auckland suburban garden",
+        "heading": "Drain Laying & Drainage Solutions",
+        "content": "Drainage issues are common across the East Coast Bays due to the hilly terrain, clay-heavy soil, and mature vegetation. Blocked drains, slow-draining sinks, and sewage odours are often symptoms of tree root intrusion, pipe collapse, or inadequate drainage fall — all of which Kurt diagnoses and resolves as a certified drain layer. Browns Bay's older homes frequently have original earthenware or concrete drain pipes that crack and deteriorate over time, creating entry points for tree roots and allowing groundwater infiltration. KA Plumbing provides complete drainage solutions: from clearing blockages and root intrusions to replacing damaged pipe sections and installing new drainage for extensions and renovations. Kurt's drain laying certification means he can legally do this work and provide the compliance documentation that Auckland Council and insurance companies require."
+      }
+    ],
+    "whyChoose": [
+      { "title": "East Coast Bays Local", "desc": "North Shore based — Browns Bay is in our core service area with 20-30 minute emergency response" },
+      { "title": "Coastal Expertise", "desc": "Understands salt air corrosion, hillside drainage, and East Coast Bays-specific plumbing challenges" },
+      { "title": "Certified Drain Layer", "desc": "Full drainage solutions including root clearance, pipe replacement, and new drain laying — all legally certified" },
+      { "title": "Honest Assessments", "desc": "Kurt tells you what your home actually needs — not what makes the biggest invoice. Free quotes, no pressure." }
+    ],
+    "childPages": [],
+    "siblingPages": ["takapuna", "albany", "glenfield"],
+    "parentPage": { "slug": "north-shore", "name": "North Shore" },
+    "suburbPages": [],
+    "nearbyThinSlugs": ["torbay", "mairangi-bay", "sunnynook"],
+    "responseTime": "20-30 minutes",
+    "faqs": [
+      { "q": "How fast can a plumber get to Browns Bay?", "a": "KA Plumbing is North Shore based, with Browns Bay in the core service area. Emergency response time is typically 20-30 minutes. For scheduled work, Kurt offers flexible appointments including Saturdays." },
+      { "q": "Do you service the wider East Coast Bays?", "a": "Yes — KA Plumbing covers Browns Bay, Mairangi Bay, Torbay, Long Bay, and all surrounding East Coast Bays suburbs. All with fast North Shore response times." },
+      { "q": "My drains keep blocking in Browns Bay — can you fix it permanently?", "a": "Recurring blockages usually indicate an underlying issue like tree root intrusion or pipe damage. As a certified drain layer, Kurt can investigate the cause, clear the current blockage, and repair or replace the affected drainage to prevent it happening again." },
+      { "q": "Can you upgrade my old hot water cylinder in Browns Bay?", "a": "Absolutely. Many Browns Bay homes have aging low-pressure cylinders. Kurt assesses your current system and recommends the best replacement — whether that's a modern mains-pressure cylinder, continuous-flow gas, or a heat pump system. He installs all major brands." },
+      { "q": "Do you handle plumbing for Browns Bay rental properties?", "a": "Yes. KA Plumbing works with Browns Bay landlords and property managers for both emergency repairs and planned maintenance. Kurt provides clear communication, competitive pricing, and documentation for your records." }
+    ],
+    "keywords": ["plumber browns bay", "browns bay plumber", "plumber east coast bays", "emergency plumber browns bay", "drain layer browns bay"]
+  },
+  {
+    "slug": "glenfield",
+    "pageType": "suburb",
+    "name": "Glenfield",
+    "region": "North Shore",
+    "seoTitle": "Plumber in Glenfield — North Shore Plumbing & Drain Laying | KA Plumbing LTD",
+    "seoDescription": "Glenfield plumber and certified drain layer. Aging pipe replacement, emergency repairs, hot water, renovations. Fast North Shore response. Call 021 277 9151.",
+    "heroHeadline": "Plumber & Drain Layer in Glenfield",
+    "heroSubheadline": "Glenfield's go-to plumber for aging pipe replacement, emergency repairs, and renovations. Certified plumber and drain layer — North Shore based, fast response.",
+    "heroImage": "/images/areas/heroes/glenfield.webp",
+    "introHeading": "Glenfield's Reliable Local Plumber",
+    "introContent": [
+      "Glenfield sits at the geographic centre of Auckland's North Shore — a well-established suburb that connects the eastern and western sides of the Shore and provides easy access to everywhere via Glenfield Road and the Northern Motorway. Home to Glenfield Mall, strong schools, and thousands of family homes built primarily in the 1960s through 1980s, Glenfield is the kind of suburb where plumbing maintenance isn't just recommended — it's essential. These homes are now 40-60 years old, and their plumbing systems are showing it.",
+      "KA Plumbing is Glenfield's trusted local plumber, providing fast-response emergency repairs, planned maintenance, renovations, and drain laying across the suburb and surrounding areas. Kurt is based on the North Shore with Glenfield firmly in his core service zone — emergency response times of 15-25 minutes mean you're not waiting long when a pipe bursts or a drain blocks. As both a certified plumber and certified drain layer, Kurt handles everything Glenfield homeowners need under one certification.",
+      "The reality for many Glenfield homes is that their plumbing infrastructure — water supply pipes, hot water cylinders, drainage systems — was installed when the house was built and has never been fully replaced. Galvanised iron supply pipes, original copper waste connections, and clay drain lines are common across Glenfield. KA Plumbing helps homeowners navigate the transition from aging infrastructure to modern plumbing systems with honest assessments, practical solutions, and fair pricing."
+    ],
+    "contentGrid": [
+      {
+        "image": "/images/areas/content/glenfield-1.webp",
+        "imageAlt": "Glenfield Mall area with suburban shopping centre and residential streets",
+        "heading": "Glenfield's Aging Plumbing Infrastructure",
+        "content": "Glenfield's homes were largely built during the suburban expansion of the 1960s and 1970s, with a second wave of development in the 1980s. The plumbing standards and materials of these eras are now well past their design life. Galvanised iron water pipes — the standard material of the era — typically last 40-50 years before internal corrosion causes problems. In Glenfield, many of these pipes are reaching or exceeding that limit. Homeowners notice rust-coloured water first, followed by gradually decreasing water pressure as the internal bore narrows with corrosion buildup. Eventually, pinhole leaks develop — sometimes inside walls where they cause hidden moisture damage before being discovered. KA Plumbing sees this pattern repeatedly across Glenfield and provides staged replacement strategies that address the most critical sections first, keeping costs manageable while progressively upgrading your home's pipe work."
+      },
+      {
+        "image": "/images/areas/content/glenfield-2.webp",
+        "imageAlt": "Aging galvanised pipes being replaced with modern copper in Auckland home renovation",
+        "heading": "Pipe Replacement & Home Upgrades",
+        "content": "Replacing aging pipes in a Glenfield home doesn't have to mean ripping out walls from end to end. Kurt takes a practical, staged approach that prioritises the sections causing the most problems. Typically, the water supply from the street to the house (the lateral) and the main distribution lines within the house are addressed first, as these carry the highest pressure and cause the most damage when they fail. Branch lines to individual fixtures can often be replaced progressively as part of bathroom or kitchen renovations. For drain lines, Glenfield's clay-heavy soil puts stress on underground pipes, and Kurt frequently replaces cracked or root-invaded sections with modern PVC that resists both soil movement and root intrusion. Every replacement is done to current Building Code standards with quality materials — Kurt doesn't cut corners, because a proper replacement should last another 50+ years."
+      },
+      {
+        "image": "/images/areas/content/glenfield-3.webp",
+        "imageAlt": "Tree root intrusion in residential drain pipe showing roots blocking clay pipe",
+        "heading": "Glenfield Drainage Problems & Solutions",
+        "content": "Drainage is one of the most common plumbing issues in Glenfield. The suburb's clay soil expands and contracts with seasonal moisture changes, causing ground movement that cracks rigid drain pipes. Once a crack appears, tree roots — which are drawn to the moisture and nutrients in drain lines — find their way in and gradually fill the pipe. The result: recurring blockages, slow-draining fixtures, and sometimes sewage backups that require emergency attention. KA Plumbing provides Glenfield homeowners with permanent drainage solutions, not temporary fixes. As a certified drain layer, Kurt can excavate and replace damaged drain sections, install root barriers where appropriate, and reroute drainage where the original layout is causing chronic problems. For less severe cases, professional drain clearing and a maintenance schedule can keep things flowing until a full replacement is practical."
+      }
+    ],
+    "whyChoose": [
+      { "title": "15-25 Min Response", "desc": "Glenfield is right in KA Plumbing's core North Shore zone — fast emergency response when you need it most" },
+      { "title": "Aging Pipe Specialists", "desc": "Extensive experience replacing Glenfield's 1960s-80s galvanised pipes with modern systems" },
+      { "title": "Certified Drain Layer", "desc": "Full drainage repair and replacement — tree root clearance, pipe replacement, new drain laying" },
+      { "title": "Staged Solutions", "desc": "Practical, affordable upgrade strategies that address critical issues first without blowing your budget" }
+    ],
+    "childPages": [],
+    "siblingPages": ["takapuna", "albany", "browns-bay"],
+    "parentPage": { "slug": "north-shore", "name": "North Shore" },
+    "suburbPages": [],
+    "nearbyThinSlugs": ["birkenhead", "sunnynook", "northcote"],
+    "responseTime": "15-25 minutes",
+    "faqs": [
+      { "q": "How fast can a plumber get to Glenfield?", "a": "KA Plumbing is North Shore based with Glenfield in the core service zone. Emergency response time is typically 15-25 minutes. For scheduled work, flexible appointments are available throughout the week including Saturdays." },
+      { "q": "My Glenfield home has rusty water — what's causing it?", "a": "Rust-coloured water in Glenfield homes is almost always caused by corroding galvanised iron pipes — the standard material used when most Glenfield homes were built in the 1960s-80s. The internal corrosion produces rust that discolours your water. Kurt can assess the extent of corrosion and recommend a replacement strategy." },
+      { "q": "How much does it cost to replace galvanised pipes in Glenfield?", "a": "Costs depend on the extent of replacement needed and the complexity of your home's pipe layout. Kurt provides free, no-obligation quotes and can recommend a staged approach that addresses the most critical sections first if budget is a concern." },
+      { "q": "Can you fix recurring drain blockages in Glenfield?", "a": "Yes. Recurring blockages in Glenfield are usually caused by tree root intrusion or pipe damage in the clay soil. As a certified drain layer, Kurt can diagnose the root cause and provide a permanent fix — whether that's pipe repair, replacement, or rerouting." },
+      { "q": "Do you work on weekends in Glenfield?", "a": "Yes. Emergency plumbing is available 24/7 including weekends and public holidays. For non-emergency scheduled work, Saturday appointments are available. Call 021 277 9151 to book." }
+    ],
+    "keywords": ["plumber glenfield", "glenfield plumber", "plumber in glenfield auckland", "emergency plumber glenfield", "drain layer glenfield"]
+  }
+]

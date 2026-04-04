@@ -27,9 +27,9 @@ const serviceSchema = {
     '@type': 'Plumber',
     name: 'KA Plumbing LTD',
     url: siteUrl,
-    telephone: '+64-21-277-9151',
+    telephone: '+64212779151',
   },
-  areaServed: { '@type': 'City', name: 'Auckland' },
+  areaServed: { '@type': 'City', name: 'Auckland', sameAs: 'https://en.wikipedia.org/wiki/Auckland' },
   description: sector.seoDescription,
   offers: {
     '@type': 'Offer',
@@ -75,6 +75,7 @@ servicesData.forEach((s: any) => { serviceIconMap[s.id] = s.icon; });
       height="1080"
       class="absolute inset-0 w-full h-full object-cover"
       loading="eager"
+      fetchpriority="high"
     />
     <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-32 flex items-center justify-center w-full">
       <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">

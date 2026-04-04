@@ -101,21 +101,32 @@ const currentPath = Astro.url.pathname;
       }, { passive: true });
     }
 
-    // Video hero: play once then show end-frame
+    // Video hero: defer loading for better LCP, play once then show end-frame
     document.querySelectorAll('.video-hero').forEach((container) => {
       const video = container.querySelector('video') as HTMLVideoElement;
       const poster = container.querySelector('.video-poster') as HTMLElement;
-      if (video && poster) {
-        video.play().catch(() => {
-          // Autoplay blocked — show poster immediately
+      if (!video || !poster) return;
+
+      const startVideo = () => {
+        video.preload = 'auto';
+        video.load();
+        video.play().then(() => {
+          poster.style.opacity = '0';
+          video.style.opacity = '1';
+        }).catch(() => {
           video.style.display = 'none';
-          poster.style.opacity = '1';
         });
         video.addEventListener('ended', () => {
           poster.style.opacity = '1';
           video.style.opacity = '0';
           setTimeout(() => { video.style.display = 'none'; }, 500);
         });
+      };
+
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(startVideo, { timeout: 2000 });
+      } else {
+        setTimeout(startVideo, 1500);
       }
     });
 

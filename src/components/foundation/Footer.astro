@@ -96,24 +96,44 @@ const currentYear = new Date().getFullYear();
       <div>
         <h4 class="font-heading text-h4 text-white mb-4">Service Areas</h4>
         <ul class="space-y-3">
-          {[
-            { href: '/areas/takapuna/', label: 'Takapuna' },
-            { href: '/areas/albany/', label: 'Albany' },
-            { href: '/areas/browns-bay/', label: 'Browns Bay' },
-            { href: '/areas/devonport/', label: 'Devonport' },
-            { href: '/areas/glenfield/', label: 'Glenfield' },
-            { href: '/areas/torbay/', label: 'Torbay' },
-            { href: '/areas/beach-haven/', label: 'Beach Haven' },
-          ].map(area => (
-            <li>
-              <a href={area.href} class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
-                {area.label}
-              </a>
-            </li>
-          ))}
           <li>
-            <a href="/services" class="text-accent hover:underline text-sm font-semibold cursor-pointer">
-              View All Areas &rarr;
+            <a href="/areas/auckland/" class="text-white font-semibold hover:text-accent transition-colors text-sm cursor-pointer">
+              Auckland
+            </a>
+          </li>
+          <li class="pl-3">
+            <a href="/areas/north-shore/" class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
+              North Shore
+            </a>
+          </li>
+          <li class="pl-3">
+            <a href="/areas/auckland-cbd/" class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
+              Auckland CBD
+            </a>
+          </li>
+          <li class="border-t border-white/10 pt-3">
+            <a href="/areas/takapuna/" class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
+              Takapuna
+            </a>
+          </li>
+          <li>
+            <a href="/areas/albany/" class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
+              Albany
+            </a>
+          </li>
+          <li>
+            <a href="/areas/browns-bay/" class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
+              Browns Bay
+            </a>
+          </li>
+          <li>
+            <a href="/areas/glenfield/" class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
+              Glenfield
+            </a>
+          </li>
+          <li>
+            <a href="/areas/auckland/" class="text-accent hover:underline text-sm font-semibold cursor-pointer">
+              All 40+ Areas &rarr;
             </a>
           </li>
         </ul>
