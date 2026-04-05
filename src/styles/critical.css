@@ -1,0 +1,60 @@
+/*
+ * CRITICAL CSS — inlined in <head> for instant first paint.
+ * Contains only what's needed for above-fold: nav, trust bar, hero, glass card, buttons.
+ * Full stylesheet loads async after this.
+ */
+
+/* Design tokens (subset needed for above-fold) */
+:root {
+  --color-primary: #1E3A5F;
+  --color-primary-light: #2E5A8F;
+  --color-accent: #E8A04C;
+  --color-accent-dark: #D08A35;
+  --color-background: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-text: #1C2930;
+  --color-text-muted: #6B7B86;
+  --color-emergency: #DC2626;
+  --color-emergency-dark: #B91C1C;
+  --font-heading: "DM Serif Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  --text-hero: 4rem;
+  --text-h1: 3rem;
+  --text-h2: 2.25rem;
+  --text-h3: 1.75rem;
+  --text-body: 1.0625rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+  --radius-full: 9999px;
+  --radius-lg: 1rem;
+  --shadow-amber-glow: 0 4px 20px rgba(232, 160, 76, 0.4);
+  --shadow-emergency-glow: 0 4px 20px rgba(220, 38, 38, 0.4);
+  --duration-normal: 250ms;
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: var(--font-body); font-size: var(--text-body); line-height: 1.6; color: var(--color-text); background: var(--color-background); margin: 0; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); line-height: 1.2; color: var(--color-primary); }
+
+/* Nav */
+.glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8); border-bottom: 1px solid rgba(30, 58, 95, 0.06); box-shadow: 0 1px 8px rgba(30, 58, 95, 0.04); }
+.glass-nav-scrolled { background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 16px rgba(30, 58, 95, 0.08); }
+
+/* Hero glass card */
+.hero-glass-card { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 40px rgba(30, 58, 95, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3); }
+
+/* Buttons (hero CTAs) */
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: var(--color-accent); color: white; font-family: var(--font-body); font-weight: 600; font-size: var(--text-body); border-radius: var(--radius-full); border: none; cursor: pointer; box-shadow: var(--shadow-amber-glow); text-decoration: none; line-height: 1; }
+.btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: transparent; color: var(--color-primary); font-family: var(--font-body); font-weight: 600; font-size: var(--text-body); border-radius: var(--radius-full); border: 2px solid var(--color-primary); cursor: pointer; text-decoration: none; line-height: 1; }
+.btn-emergency { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: var(--color-emergency); color: white; font-family: var(--font-body); font-weight: 700; font-size: var(--text-body); border-radius: var(--radius-full); border: none; cursor: pointer; box-shadow: var(--shadow-emergency-glow); text-decoration: none; line-height: 1; }
+
+/* Video poster (visible by default for LCP) */
+.video-poster { background-size: cover; background-position: center; }
+
+/* Reveal initial state (prevent FOUC — hidden until GSAP runs) */
+.reveal { opacity: 0; transform: translateY(24px); }
+
+/* Shutter text initial state */
+.shutter-char { line-height: 1.15; }

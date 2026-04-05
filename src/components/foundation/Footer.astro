@@ -32,11 +32,11 @@ const currentYear = new Date().getFullYear();
         <ul class="space-y-3">
           {[
             { href: '/', label: 'Home' },
-            { href: '/services', label: 'Services' },
-            { href: '/about', label: 'About Kurt' },
-            { href: '/contact', label: 'Contact Us' },
-            { href: '/booking', label: 'Book a Service' },
-            { href: '/blog', label: 'Blog' },
+            { href: '/services/', label: 'Services' },
+            { href: '/about/', label: 'About Kurt' },
+            { href: '/contact/', label: 'Contact Us' },
+            { href: '/booking/', label: 'Book a Service' },
+            { href: '/blog/', label: 'Blog' },
           ].map(link => (
             <li>
               <a href={link.href} class="text-white/70 hover:text-accent transition-colors text-sm cursor-pointer">
@@ -85,7 +85,7 @@ const currentYear = new Date().getFullYear();
             </li>
           ))}
           <li>
-            <a href="/sectors" class="text-accent hover:underline text-sm font-semibold cursor-pointer">
+            <a href="/sectors/" class="text-accent hover:underline text-sm font-semibold cursor-pointer">
               All Sectors &rarr;
             </a>
           </li>
