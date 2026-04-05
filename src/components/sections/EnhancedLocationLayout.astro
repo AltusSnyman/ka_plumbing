@@ -31,7 +31,7 @@ const iconMap: Record<string, string> = {
 ---
 
 <!-- Hero -->
-<section class="relative min-h-[60vh] flex items-center overflow-hidden" aria-label={location.heroHeadline}>
+<section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden" aria-label={location.heroHeadline}>
   <img
     src={location.heroImage}
     alt={`${location.name} — plumber and drain layer`}
@@ -214,7 +214,7 @@ const iconMap: Record<string, string> = {
               <a
                 href={`/areas/${slug}/`}
                 title={`Plumber in ${name}, Auckland`}
-                class="inline-block px-4 py-2 bg-primary/5 text-primary text-sm font-medium rounded-full hover:bg-accent/10 hover:text-accent transition-colors"
+                class="inline-block px-4 py-2.5 bg-primary/5 text-primary text-sm font-medium rounded-full hover:bg-accent/10 hover:text-accent transition-colors"
               >
                 {name}
               </a>

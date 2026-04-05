@@ -20,6 +20,15 @@
       "Washing machine and dishwasher connections",
       "General plumbing maintenance"
     ],
+    "commonIssues": [
+      { "issue": "Burst pipe flooding your home", "detail": "Kurt arrives within 30-60 minutes, locates the burst, isolates the water supply, and completes the repair — often in a single visit." },
+      { "issue": "Tap that won't stop dripping", "detail": "A dripping tap wastes thousands of litres a year and usually needs a washer, cartridge, or mixer replacement. Quick, affordable fix." },
+      { "issue": "Toilet running constantly", "detail": "Running toilets spike your water bill fast. Typically caused by a worn inlet valve or flush mechanism — diagnosed and repaired on the spot." },
+      { "issue": "Low water pressure throughout the house", "detail": "Could be a faulty pressure-reducing valve, corroded galvanised pipes, or a Watercare supply issue. Kurt diagnoses the root cause before recommending a fix." },
+      { "issue": "Blocked or slow-draining sink", "detail": "Kitchen and bathroom blockages from grease, hair, or soap buildup. Cleared professionally without damaging your pipes." },
+      { "issue": "Leaking pipes inside walls", "detail": "Hidden leaks cause mould and structural damage. Kurt locates the leak, accesses the pipe with minimal wall damage, and repairs it permanently." }
+    ],
+    "customerPromise": "Every plumbing repair starts with a free, no-obligation assessment. Kurt explains what's wrong in plain language, tells you the cost before any work begins, and only proceeds when you're comfortable. There are no hidden fees, no upselling, and no pressure. If a repair isn't worth the cost, Kurt will tell you honestly. Your home is treated with respect — drop sheets go down, mess gets cleaned up, and you get a workmanship guarantee on every repair.",
     "faqs": [
       { "q": "How fast can you respond to a plumbing emergency in Auckland?", "a": "For emergencies like burst pipes or flooding, Kurt aims to arrive within 30-60 minutes across Auckland, including the North Shore, Central, and West Auckland." },
       { "q": "Do you charge a call-out fee for plumbing repairs?", "a": "No call-out fee for standard plumbing repairs during business hours. Emergency after-hours callouts may have a small surcharge, always disclosed upfront." },
@@ -48,6 +57,15 @@
       "Drainage modifications (certified drain layer)",
       "Coordination with builders and other trades"
     ],
+    "commonIssues": [
+      { "issue": "Bathroom plumbing that doesn't match the new layout", "detail": "Relocating water supply and waste lines to suit your new design. Kurt works from your plans to get pipe positions right before tiling begins." },
+      { "issue": "Old pipes discovered during demolition", "detail": "Galvanised or lead pipes hidden behind walls are common in older Auckland homes. Kurt replaces them with modern copper or PEX as part of the renovation." },
+      { "issue": "Drainage that needs rerouting for a new floor plan", "detail": "As a certified drain layer, Kurt modifies drainage without needing a second contractor — saving time and money on your renovation." },
+      { "issue": "Kitchen sink and dishwasher plumbing for a new layout", "detail": "Moving the kitchen? The plumbing needs to move too. Kurt handles waste and water line extensions to suit your new kitchen design." },
+      { "issue": "Heated towel rail installation", "detail": "Adding warmth and convenience to your new bathroom. Plumbed into your hot water system for efficient, reliable heating." },
+      { "issue": "Builder needs a plumber who shows up on time", "detail": "Renovation schedules are tight. Kurt turns up when promised, communicates clearly, and keeps the plumbing on track with your builder's timeline." }
+    ],
+    "customerPromise": "Renovation plumbing is stressful when trades don't communicate. Kurt works directly with your builder, project manager, or you to ensure the plumbing scope is clear from day one. You'll get a detailed written quote covering every aspect of the plumbing work, a realistic timeline, and regular updates as the job progresses. If something unexpected is found during demolition, Kurt discusses it with you before proceeding — no surprise charges, no assumptions.",
     "faqs": [
       { "q": "Can you handle the drainage work during a renovation too?", "a": "Yes — Kurt is a certified drain layer as well as a certified plumber, so all plumbing and drainage work is handled by one tradesperson. No need for a second contractor." },
       { "q": "Do you work with builders on renovation projects?", "a": "Absolutely. Kurt coordinates directly with builders, tilers, and other trades to ensure plumbing work fits the project timeline." },
@@ -76,6 +94,15 @@
       "Outdoor taps and garden plumbing",
       "Waste disposal unit installation"
     ],
+    "commonIssues": [
+      { "issue": "New dishwasher or washing machine needs connecting", "detail": "Most appliance connections are completed in under 2 hours. Kurt ensures proper waste, water, and power connections that won't leak." },
+      { "issue": "New build needs plumbing from scratch", "detail": "Full plumbing scope from initial rough-in through to final fit-off. Kurt works to your building schedule and coordinates with other trades on site." },
+      { "issue": "Upgrading old fixtures to modern tapware", "detail": "Replacing dated taps, showerheads, or toilets with modern, water-efficient fixtures. Quick installation with minimal disruption." },
+      { "issue": "Adding an outdoor tap for the garden", "detail": "Running a new water line from your mains to the garden. Includes a proper isolation valve so you can shut it off independently." },
+      { "issue": "Water filtration system installation", "detail": "Under-sink or whole-house water filtration fitted to your existing plumbing. Clean, safe drinking water without the taste of chlorine." },
+      { "issue": "Granny flat or minor dwelling plumbing", "detail": "Complete plumbing for secondary dwellings — kitchen, bathroom, laundry, and drainage connections. All to Building Code standard." }
+    ],
+    "customerPromise": "Every installation starts with a clear explanation of what's involved and an upfront price. Kurt doesn't start work until you've approved the quote. Installations are done to NZ Building Code standards, and Kurt's work passes council inspection the first time — saving you the cost and delay of re-inspections. Your property is left clean, with all connections tested and verified before Kurt leaves.",
     "faqs": [
       { "q": "Can you do the plumbing for a new build from start to finish?", "a": "Yes — from initial rough-in through to final fit-off and sign-off. Kurt works to your building schedule and coordinates with other trades." },
       { "q": "Do installations pass council inspection?", "a": "Every installation is done to NZ Building Code standards. Kurt's work passes inspection first time — avoiding costly re-inspection fees." },
@@ -104,6 +131,15 @@
       "Heat pump hot water systems",
       "All major brands: Rheem, Rinnai, Dux, Aquamax"
     ],
+    "commonIssues": [
+      { "issue": "No hot water at all", "detail": "Could be a failed element, tripped circuit breaker, faulty thermostat, or a dead cylinder. Kurt diagnoses the cause and often restores hot water the same day." },
+      { "issue": "Hot water runs out too quickly", "detail": "Your cylinder may be undersized for your household, or sediment buildup is reducing its effective capacity. Kurt assesses and recommends the right solution." },
+      { "issue": "Water is lukewarm but never properly hot", "detail": "Usually a failing element or thermostat issue. Quick diagnosis and same-day repair in most cases." },
+      { "issue": "Hot water cylinder is leaking", "detail": "A leaking cylinder often means it's reached end of life. Kurt will confirm whether a repair is viable or if replacement is the smarter option." },
+      { "issue": "Old low-pressure system needs upgrading", "detail": "Many Auckland homes still have outdated low-pressure hot water. Kurt upgrades to mains-pressure systems for better flow and performance." },
+      { "issue": "Tempering valve needs replacing or testing", "detail": "Required by NZ regulations to prevent scalding. Kurt tests, adjusts, or replaces tempering valves as part of hot water service." }
+    ],
+    "customerPromise": "Hot water problems are urgent — nobody wants a cold shower. Kurt prioritises hot water callouts and carries common parts on the van for same-day fixes. If your cylinder needs replacing, he'll walk you through every option honestly, explaining the pros and cons of each system type for your home. You'll get a clear quote before any work starts, and Kurt will never recommend a replacement if a simple repair will do the job.",
     "faqs": [
       { "q": "Can you fix my hot water the same day?", "a": "In most cases, yes. Kurt carries common cylinder parts and elements on the van. If a replacement is needed, we can often source and install within 24 hours." },
       { "q": "What hot water brands do you install?", "a": "We install and service all major brands including Rheem, Rinnai, Dux, and Aquamax. Kurt will recommend the best option for your household." },
@@ -132,6 +168,15 @@
       "CCTV drain inspection",
       "Soak pit and stormwater solutions"
     ],
+    "commonIssues": [
+      { "issue": "Tree roots blocking your drain lines", "detail": "One of the most common drainage problems in Auckland. Roots find cracks in clay pipes and grow inside, causing recurring blockages. Kurt locates and removes the intrusion, then repairs or replaces the affected section." },
+      { "issue": "Old clay or earthenware pipes collapsing", "detail": "Pre-1980s Auckland homes often have clay drain pipes that crack and collapse over time. Kurt replaces damaged sections with modern PVC for a permanent fix." },
+      { "issue": "Stormwater flooding your property", "detail": "Inadequate or blocked stormwater drainage causes pooling and flooding. Kurt designs and installs proper stormwater solutions including new drains, soak pits, and channel drains." },
+      { "issue": "New build requires drainage installation", "detail": "Full stormwater and wastewater drainage for new builds and subdivisions. Designed to council specifications, installed to code, and inspected before backfill." },
+      { "issue": "Sewage smell coming from drains", "detail": "Usually indicates a cracked pipe, failed trap, or poor ventilation. Kurt diagnoses with CCTV inspection and fixes the root cause — not just the symptom." },
+      { "issue": "Renovation needs drainage modifications", "detail": "Adding or moving a bathroom during a renovation requires drainage rerouting. Kurt handles this as a certified drain layer — no second contractor needed." }
+    ],
+    "customerPromise": "Drain laying work is disruptive by nature — it often involves excavation. Kurt minimises the impact by planning the work carefully, using the least invasive approach possible, and restoring your property when the job is complete. Every drain laying project includes proper documentation for Auckland Council, photo records of the work, and a compliance certificate. You'll know exactly what's happening, what it costs, and when it'll be done — before any digging starts.",
     "faqs": [
       { "q": "What's the difference between a plumber and a drain layer?", "a": "A plumber handles water supply and internal waste pipes. A drain layer handles external drainage — stormwater and wastewater systems outside the building. Kurt holds both certifications." },
       { "q": "Do I need council consent for drainage work?", "a": "Most drainage work in Auckland requires a building consent. As a certified drain layer, Kurt handles the documentation and ensures all work meets Auckland Council requirements." },
@@ -160,6 +205,15 @@
       "Water efficiency audits",
       "Phone and on-site consultations"
     ],
+    "commonIssues": [
+      { "issue": "Planning a renovation but unsure about plumbing scope", "detail": "Kurt reviews your plans, identifies what plumbing and drainage work is needed, and provides a realistic budget before you commit to the project." },
+      { "issue": "Received a plumbing quote that seems too high", "detail": "Get a second opinion from a certified plumber. Kurt reviews the scope and gives you an honest assessment of whether the quote is fair." },
+      { "issue": "Buying a property and worried about hidden plumbing issues", "detail": "Pre-purchase plumbing inspections reveal pipe condition, drainage health, hot water age, and potential problems before you sign." },
+      { "issue": "Water bill suddenly spiked and you don't know why", "detail": "Could be a hidden leak, running toilet, or faulty valve. Kurt investigates and identifies the source so you can fix it cost-effectively." },
+      { "issue": "Need building consent guidance for plumbing work", "detail": "Kurt advises on what requires consent in Auckland, what documentation is needed, and how to structure the plumbing scope to meet council requirements." },
+      { "issue": "Want to improve water efficiency in your home", "detail": "Water efficiency audits identify where you're wasting water and money. Kurt recommends practical upgrades — low-flow fixtures, efficient hot water, leak repairs." }
+    ],
+    "customerPromise": "Consulting is about giving you the information you need to make good decisions — not selling you services you don't need. Kurt's advice is straightforward, honest, and backed by years of certified plumbing and drain laying experience. Phone consultations are always free. For on-site assessments, you'll know the cost upfront. There's never any pressure to proceed with work — the consultation stands on its own value.",
     "faqs": [
       { "q": "Is the initial consultation free?", "a": "Yes — a phone consultation is always free. For on-site assessments, Kurt provides a clear quote before visiting if needed." },
       { "q": "Can you help with building consent applications?", "a": "Kurt can advise on plumbing and drainage requirements for consent and provide the documentation needed to support your application." },

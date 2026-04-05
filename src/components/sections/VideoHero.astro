@@ -22,7 +22,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="video-hero relative min-h-[85vh] flex items-center overflow-hidden" aria-label="Hero">
+<section class="video-hero relative min-h-[60vh] md:min-h-[85vh] flex items-center overflow-hidden" aria-label="Hero">
   <!-- Video Background -->
   <video
     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
@@ -43,7 +43,7 @@ const {
   <!-- Content — centered liquid glass card over clear video -->
   <div class="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6 py-32 flex items-center justify-center">
     <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-16 rounded-2xl">
-      <h1 class="text-h1 md:text-hero leading-tight mb-4">
+      <h1 class="text-h2 md:text-h1 lg:text-hero leading-tight mb-4">
         <ShutterText text={headline} />
       </h1>
       <p class="text-text text-lg mb-8 leading-relaxed max-w-lg mx-auto">

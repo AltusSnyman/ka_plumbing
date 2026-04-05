@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ShutterText from '../components/ui/ShutterText.astro';
+import TestimonialScroller from '../components/sections/TestimonialScroller.astro';
+import TrustScroller from '../components/sections/TrustScroller.astro';
+import { buildBreadcrumbSchema, buildFAQSchema } from '../utils/breadcrumbs';
+
+const siteUrl = 'https://kaplumbingltd.co.nz';
+
+const faqs = [
+  { q: 'How fast can an emergency plumber get to me in Auckland?', a: 'Kurt aims to arrive within 30-60 minutes for genuine plumbing emergencies across Auckland. North Shore suburbs typically see the fastest response — often under 30 minutes. Central, West, and South Auckland are usually within 45-60 minutes depending on traffic and time of day.' },
+  { q: 'Do you charge more for after-hours emergency plumbing?', a: 'Emergency callouts outside standard business hours (after 6pm, weekends, and public holidays) may include a small after-hours surcharge. This is always disclosed upfront before any work begins — no surprise fees.' },
+  { q: 'What should I do while waiting for the plumber?', a: 'Turn off the water at the mains (your toby valve, usually at the front boundary of your property). If the emergency involves your hot water cylinder, switch it off at the power board. Place towels or buckets to contain any water. If flooding is severe, turn off electricity to affected areas at the switchboard.' },
+  { q: 'Is a blocked drain considered a plumbing emergency?', a: 'If a blocked drain is causing sewage backup into your home, overflowing outside, or creating a health hazard — yes, it is an emergency. A slow drain that is still functioning can usually wait for a scheduled appointment.' },
+  { q: 'Do I need to be home for an emergency plumbing callout?', a: 'Ideally yes, so Kurt can discuss the issue and get your approval before starting work. If you cannot be present, arrangements can be made by phone — Kurt will explain the problem, get your verbal approval, and photograph everything for your records.' },
+];
+
+const emergencySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Plumber',
+  name: 'KA Plumbing LTD — Emergency Plumber Auckland',
+  url: siteUrl,
+  telephone: '+64212779151',
+  email: 'KAPlumbingLtd@gmail.com',
+  description: 'Emergency plumber available 24/7 across Auckland and the North Shore. Burst pipes, flooding, blocked drains, no hot water. Certified plumber and drain layer. Call 021 277 9151.',
+  areaServed: [
+    { '@type': 'City', name: 'Auckland' },
+    { '@type': 'Place', name: 'North Shore, Auckland' },
+    { '@type': 'Place', name: 'Auckland CBD' },
+  ],
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -36.8485,
+    longitude: 174.7633,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '00:00',
+    closes: '23:59',
+  },
+  availableChannel: {
+    '@type': 'ServiceChannel',
+    servicePhone: { '@type': 'ContactPoint', telephone: '+64212779151', contactType: 'emergency' },
+  },
+};
+---
+
+<BaseLayout
+  title="Emergency Plumber Auckland — 24/7 Callouts | KA Plumbing LTD"
+  description="Emergency plumber available 24/7 across Auckland and the North Shore. Burst pipes, flooding, blocked drains, no hot water. Certified plumber — fast response. Call 021 277 9151 now."
+  canonicalUrl={`${siteUrl}/emergency/`}
+  additionalSchemas={[
+    buildBreadcrumbSchema([{ name: 'Emergency Plumber', path: '/emergency/' }]),
+    buildFAQSchema(faqs),
+    emergencySchema,
+  ]}
+>
+  <!-- Emergency Hero — high urgency design -->
+  <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden bg-primary" aria-label="Emergency plumber Auckland">
+    <img
+      src="/images/backgrounds/pipes-business.webp"
+      alt="Emergency plumber Auckland"
+      width="1920"
+      height="1080"
+      class="absolute inset-0 w-full h-full object-cover opacity-30"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 py-24 md:py-32 flex items-center justify-center w-full">
+      <div class="hero-glass-card w-full max-w-[calc(100%-2rem)] md:max-w-2xl lg:max-w-3xl text-center px-6 py-10 md:px-14 md:py-14 rounded-2xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emergency/20 rounded-full mb-4">
+          <span class="w-2.5 h-2.5 bg-emergency rounded-full animate-pulse"></span>
+          <span class="text-emergency font-semibold text-sm uppercase tracking-wider">24/7 Emergency Service</span>
+        </div>
+        <h1 class="text-h2 md:text-h1 mb-4"><ShutterText text="Emergency Plumber Auckland" /></h1>
+        <p class="text-text-muted max-w-lg mx-auto text-lg mb-8">
+          Burst pipe? Flooding? Blocked drain? Kurt is available right now — 24 hours a day, 7 days a week, across all of Auckland.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+64212779151" class="btn-emergency text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call Now: 021 277 9151
+          </a>
+          <a href="/booking/" class="btn-outline">Book an Emergency Visit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Handle -->
+  <section class="py-section bg-background" aria-label="Emergency situations we handle">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">We Handle It All</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Common Emergency Situations</h2>
+        <p class="text-text-muted max-w-xl mx-auto">
+          These are the emergencies Auckland homeowners call us about most. If your situation is urgent, don't wait — call now.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+        {[
+          { icon: '💧', title: 'Burst Pipes', desc: 'Water spraying from a pipe inside your home or under the house. Turn off your mains and call immediately — every minute counts.' },
+          { icon: '🌊', title: 'Flooding', desc: 'Water pooling on floors, running down walls, or flowing from fixtures. Kurt arrives fast to stop the source and minimise damage.' },
+          { icon: '🚽', title: 'Blocked Drains & Sewage', desc: 'Sewage backing up into your home, toilets overflowing, or drains completely blocked. A health hazard that needs immediate attention.' },
+          { icon: '🔥', title: 'No Hot Water', desc: 'Hot water cylinder failed, leaking, or making strange noises. Same-day repair or replacement in most cases.' },
+          { icon: '🏠', title: 'Gas Smell Near Pipes', desc: 'If you smell gas, evacuate immediately and call the gas emergency line (0800 764 764). Then call Kurt for the plumbing side.' },
+          { icon: '🧊', title: 'Frozen or Cracked Pipes', desc: 'Auckland rarely freezes, but exposed pipes in garages and sub-floors can crack in cold snaps. Kurt repairs and insulates to prevent recurrence.' },
+        ].map(item => (
+          <div class="glass-card-solid p-6">
+            <div class="text-2xl mb-3">{item.icon}</div>
+            <h3 class="font-heading text-primary mb-2">{item.title}</h3>
+            <p class="text-text-muted text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What Happens When You Call -->
+  <section class="py-section bg-surface" aria-label="Emergency process">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">What to Expect</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">What Happens When You Call</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+        {[
+          { step: '01', title: 'You Call Kurt', desc: 'Call 021 277 9151 — Kurt answers personally. Describe the emergency and he\'ll talk you through immediate steps to contain the damage.' },
+          { step: '02', title: 'Fast Arrival', desc: 'Kurt heads to you immediately. North Shore: 15-30 minutes. Central Auckland: 20-40 minutes. West/South: 30-60 minutes.' },
+          { step: '03', title: 'Diagnose & Quote', desc: 'Kurt assesses the situation, explains what\'s wrong in plain language, and gives you a clear price before any work starts.' },
+          { step: '04', title: 'Fixed On the Spot', desc: 'Most emergencies are resolved in a single visit. Kurt carries common parts on the van for fast same-day repairs.' },
+        ].map(step => (
+          <div class="glass-card-solid p-6 text-center">
+            <div class="text-accent font-heading text-h2 mb-3 opacity-30">{step.step}</div>
+            <h3 class="font-heading text-h4 text-primary mb-2">{step.title}</h3>
+            <p class="text-text-muted text-sm">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Coverage Areas -->
+  <section class="py-section bg-background" aria-label="Emergency coverage areas">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="text-center mb-10">
+          <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Coverage</span>
+          <h2 class="font-heading text-h2 text-primary mb-4">Emergency Plumber — All of Auckland</h2>
+          <p class="text-text-muted max-w-xl mx-auto">
+            Kurt provides 24/7 emergency plumbing across every Auckland suburb. North Shore response is fastest — it's where he's based.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <a href="/areas/north-shore/" class="glass-card-solid p-6 text-center hover:border-accent/30 transition-colors group">
+            <h3 class="font-heading text-primary group-hover:text-accent transition-colors mb-1">North Shore</h3>
+            <p class="text-accent font-semibold text-sm">15-30 min response</p>
+            <p class="text-text-muted text-xs mt-2">Takapuna, Albany, Browns Bay, Glenfield, Devonport, and all Shore suburbs</p>
+          </a>
+          <a href="/areas/auckland-cbd/" class="glass-card-solid p-6 text-center hover:border-accent/30 transition-colors group">
+            <h3 class="font-heading text-primary group-hover:text-accent transition-colors mb-1">Auckland CBD</h3>
+            <p class="text-accent font-semibold text-sm">20-40 min response</p>
+            <p class="text-text-muted text-xs mt-2">City centre apartments, Ponsonby, Parnell, Grey Lynn, Newmarket</p>
+          </a>
+          <a href="/areas/auckland/" class="glass-card-solid p-6 text-center hover:border-accent/30 transition-colors group">
+            <h3 class="font-heading text-primary group-hover:text-accent transition-colors mb-1">Greater Auckland</h3>
+            <p class="text-accent font-semibold text-sm">30-60 min response</p>
+            <p class="text-text-muted text-xs mt-2">West Auckland, South Auckland, and all surrounding suburbs</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Promise -->
+  <section class="py-section bg-surface" aria-label="Our emergency service promise">
+    <div class="max-w-[800px] mx-auto px-6 reveal">
+      <div class="text-center mb-8">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Promise</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Emergency Service You Can Trust</h2>
+      </div>
+      <div class="glass-card-solid p-8 border-l-4 border-accent">
+        <p class="text-text-muted text-lg leading-relaxed mb-4">
+          A plumbing emergency is stressful enough without worrying about being overcharged. Kurt provides a clear price before starting any work — even at 2am. There are no hidden fees, no inflated emergency rates, and no pressure to approve work you don't understand.
+        </p>
+        <p class="text-text-muted text-lg leading-relaxed">
+          As a certified plumber and certified drain layer, Kurt handles both the plumbing and drainage sides of any emergency. That means one phone call, one tradesperson, and a permanent fix — not a temporary patch that fails next week. Your home is treated with respect: drop sheets go down, the mess gets cleaned up, and you get a workmanship guarantee on every repair.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Scroller -->
+  <TrustScroller />
+
+  <!-- FAQ -->
+  <section class="py-section bg-background" aria-label="Emergency plumbing FAQ">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</span>
+        <h2 class="font-heading text-h2 text-primary mb-4">Emergency Plumbing Questions</h2>
+      </div>
+      <div class="space-y-4 reveal">
+        {faqs.map((faq) => (
+          <details class="glass-card-solid group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-semibold text-primary list-none">
+              <span>{faq.q}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-text-muted text-sm leading-relaxed border-t border-primary/5 pt-4">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <TestimonialScroller />
+
+  <!-- Final CTA -->
+  <section class="py-section bg-emergency" aria-label="Emergency call to action">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="font-heading text-h2 text-white mb-4">Don't Wait — Call Now</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+        Every minute matters with a burst pipe or flooding. Kurt is available right now to help.
+      </p>
+      <a href="tel:+64212779151" class="inline-flex items-center gap-3 px-8 py-5 bg-white text-emergency font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call 021 277 9151
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -64,6 +64,11 @@ export default defineConfig({
           item.priority = 0.7;
           item.changefreq = 'monthly';
         }
+        // Emergency page — highest conversion intent
+        else if (url.includes('/emergency/')) {
+          item.priority = 0.9;
+          item.changefreq = 'monthly';
+        }
         // Contact and booking — high conversion pages
         else if (url.includes('/contact/') || url.includes('/booking/')) {
           item.priority = 0.8;
