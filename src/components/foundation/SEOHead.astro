@@ -32,6 +32,8 @@ const canonical = canonicalUrl || Astro.url.href;
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={fullOgImage} />
 
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+
 <!-- Geo -->
 <meta name="geo.region" content="NZ-AUK" />
 <meta name="geo.placename" content="Auckland" />
@@ -49,8 +51,10 @@ const canonical = canonicalUrl || Astro.url.href;
   "email": "KAPlumbingLtd@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Auckland",
+    "streetAddress": "288 Glenmore Road",
+    "addressLocality": "Coatesville",
     "addressRegion": "Auckland",
+    "postalCode": "0793",
     "addressCountry": "NZ"
   },
   "geo": {
@@ -77,11 +81,17 @@ const canonical = canonicalUrl || Astro.url.href;
       "dayOfWeek": ["Saturday"],
       "opens": "08:00",
       "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
     }
   ],
   "priceRange": "$$",
   "image": `${siteUrl}/images/logos/logo-square.webp`,
-  "sameAs": [],
+  "sameAs": ["https://www.facebook.com/profile.php?id=61572012577876"],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
