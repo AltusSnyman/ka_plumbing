@@ -13,7 +13,7 @@
   --color-background: #F5F7FA;
   --color-surface: #FFFFFF;
   --color-text: #1C2930;
-  --color-text-muted: #6B7B86;
+  --color-text-muted: #5A6873;
   --color-emergency: #DC2626;
   --color-emergency-dark: #B91C1C;
   --font-heading: "DM Serif Display", serif;
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); line-height: 1.2; col
 .hero-glass-card { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 40px rgba(30, 58, 95, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3); }
 
 /* Buttons (hero CTAs) */
-.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: var(--color-accent); color: white; font-family: var(--font-body); font-weight: 600; font-size: var(--text-body); border-radius: var(--radius-full); border: none; cursor: pointer; box-shadow: var(--shadow-amber-glow); text-decoration: none; line-height: 1; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: var(--color-accent); color: var(--color-primary); font-family: var(--font-body); font-weight: 600; font-size: var(--text-body); border-radius: var(--radius-full); border: none; cursor: pointer; box-shadow: var(--shadow-amber-glow); text-decoration: none; line-height: 1; }
 .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: transparent; color: var(--color-primary); font-family: var(--font-body); font-weight: 600; font-size: var(--text-body); border-radius: var(--radius-full); border: 2px solid var(--color-primary); cursor: pointer; text-decoration: none; line-height: 1; }
 .btn-emergency { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; background: var(--color-emergency); color: white; font-family: var(--font-body); font-weight: 700; font-size: var(--text-body); border-radius: var(--radius-full); border: none; cursor: pointer; box-shadow: var(--shadow-emergency-glow); text-decoration: none; line-height: 1; }
 
