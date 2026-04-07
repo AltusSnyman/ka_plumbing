@@ -6,6 +6,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://kaplumbingltd.co.nz',
   trailingSlash: 'always',
+  build: {
+    inlineStylesheets: 'always',
+  },
   redirects: {
     '/areas/cbd/': '/areas/auckland-cbd/',
   },

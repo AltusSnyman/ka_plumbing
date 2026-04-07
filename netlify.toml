@@ -2,6 +2,14 @@
   command = "npm run build"
   publish = "dist"
 
+# Override Netlify's default x-robots-tag: noindex on deploy previews
+# so Lighthouse SEO audit passes during testing.
+# REMOVE this block before going live, or restrict to production only.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "all"
+
 # Redirect www to apex domain (301 permanent)
 [[redirects]]
   from = "https://www.kaplumbingltd.co.nz/*"

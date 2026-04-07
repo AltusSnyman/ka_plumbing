@@ -35,10 +35,15 @@ const {
   </video>
 
   <!-- Static Poster (visible immediately for fast LCP, fades when video plays) -->
-  <div
-    class="video-poster absolute inset-0 w-full h-full transition-opacity duration-500"
-    style={`background-image: url('${posterSrc}'); background-size: cover; background-position: center;`}
-  ></div>
+  <img
+    src={posterSrc}
+    alt=""
+    width="1920"
+    height="1080"
+    fetchpriority="high"
+    decoding="async"
+    class="video-poster absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+  />
 
   <!-- Content — centered liquid glass card over clear video -->
   <div class="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6 py-32 flex items-center justify-center">

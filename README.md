@@ -1,3 +1,9 @@
+## TODO before going live
+
+- [ ] **Remove `X-Robots-Tag = "all"` override in `netlify.toml`** — currently set so Lighthouse SEO audit passes on deploy previews. Before launch, either delete the `[[headers]]` block or change value to `noindex` so deploy previews don't compete with the production domain in Google search results.
+
+---
+
 # Astro Starter Kit: Minimal
 
 ```sh
